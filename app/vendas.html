@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Minhas Vendas · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="inicio.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<section class="page-h">
+  <div><h1>Minhas Vendas</h1><p>Vendas enviadas pela sua distribuidora e os pontos que cada uma gerou.</p></div>
+  <label class="select sv-month"><i class="fa-regular fa-calendar"></i><select id="month" aria-label="Competência"></select><i class="fa-solid fa-chevron-down"></i></label>
+</section>
+
+<section class="sv-kpis">
+  <div class="card"><span class="ic i-green"><i class="fa-solid fa-sack-dollar"></i></span><small>Total vendido</small><b id="kAmount">—</b></div>
+  <div class="card"><span class="ic i-blue"><i class="fa-solid fa-receipt"></i></span><small>Vendas</small><b id="kCount">—</b></div>
+  <div class="card"><span class="ic i-purple"><i class="fa-solid fa-cubes"></i></span><small>Unidades</small><b id="kQty">—</b></div>
+  <div class="card"><span class="ic i-gold"><i class="fa-solid fa-star"></i></span><small>Pontos ganhos</small><b id="kPoints">—</b></div>
+</section>
+
+<section class="card sv-chart">
+  <div class="between"><h2>Evolução mensal</h2><small class="muted">Toque num mês para filtrar</small></div>
+  <div class="sv-bars" id="bars" role="list"></div>
+</section>
+
+<div class="sv-tools">
+  <label class="sv-search"><i class="fa-solid fa-magnifying-glass"></i><input id="search" type="search" placeholder="Buscar por nota fiscal ou produto" aria-label="Buscar vendas"></label>
+</div>
+
+<section class="sv-list" id="list" aria-live="polite"></section>
+<button class="btn-ghost sv-more" id="more" hidden>Carregar mais</button>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="vendas.html" class="on"><i class="fa-solid fa-cart-shopping"></i>Vendas</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+</nav>
+
+<script src="session.js?v=19"></script>
+<script>
+// Minhas Vendas: GET /api/app/me/sales devolve só as vendas do usuário logado (o servidor usa o token)
+const MES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+const comp = (c) => { const [y, m] = c.split('-'); return `${MES[+m - 1]}/${y}`; };
+const brl = (c) => (c / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const num = (n) => n.toLocaleString('pt-BR');
+const day = (d) => d.slice(0, 10).split('-').reverse().join('/');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const $ = (id) => document.getElementById(id);
+
+let state = { competence: new URLSearchParams(location.search).get('competence'), search: '', page: 1 };
+let loading = false;
+
+async function load(append = false) {
+  if (loading) return;
+  loading = true;
+  if (!append) $('list').innerHTML = '<div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando vendas...</div>';
+  const qs = new URLSearchParams({ page: state.page, per_page: 15, ...(state.competence ? { competence: state.competence } : {}), ...(state.search ? { search: state.search } : {}) });
+  try {
+    const d = await window.incentiva.api(`/app/me/sales?${qs}`);
+    state.competence = d.competence;
+    renderMonths(d.monthly);
+    renderKpis(d.summary);
+    renderBars(d.monthly);
+    renderRows(d.data, append, d.summary.count);
+    $('more').hidden = d.pagination.page >= d.pagination.lastPage;
+  } catch (e) {
+    $('list').innerHTML = `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  } finally {
+    loading = false;
+  }
+}
+
+function renderMonths(monthly) {
+  const opts = [['all', 'Todos os meses'], ...monthly.map((m) => [m.competence, comp(m.competence)]).reverse()];
+  $('month').innerHTML = opts.map(([v, l]) => `<option value="${v}"${v === state.competence ? ' selected' : ''}>${l}</option>`).join('');
+}
+
+function renderKpis(s) {
+  $('kAmount').textContent = brl(s.amountCents);
+  $('kCount').textContent = num(s.count);
+  $('kQty').textContent = num(s.quantity);
+  $('kPoints').textContent = num(s.points);
+}
+
+function renderBars(monthly) {
+  const max = Math.max(1, ...monthly.map((m) => m.amountCents));
+  $('bars').innerHTML = monthly.length
+    ? monthly.map((m) => `
+      <button role="listitem" class="sv-bar${m.competence === state.competence ? ' on' : ''}" data-c="${m.competence}" title="${comp(m.competence)}: ${brl(m.amountCents)} · ${num(m.points)} pts">
+        <em>${brl(m.amountCents).replace(/,\d+$/, '')}</em>
+        <span style="height:${Math.max(4, (m.amountCents / max) * 100)}%"></span>
+        <small>${MES[+m.competence.slice(5) - 1]}</small>
+      </button>`).join('')
+    : '<p class="muted">Sem vendas ainda.</p>';
+}
+
+function renderRows(rows, append, total) {
+  if (!append && !rows.length) {
+    $('list').innerHTML = `<div class="sv-empty"><i class="fa-solid fa-cart-shopping"></i>${state.search ? 'Nenhuma venda encontrada para a busca.' : 'Nenhuma venda nesta competência.'}</div>`;
+    return;
+  }
+  const html = rows.map((r) => `
+    <article class="card sv-row">
+      <div class="sv-ico"><i class="fa-solid fa-cart-shopping"></i></div>
+      <div class="sv-main">
+        <b>${esc(r.productName)}</b>
+        <small>${esc(r.sku)} · NF ${esc(r.document.replace(/^NF/, ''))} · ${day(r.date)}${r.corrected ? ' · <span class="sv-tag">Corrigida</span>' : ''}</small>
+        ${r.rule ? `<small class="sv-rule"><i class="fa-solid fa-scale-balanced"></i>${esc(r.rule)}</small>` : ''}
+      </div>
+      <div class="sv-num"><small>Qtd.</small><b>${num(r.quantity)}</b></div>
+      <div class="sv-num"><small>Valor</small><b>${brl(r.amountCents)}</b></div>
+      <div class="sv-pts"><b>+${num(r.points)}</b><small>pontos</small></div>
+    </article>`).join('');
+  if (append) $('list').insertAdjacentHTML('beforeend', html);
+  else $('list').innerHTML = `<p class="sv-count">${num(total)} venda(s)${state.competence === 'all' ? '' : ` em ${comp(state.competence)}`}</p>` + html;
+}
+
+const reset = (patch) => { state = { ...state, ...patch, page: 1 }; load(); };
+$('month').addEventListener('change', (e) => reset({ competence: e.target.value }));
+$('bars').addEventListener('click', (e) => { const b = e.target.closest('[data-c]'); if (b) reset({ competence: b.dataset.c }); });
+let t;
+$('search').addEventListener('input', (e) => { clearTimeout(t); t = setTimeout(() => reset({ search: e.target.value.trim() }), 300); });
+$('more').addEventListener('click', () => { state.page++; load(true); });
+
+// session.js valida o login e então dispara o evento (ou já disparou)
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+</body></html>

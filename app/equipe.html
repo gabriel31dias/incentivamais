@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Minha Equipe · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <button class="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"><img src="img/avatar-mariana.png" alt="Mariana"></a>
+</header>
+
+<section class="page-h">
+  <div><h1><i class="fa-solid fa-users green"></i>Minha Equipe</h1><p>Gerencie sua equipe, acompanhe resultados e distribua metas.</p></div>
+  <!-- ponytail: adicionar membro desativado por enquanto
+  <button type="button" class="btn btn-add" onclick="addDlg.showModal()"><i class="fa-solid fa-circle-plus"></i>Adicionar membro</button>
+  -->
+</section>
+
+<section class="team-kpis">
+  <div class="card"><div class="row"><i class="fa-solid fa-user-group" style="color:#3b8bff"></i>Total da equipe</div><div class="row"><b>12</b><span class="pill"><i class="fa-solid fa-arrow-up"></i>2</span></div><small>membros ativos</small></div>
+  <div class="card"><div class="row"><i class="fa-solid fa-chart-column green"></i>Vendas do mês</div><b>R$ 48.250</b><span class="up">↑ 18%</span></div>
+  <div class="card"><div class="row"><i class="fa-solid fa-trophy" style="color:var(--gold)"></i>Meta da equipe</div><b>78%</b><div class="bar"><span style="width:78%"></span></div></div>
+  <div class="card"><div class="row"><i class="fa-solid fa-medal green"></i>Pontos da equipe</div><b>12.450</b><span class="up">↑ 22%</span></div>
+</section>
+
+<div class="tabs"><button class="on">Membros</button><button>Metas</button><button>Desempenho</button><button>Campanhas</button><button>Convites</button></div>
+
+<section class="filters team-filters">
+  <label class="select search"><i class="fa-solid fa-magnifying-glass"></i><input id="q" placeholder="Buscar por nome, e-mail ou cargo..."></label>
+  <button class="select">Todos os status<i class="fa-solid fa-chevron-down"></i></button>
+  <button class="select">Mês atual<i class="fa-solid fa-chevron-down"></i></button>
+</section>
+
+<section class="table members">
+  <div class="mrow head"><span><input type="checkbox" class="cb" id="all" aria-label="Selecionar todos"></span><span>Membro</span><span class="c-cargo">Cargo</span><span class="c-vendas">Vendas (R$)</span><span class="c-pts">Pontos</span><span class="c-meta">Meta</span><span>Status</span><span class="c-act">Ações</span></div>
+  <div id="members"></div>
+  <div class="mfoot"><span id="count">Mostrando 8 de 12 membros</span>
+    <nav class="pager"><button aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button><button class="on">1</button><button>2</button><button aria-label="Próxima"><i class="fa-solid fa-chevron-right"></i></button></nav></div>
+</section>
+
+<section class="team-bottom">
+  <div class="card panel">
+    <div class="between"><h2><i class="fa-solid fa-bullseye" style="color:#ff2d3a"></i>Metas da Equipe</h2><a href="#" class="see">Ver todas <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="goal-main"><div class="ring" style="--p:78">78%</div><div><span>Meta geral</span><br><b>R$ 48.250</b> <span class="muted">/ R$ 62.000</span></div></div>
+    <div class="goal-line"><i class="fa-solid fa-square-check green"></i><div>Meta individual<small>8/12 atingiram</small></div><div class="bar"><span style="width:67%"></span></div><b>67%</b></div>
+    <div class="goal-line"><i class="fa-solid fa-cube" style="color:#3b8bff"></i><div>Meta por campanha<small>5/12 atingiram</small></div><div class="bar"><span style="width:42%;background:#1d8bff"></span></div><b>42%</b></div>
+    <div class="goal-line"><i class="fa-solid fa-trophy" style="color:var(--gold)"></i><div>Meta de pontos<small>9/12 atingiram</small></div><div class="bar"><span style="width:75%"></span></div><b>75%</b></div>
+  </div>
+  <div class="card panel">
+    <div class="between"><h2><i class="fa-solid fa-trophy" style="color:var(--gold)"></i>Top Performers</h2><a href="ranking.html" class="see">Ver ranking <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div id="tops"></div>
+  </div>
+</section>
+</div>
+
+<!-- modal adicionar membro (desativado)
+<dialog id="addDlg" class="modal" aria-labelledby="addTitle">
+  <form method="dialog" id="addForm">
+    <header class="modal-h">
+      <span class="modal-ic"><i class="fa-solid fa-user-plus"></i></span>
+      <div><h2 id="addTitle">Adicionar membro</h2><p>Convide alguém para a sua equipe e defina a meta inicial.</p></div>
+      <button type="button" class="modal-x" aria-label="Fechar" onclick="addDlg.close()"><i class="fa-solid fa-xmark"></i></button>
+    </header>
+    <div class="modal-b">
+      <label class="up-photo"><input type="file" accept="image/*" id="photo" hidden>
+        <img id="photoPrev" src="" alt="" hidden><span class="ph"><i class="fa-solid fa-camera"></i></span>
+        <span><b>Foto do perfil</b><small>Opcional · JPG ou PNG</small></span></label>
+      <div class="fgrid">
+        <label class="f full">Nome completo<span class="fi"><i class="fa-regular fa-user"></i><input name="nome" autofocus required minlength="3" placeholder="Ex.: Joana Martins"></span></label>
+        <label class="f">E-mail<span class="fi"><i class="fa-regular fa-envelope"></i><input name="email" type="email" required placeholder="nome@empresa.com"></span></label>
+        <label class="f">CPF<span class="fi"><i class="fa-regular fa-id-card"></i><input name="cpf" inputmode="numeric" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" placeholder="000.000.000-00"></span></label>
+        <label class="f">Cargo<span class="fi"><i class="fa-solid fa-briefcase"></i><select name="cargo" required><option value="" disabled selected>Selecione</option><option>Vendedora</option><option>Vendedor</option><option>Gerente</option></select></span></label>
+        <label class="f">Distribuidora<span class="fi"><i class="fa-solid fa-building"></i><select name="dist"><option>Distribuidora Sudeste</option><option>Distribuidora Sul</option><option>Distribuidora Nordeste</option><option>Distribuidora Centro-Oeste</option></select></span></label>
+        <label class="f">Meta mensal (R$)<span class="fi"><i class="fa-solid fa-bullseye"></i><input name="meta" type="number" min="0" step="100" placeholder="10.000"></span></label>
+        <label class="f">Início<span class="fi"><i class="fa-regular fa-calendar"></i><input name="inicio" type="date"></span></label>
+      </div>
+      <label class="check invite"><input type="checkbox" name="convite" checked> Enviar convite de acesso por e-mail</label>
+    </div>
+    <footer class="modal-f">
+      <button type="button" class="btn-ghost" onclick="addDlg.close()">Cancelar</button>
+      <button class="btn" value="ok">Adicionar <i class="fa-solid fa-arrow-right"></i></button>
+    </footer>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+-->
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html" class="on"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+
+<script>
+// [img, nome, email, cargo, vendas, pontos, meta%]
+const M=[
+ ['carlos','Carlos Souza','carlos','Gerente','12.450','2.850',125],
+ ['ana','Ana Lima','ana','Vendedora','9.230','1.980',92],
+ ['pedro','Pedro Santos','pedro','Vendedor','7.840','1.450',78],
+ ['juliana','Juliana Costa','juliana','Vendedora','6.120','1.200',61],
+ ['marcelo','Marcelo Alves','marcelo','Vendedor','5.430','980',54],
+ ['fernanda','Fernanda Rocha','fernanda','Vendedora','4.980','860',49],
+ ['ricardo','Ricardo Gomes','ricardo','Vendedor','4.320','720',43],
+ ['patricia','Patrícia Lima','patricia','Vendedora','3.890','650',39],
+];
+const color=p=>p>=100?'#1df2a0':p>=90?'#1d8bff':p>=70?'#ffc33a':p>=60?'#ff7a1a':'#ff3b4e';
+const role=c=>c==='Gerente'?'r-ger':c==='Vendedor'?'r-vdr':'r-vda';
+function render(q=''){
+  q=q.toLowerCase();
+  const rows=M.filter(m=>(m[1]+m[2]+m[3]).toLowerCase().includes(q));
+  members.innerHTML=rows.map(([img,n,e,c,v,p,g,mail])=>`
+  <div class="mrow">
+    <span><input type="checkbox" class="cb" aria-label="Selecionar ${n}"></span>
+    <span class="who">${img===null?`<span class="av av-ini">${n.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase()}</span>`:`<img class="av" src="${img.startsWith('blob:')?img:`img/r-${img}.png`}" alt="">`}<span>${n}<small>${mail||e+'@empresa.com'}</small></span></span>
+    <span class="c-cargo"><span class="role ${role(c)}">${c}</span></span>
+    <span class="c-vendas">${v}</span>
+    <span class="c-pts sc"><i class="fa-solid fa-star"></i>${p}</span>
+    <span class="c-meta"><small>${g}%</small><div class="bar"><span style="width:${Math.min(g,100)}%;background:${color(g)}"></span></div></span>
+    <span><span class="status">Ativo</span></span>
+    <span class="kebab"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+  </div>`).join('');
+  count.textContent=`Mostrando ${rows.length} de ${M.length+4} membros`;
+}
+render();
+q.oninput=e=>render(e.target.value);
+all.onchange=e=>members.querySelectorAll('.cb').forEach(c=>c.checked=e.target.checked);
+document.getElementById("tops").innerHTML=M.slice(0,5).map(([img,n,,,,p,g],i)=>`
+  <div class="top-row"><span>${i<3?`<span class="medal m${i+1}">${i+1}</span>`:i+1}</span><img class="av" src="img/r-${img}.png" alt=""><span class="nm">${n}</span><span class="sc"><i class="fa-solid fa-star"></i>${p}</span><b style="color:${color(g)}">${g}%</b></div>`).join('');
+/* modal adicionar membro (desativado)
+// modal adicionar membro
+const form=document.getElementById('addForm'),prev=document.getElementById('photoPrev');
+photo.onchange=()=>{const f=photo.files[0];if(f){prev.src=URL.createObjectURL(f);prev.hidden=false}};
+addDlg.addEventListener('click',e=>{if(e.target===addDlg)addDlg.close()}); // clique fora fecha
+form.addEventListener('submit',e=>{
+  if(e.submitter?.value!=='ok')return;
+  const d=Object.fromEntries(new FormData(form));
+  const esc=t=>t.replace(/[&<>"']/g,c=>'&#'+c.charCodeAt(0)+';');
+  M.unshift([prev.hidden?null:prev.src,esc(d.nome.trim()),'',d.cargo,'0','0',0,esc(d.email)]);
+  render(q.value);
+  toast.textContent=`${d.nome.trim()} foi adicionado(a) à equipe`+(d.convite?' · convite enviado':'');
+  toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3200);
+});
+addDlg.addEventListener('close',()=>{form.reset();prev.hidden=true;prev.src=''});
+*/
+</script>
+<script src="session.js?v=19"></script>
+</body></html>

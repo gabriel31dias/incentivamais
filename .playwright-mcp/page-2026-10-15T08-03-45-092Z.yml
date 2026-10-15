@@ -1,0 +1,461 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: Incentiva+
+        - button "Recolher menu" [ref=e8] [cursor=pointer]
+      - navigation [ref=e9]:
+        - generic [ref=e10]:
+          - button "Visão Geral" [expanded] [ref=e11] [cursor=pointer]
+          - generic [ref=e14]:
+            - link "Dashboard" [ref=e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=e23]:
+          - button "Gestão Comercial" [expanded] [ref=e24] [cursor=pointer]
+          - generic [ref=e27]:
+            - link "Distribuidoras" [ref=e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=e67] [cursor=pointer]
+          - generic [ref=e70]:
+            - link "Campanhas" [ref=e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=e104]:
+          - button "Importação de Vendas" [expanded] [ref=e105] [cursor=pointer]
+          - generic [ref=e108]:
+            - link "Nova Importação" [ref=e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=e131]:
+          - button "Conteúdos" [expanded] [ref=e132] [cursor=pointer]
+          - generic [ref=e135]:
+            - link "Notícias" [ref=e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=e167]:
+          - button "Configurações" [expanded] [ref=e168] [cursor=pointer]
+          - generic [ref=e171]:
+            - link "Menus Dinâmicos" [ref=e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Modelos de Menus" [ref=e177] [cursor=pointer]:
+              - /url: /config/menus/modelos
+            - link "Perfis e Permissões" [ref=e183] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=e188] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=e195] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=e200] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=e205] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=e210]:
+          - button "Atendimento" [expanded] [ref=e211] [cursor=pointer]
+          - generic [ref=e214]:
+            - link "Chamados" [ref=e215] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=e219] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=e224] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=e230]:
+          - button "Relatórios" [expanded] [ref=e231] [cursor=pointer]
+          - generic [ref=e234]:
+            - link "Vendas" [ref=e235] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=e240] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=e244] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=e251] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=e257] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=e262] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=e270] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=e277] [cursor=pointer]
+    - generic [ref=e282]:
+      - banner [ref=e283]:
+        - heading "Histórico de Lotes" [level=1] [ref=e289]
+        - generic [ref=e290]:
+          - button "Abrir tutorial" [ref=e291] [cursor=pointer]:
+            - generic [ref=e292]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=e293]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=e296] [cursor=pointer]:
+            - generic [ref=e297]: A
+            - generic [ref=e299]: Ana Administradora
+            - generic [ref=e300]: Super Admin
+          - button "Toggle theme" [ref=e301] [cursor=pointer]
+      - main [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - button "Voltar" [ref=e307] [cursor=pointer]
+              - generic [ref=e310]: Devolvido p/ correção
+            - generic [ref=e311]:
+              - button "Erros (CSV)" [ref=e312] [cursor=pointer]
+              - link "Reenviar corrigido" [ref=e316] [cursor=pointer]:
+                - /url: /importacao/nova?distributorId=5&competence=2026-08&replaces=310
+          - paragraph [ref=e329]:
+            - generic [ref=e330]: "Lote #310"
+            - text: · Distribuidora Mineira · Ago/2026 · vendas-agosto-TESTE.xlsx · enviado por Vinícius Carvalho em 15/10/2026, 05:03
+          - generic [ref=e663]:
+            - paragraph [ref=e664]: Devolvido para Vinícius Carvalho por Ana Administradora · ainda não visto
+            - paragraph [ref=e665]: As linhas 3 e 7 estão com CPF de vendedor que não é da sua distribuidora. Confira e reenvie.
+          - generic [ref=e331]:
+            - generic [ref=e332]:
+              - paragraph [ref=e333]: Total de registros
+              - paragraph [ref=e334]: "24"
+            - generic [ref=e335]:
+              - paragraph [ref=e336]: Válidos
+              - paragraph [ref=e337]: "12"
+            - generic [ref=e338]:
+              - paragraph [ref=e339]: Inválidos
+              - paragraph [ref=e340]: "10"
+            - generic [ref=e341]:
+              - paragraph [ref=e342]: Duplicidades / já importadas
+              - paragraph [ref=e343]: "2"
+            - generic [ref=e344]:
+              - paragraph [ref=e345]: Correções
+              - paragraph [ref=e346]: "0"
+            - generic [ref=e347]:
+              - paragraph [ref=e348]: Pontos previstos
+              - paragraph [ref=e349]: "854"
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - heading [level=2] [ref=e354]
+                - list "Etapas do lote" [ref=e360]:
+                  - listitem [ref=e361]:
+                    - generic [ref=e366]:
+                      - paragraph [ref=e367]: Recebido15/10/2026, 05:03
+                      - paragraph [ref=e368]: vendas-agosto-TESTE.xlsx
+                  - listitem [ref=e369]:
+                    - paragraph [ref=e375]: Validando
+                  - listitem [ref=e376]:
+                    - generic [ref=e382]:
+                      - paragraph [ref=e383]: Com inconsistências
+                      - paragraph [ref=e384]: 12 válidas · 0 correções · 12 ignoradas/inválidas
+                  - listitem [ref=e385]:
+                    - paragraph [ref=e391]: Aguardando confirmação
+                  - listitem [ref=e675]:
+                    - generic [ref=e680]:
+                      - paragraph [ref=e681]: Devolvido para correção15/10/2026, 05:03
+                      - paragraph [ref=e682]: "Ana Administradora: As linhas 3 e 7 estão com CPF de vendedor que não é da sua distribuidora. Confira e reenvie. · aguardando quem enviou ver"
+              - generic [ref=e405]:
+                - heading [level=2] [ref=e407]
+                - list [ref=e411]:
+                  - listitem [ref=e412]:
+                    - generic [ref=e413]:
+                      - generic [ref=e414]: Campo obrigatório vazio
+                      - generic [ref=e418]: "1"
+                    - paragraph [ref=e421]: Preencha documento, CPF do vendedor, SKU, data, quantidade e valor em todas as linhas.
+                  - listitem [ref=e424]:
+                    - generic [ref=e425]:
+                      - generic [ref=e426]: CPF inválido
+                      - generic [ref=e430]: "1"
+                    - paragraph [ref=e433]: Confira os 11 dígitos do CPF do vendedor (os dígitos verificadores não batem).
+                  - listitem [ref=e436]:
+                    - generic [ref=e437]:
+                      - generic [ref=e438]: Vendedor inexistente
+                      - generic [ref=e442]: "1"
+                    - paragraph [ref=e445]: O CPF não pertence a nenhum vendedor cadastrado. Cadastre o vendedor antes ou corrija o CPF.
+                  - listitem [ref=e448]:
+                    - generic [ref=e449]:
+                      - generic [ref=e450]: Vendedor de outra distribuidora
+                      - generic [ref=e454]: "1"
+                    - paragraph [ref=e457]: O vendedor está vinculado a outra distribuidora. Envie a venda pela distribuidora correta ou peça a transferência.
+                  - listitem [ref=e460]:
+                    - generic [ref=e461]:
+                      - generic [ref=e462]: Vendedor inativo
+                      - generic [ref=e466]: "1"
+                    - paragraph [ref=e469]: O vendedor está inativo ou bloqueado. Reative o cadastro antes de pontuar a venda.
+                  - listitem [ref=e472]:
+                    - generic [ref=e473]:
+                      - generic [ref=e474]: Produto inexistente
+                      - generic [ref=e478]: "1"
+                    - paragraph [ref=e481]: "O SKU não existe no catálogo. Use os SKUs do modelo (ex.: PRD-A)."
+                  - listitem [ref=e484]:
+                    - generic [ref=e485]:
+                      - generic [ref=e486]: Data inválida
+                      - generic [ref=e490]: "1"
+                    - paragraph [ref=e493]: "Use o formato DD/MM/AAAA (ex.: 15/09/2026)."
+                  - listitem [ref=e496]:
+                    - generic [ref=e497]:
+                      - generic [ref=e498]: Data fora da competência
+                      - generic [ref=e502]: "1"
+                    - paragraph [ref=e505]: A data da venda precisa estar dentro do mês da competência informada no envio.
+                  - listitem [ref=e508]:
+                    - generic [ref=e509]:
+                      - generic [ref=e510]: Quantidade inválida
+                      - generic [ref=e514]: "1"
+                    - paragraph [ref=e517]: Informe um número inteiro maior que zero.
+                  - listitem [ref=e520]:
+                    - generic [ref=e521]:
+                      - generic [ref=e522]: Valor inválido
+                      - generic [ref=e526]: "1"
+                    - paragraph [ref=e529]: "Informe o valor total da venda maior que zero (ex.: 1.250,00)."
+                  - listitem [ref=e532]:
+                    - generic [ref=e533]:
+                      - generic [ref=e534]: Documento duplicado no arquivo
+                      - generic [ref=e538]: "1"
+                    - paragraph [ref=e541]: O mesmo documento + item aparece mais de uma vez. Remova a linha repetida.
+                  - listitem [ref=e544]:
+                    - generic [ref=e545]:
+                      - generic [ref=e546]: Venda já importada
+                      - generic [ref=e550]: "1"
+                    - paragraph [ref=e553]: Esta venda já foi pontuada com os mesmos dados e será ignorada (sem pontos em dobro).
+            - generic [ref=e556]:
+              - tablist [ref=e557]:
+                - tab "Todas (24)" [selected] [ref=e558] [cursor=pointer]
+                - tab "Válidas (12)" [ref=e559] [cursor=pointer]
+                - tab "Correções (0)" [ref=e560] [cursor=pointer]
+                - tab "Inválidas (10)" [ref=e561] [cursor=pointer]
+                - tab "Duplicadas" [ref=e562] [cursor=pointer]
+                - tab "Já importadas" [ref=e563] [cursor=pointer]
+              - generic [ref=e564]:
+                - generic [ref=e566]:
+                  - row "Linha Documento CPF vendedor SKU Data Qtd Valor Pontos Situação" [ref=e567]:
+                    - generic [ref=e568]: Linha
+                    - generic [ref=e569]: Documento
+                    - generic [ref=e570]: CPF vendedor
+                    - generic [ref=e571]: SKU
+                    - generic [ref=e572]: Data
+                    - generic [ref=e573]: Qtd
+                    - generic [ref=e574]: Valor
+                    - generic [ref=e575]: Pontos
+                    - generic [ref=e576]: Situação
+                  - generic [ref=e577]:
+                    - generic [ref=e683]:
+                      - generic [ref=e684]: "2"
+                      - generic [ref=e686]:
+                        - text: DEMO-94OV8-001
+                        - generic [ref=e687]: · item 1
+                      - generic [ref=e688]: 100.799.819-92
+                      - generic [ref=e689]: PRD-B
+                      - generic [ref=e690]: 06/08/2026
+                      - generic [ref=e691]: "2"
+                      - generic [ref=e692]: 658,00
+                      - generic [ref=e693]: "40"
+                      - generic [ref=e694]: Válida
+                    - generic [ref=e697]:
+                      - generic [ref=e698]: "3"
+                      - generic [ref=e700]:
+                        - text: DEMO-94OV8-002
+                        - generic [ref=e701]: · item 1
+                      - generic [ref=e702]: 100.918.604-31
+                      - generic [ref=e703]: PRD-C
+                      - generic [ref=e704]: 09/08/2026
+                      - generic [ref=e705]: "3"
+                      - generic [ref=e706]: 269,70
+                      - generic [ref=e707]: "10"
+                      - generic [ref=e708]: Válida
+                    - generic [ref=e711]:
+                      - generic [ref=e712]: "4"
+                      - generic [ref=e714]:
+                        - text: DEMO-94OV8-003
+                        - generic [ref=e715]: · item 1
+                      - generic [ref=e716]: 101.195.769-88
+                      - generic [ref=e717]: PRD-D
+                      - generic [ref=e718]: 12/08/2026
+                      - generic [ref=e719]: "4"
+                      - generic [ref=e720]: 2.160,00
+                      - generic [ref=e721]: "216"
+                      - generic [ref=e722]: Válida
+                    - generic [ref=e725]:
+                      - generic [ref=e726]: "5"
+                      - generic [ref=e728]:
+                        - text: DEMO-94OV8-004
+                        - generic [ref=e729]: · item 1
+                      - generic [ref=e730]: 101.314.554-27
+                      - generic [ref=e731]: PRD-E
+                      - generic [ref=e732]: 15/08/2026
+                      - generic [ref=e733]: "5"
+                      - generic [ref=e734]: 124,50
+                      - generic [ref=e735]: "12"
+                      - generic [ref=e736]: Válida
+                    - generic [ref=e739]:
+                      - generic [ref=e740]: "6"
+                      - generic [ref=e742]:
+                        - text: DEMO-94OV8-005
+                        - generic [ref=e743]: · item 1
+                      - generic [ref=e744]: 101.591.719-46
+                      - generic [ref=e745]: PRD-F
+                      - generic [ref=e746]: 18/08/2026
+                      - generic [ref=e747]: "6"
+                      - generic [ref=e748]: 299,40
+                      - generic [ref=e749]: "29"
+                      - generic [ref=e750]: Válida
+                    - generic [ref=e753]:
+                      - generic [ref=e754]: "7"
+                      - generic [ref=e756]:
+                        - text: DEMO-94OV8-006
+                        - generic [ref=e757]: · item 1
+                      - generic [ref=e758]: 101.710.504-95
+                      - generic [ref=e759]: PRD-G
+                      - generic [ref=e760]: 21/08/2026
+                      - generic [ref=e761]: "7"
+                      - generic [ref=e762]: 1.533,00
+                      - generic [ref=e763]: "153"
+                      - generic [ref=e764]: Válida
+                    - generic [ref=e767]:
+                      - generic [ref=e768]: "8"
+                      - generic [ref=e770]:
+                        - text: DEMO-94OV8-007
+                        - generic [ref=e771]: · item 1
+                      - generic [ref=e772]: 101.987.669-71
+                      - generic [ref=e773]: PRD-H
+                      - generic [ref=e774]: 24/08/2026
+                      - generic [ref=e775]: "1"
+                      - generic [ref=e776]: 159,00
+                      - generic [ref=e777]: "15"
+                      - generic [ref=e778]: Válida
+                    - generic [ref=e781]:
+                      - generic [ref=e782]: "9"
+                      - generic [ref=e784]:
+                        - text: DEMO-94OV8-008
+                        - generic [ref=e785]: · item 1
+                      - generic [ref=e786]: 102.106.454-82
+                      - generic [ref=e787]: PRD-A
+                      - generic [ref=e788]: 27/08/2026
+                      - generic [ref=e789]: "2"
+                      - generic [ref=e790]: 379,80
+                      - generic [ref=e791]: "20"
+                      - generic [ref=e792]: Válida
+                    - generic [ref=e795]:
+                      - generic [ref=e796]: "10"
+                      - generic [ref=e798]:
+                        - text: DEMO-94OV8-009
+                        - generic [ref=e799]: · item 1
+                      - generic [ref=e800]: 102.383.619-00
+                      - generic [ref=e801]: PRD-B
+                      - generic [ref=e802]: 05/08/2026
+                      - generic [ref=e803]: "3"
+                      - generic [ref=e804]: 987,00
+                      - generic [ref=e805]: "60"
+                      - generic [ref=e806]: Válida
+                    - generic [ref=e809]:
+                      - generic [ref=e810]: "11"
+                      - generic [ref=e812]:
+                        - text: DEMO-94OV8-010
+                        - generic [ref=e813]: · item 1
+                      - generic [ref=e814]: 102.502.404-40
+                      - generic [ref=e815]: PRD-C
+                      - generic [ref=e816]: 08/08/2026
+                      - generic [ref=e817]: "4"
+                      - generic [ref=e818]: 359,60
+                      - generic [ref=e819]: "15"
+                      - generic [ref=e820]: Válida
+                    - generic [ref=e823]:
+                      - generic [ref=e824]: "12"
+                      - generic [ref=e826]:
+                        - text: DEMO-94OV8-011
+                        - generic [ref=e827]: · item 1
+                      - generic [ref=e828]: 102.779.569-27
+                      - generic [ref=e829]: PRD-D
+                      - generic [ref=e830]: 11/08/2026
+                      - generic [ref=e831]: "5"
+                      - generic [ref=e832]: 2.700,00
+                      - generic [ref=e833]: "270"
+                      - generic [ref=e834]: Válida
+                    - generic [ref=e837]:
+                      - generic [ref=e838]: "13"
+                      - generic [ref=e840]:
+                        - text: DEMO-94OV8-012
+                        - generic [ref=e841]: · item 1
+                      - generic [ref=e842]: 100.522.654-71
+                      - generic [ref=e843]: PRD-E
+                      - generic [ref=e844]: 14/08/2026
+                      - generic [ref=e845]: "6"
+                      - generic [ref=e846]: 149,40
+                      - generic [ref=e847]: "14"
+                      - generic [ref=e848]: Válida
+                    - generic [ref=e851]:
+                      - generic [ref=e852]: "14"
+                      - generic [ref=e854]:
+                        - text: DEMO-94OV8-013
+                        - generic [ref=e855]: · item 1
+                      - generic [ref=e856]: 100.799.819-92
+                      - generic [ref=e857]: —
+                      - generic [ref=e858]: 17/08/2026
+                      - generic [ref=e859]: "7"
+                      - generic [ref=e860]: 349,30
+                      - generic [ref=e861]: —
+                      - generic [ref=e863]:
+                        - generic [ref=e864]: Inválida
+                        - 'generic "Obrigatório: sku" [ref=e865]'
+                    - generic [ref=e866]:
+                      - generic [ref=e867]: "15"
+                      - generic [ref=e869]:
+                        - text: DEMO-94OV8-014
+                        - generic [ref=e870]: · item 1
+                      - generic [ref=e871]: 123.456.789-00
+                      - generic [ref=e872]: PRD-G
+                      - generic [ref=e873]: 20/08/2026
+                      - generic [ref=e874]: "1"
+                      - generic [ref=e875]: 219,00
+                      - generic [ref=e876]: —
+                      - generic [ref=e878]:
+                        - generic [ref=e879]: Inválida
+                        - 'generic "CPF inválido: 123.456.789-00" [ref=e880]'
+                    - generic [ref=e881]:
+                      - generic [ref=e882]: "16"
+                      - generic [ref=e884]:
+                        - text: DEMO-94OV8-015
+                        - generic [ref=e885]: · item 1
+                      - generic [ref=e886]: 459.500.004-98
+                      - generic [ref=e887]: PRD-H
+                      - generic [ref=e888]: 23/08/2026
+                      - generic [ref=e889]: "2"
+                      - generic [ref=e890]: 318,00
+                      - generic [ref=e891]: —
+                      - generic [ref=e893]:
+                        - generic [ref=e894]: Inválida
+                        - generic "Nenhum vendedor com CPF 459.500.004-98" [ref=e895]
+                - generic [ref=e896]:
+                  - generic [ref=e897]: 24 registro(s)
+                  - generic [ref=e898]:
+                    - button "Página anterior" [disabled] [ref=e899]
+                    - button "Ir para página 1" [ref=e902] [cursor=pointer]: "1"
+                    - button "Ir para página 2" [ref=e903] [cursor=pointer]: "2"
+                    - button "Próxima página" [ref=e904] [cursor=pointer]
+  - region "Notifications alt+T":
+    - list:
+      - listitem [ref=e907]:
+        - generic [ref=e911]: "Lote #310 devolvido para Vinícius Carvalho"

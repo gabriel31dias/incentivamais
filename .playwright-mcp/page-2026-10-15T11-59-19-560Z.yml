@@ -1,0 +1,154 @@
+- generic [ref=f30e2]:
+  - generic [ref=f30e3]:
+    - complementary [ref=f30e4]:
+      - generic [ref=f30e5]:
+        - generic [ref=f30e6]: Incentiva+
+        - button "Recolher menu" [ref=f30e8] [cursor=pointer]
+      - navigation [ref=f30e9]:
+        - generic [ref=f30e10]:
+          - button "Visão Geral" [expanded] [ref=f30e11] [cursor=pointer]
+          - generic [ref=f30e14]:
+            - link "Dashboard" [ref=f30e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=f30e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=f30e23]:
+          - button "Gestão Comercial" [expanded] [ref=f30e24] [cursor=pointer]
+          - generic [ref=f30e27]:
+            - link "Distribuidoras" [ref=f30e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=f30e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=f30e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=f30e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=f30e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=f30e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=f30e67] [cursor=pointer]
+          - generic [ref=f30e70]:
+            - link "Campanhas" [ref=f30e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=f30e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=f30e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=f30e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=f30e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=f30e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=f30e104]:
+          - button "Importação de Vendas" [expanded] [ref=f30e105] [cursor=pointer]
+          - generic [ref=f30e108]:
+            - link "Nova Importação" [ref=f30e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=f30e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=f30e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=f30e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=f30e131]:
+          - button "Conteúdos" [expanded] [ref=f30e132] [cursor=pointer]
+          - generic [ref=f30e135]:
+            - link "Notícias" [ref=f30e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=f30e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=f30e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=f30e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=f30e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=f30e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=f30e167]:
+          - button "Configurações" [expanded] [ref=f30e168] [cursor=pointer]
+          - generic [ref=f30e171]:
+            - link "Menus Dinâmicos" [ref=f30e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Perfis e Permissões" [ref=f30e177] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=f30e182] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=f30e189] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=f30e194] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=f30e199] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=f30e204]:
+          - button "Atendimento" [expanded] [ref=f30e205] [cursor=pointer]
+          - generic [ref=f30e208]:
+            - link "Chamados" [ref=f30e209] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=f30e213] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=f30e218] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=f30e224]:
+          - button "Relatórios" [expanded] [ref=f30e225] [cursor=pointer]
+          - generic [ref=f30e228]:
+            - link "Vendas" [ref=f30e229] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=f30e234] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=f30e238] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=f30e245] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=f30e251] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=f30e256] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=f30e264] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=f30e271] [cursor=pointer]
+    - generic [ref=f30e276]:
+      - banner [ref=f30e277]:
+        - heading "Menus Dinâmicos" [level=1] [ref=f30e282]
+        - generic [ref=f30e283]:
+          - button "Abrir tutorial" [ref=f30e284] [cursor=pointer]:
+            - generic [ref=f30e285]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=f30e286]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=f30e289] [cursor=pointer]:
+            - generic [ref=f30e290]: A
+            - generic [ref=f30e292]: Ana Administradora
+            - generic [ref=f30e293]: Super Admin
+          - button "Toggle theme" [ref=f30e294] [cursor=pointer]
+      - main [ref=f30e296]:
+        - generic [ref=f30e297]:
+          - generic [ref=f30e298]:
+            - paragraph [ref=f30e299]: Estes são os itens do menu do app Incentiva+. O que você alterar aqui aparece no app assim que a tela for recarregada.
+            - generic [ref=f30e300]:
+              - link "Ferramentas avançadas" [ref=f30e301] [cursor=pointer]:
+                - /url: /config/menus/avancado
+              - button "Copiar de outro perfil" [ref=f30e304] [cursor=pointer]
+              - button "Novo item" [ref=f30e308] [cursor=pointer]
+          - generic [ref=f30e310]:
+            - tablist "Menu do perfil" [ref=f30e311]:
+              - tab "Vendedor" [selected] [ref=f30e312] [cursor=pointer]
+              - tab "Gerente" [ref=f30e313] [cursor=pointer]
+              - tab "Ponto Focal" [ref=f30e314] [cursor=pointer]
+            - paragraph [ref=f30e315]: "Itens marcados para “Todos” aparecem em todas as abas: editar um deles muda para todos os perfis."
+          - generic [ref=f30e326]:
+            - heading "Como o Vendedor vê no app" [level=2] [ref=f30e327]
+            - generic [ref=f30e330]:
+              - generic [ref=f30e331]: Incentiva+
+              - list [ref=f30e334]:
+                - listitem [ref=f30e335]:
+                  - button "Início" [ref=f30e336] [cursor=pointer]
+                - listitem [ref=f30e341]:
+                  - button "Desempenho" [ref=f30e342] [cursor=pointer]
+                - listitem [ref=f30e349]:
+                  - button "Pontos" [ref=f30e350] [cursor=pointer]
+                - listitem [ref=f30e359]:
+                  - button "Conteúdos" [ref=f30e360] [cursor=pointer]
+                - listitem [ref=f30e367]:
+                  - button "Gamificação" [ref=f30e368] [cursor=pointer]
+            - paragraph [ref=f30e374]: Toque num grupo para ver os submenus.
+  - region "Notifications alt+T"

@@ -1,0 +1,344 @@
+- generic [ref=f29e2]:
+  - generic [ref=f29e3]:
+    - complementary [ref=f29e4]:
+      - generic [ref=f29e5]:
+        - generic [ref=f29e6]: Incentiva+
+        - button "Recolher menu" [ref=f29e8] [cursor=pointer]
+      - navigation [ref=f29e9]:
+        - generic [ref=f29e10]:
+          - button "Visão Geral" [expanded] [ref=f29e11] [cursor=pointer]
+          - generic [ref=f29e14]:
+            - link "Dashboard" [ref=f29e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=f29e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=f29e23]:
+          - button "Gestão Comercial" [expanded] [ref=f29e24] [cursor=pointer]
+          - generic [ref=f29e27]:
+            - link "Distribuidoras" [ref=f29e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=f29e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=f29e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=f29e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=f29e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=f29e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=f29e67] [cursor=pointer]
+          - generic [ref=f29e70]:
+            - link "Campanhas" [ref=f29e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=f29e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=f29e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=f29e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=f29e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=f29e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=f29e104]:
+          - button "Importação de Vendas" [expanded] [ref=f29e105] [cursor=pointer]
+          - generic [ref=f29e108]:
+            - link "Nova Importação" [ref=f29e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=f29e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=f29e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=f29e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=f29e131]:
+          - button "Conteúdos" [expanded] [ref=f29e132] [cursor=pointer]
+          - generic [ref=f29e135]:
+            - link "Notícias" [ref=f29e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=f29e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=f29e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=f29e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=f29e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=f29e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=f29e167]:
+          - button "Configurações" [expanded] [ref=f29e168] [cursor=pointer]
+          - generic [ref=f29e171]:
+            - link "Menus Dinâmicos" [ref=f29e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Perfis e Permissões" [ref=f29e177] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=f29e182] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=f29e189] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=f29e194] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=f29e199] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=f29e204]:
+          - button "Atendimento" [expanded] [ref=f29e205] [cursor=pointer]
+          - generic [ref=f29e208]:
+            - link "Chamados" [ref=f29e209] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=f29e213] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=f29e218] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=f29e224]:
+          - button "Relatórios" [expanded] [ref=f29e225] [cursor=pointer]
+          - generic [ref=f29e228]:
+            - link "Vendas" [ref=f29e229] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=f29e234] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=f29e238] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=f29e245] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=f29e251] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=f29e256] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=f29e264] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=f29e271] [cursor=pointer]
+    - generic [ref=f29e276]:
+      - banner [ref=f29e277]:
+        - heading "Menus Dinâmicos" [level=1] [ref=f29e282]
+        - generic [ref=f29e283]:
+          - button "Abrir tutorial" [ref=f29e284] [cursor=pointer]:
+            - generic [ref=f29e285]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=f29e286]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=f29e289] [cursor=pointer]:
+            - generic [ref=f29e290]: A
+            - generic [ref=f29e292]: Ana Administradora
+            - generic [ref=f29e293]: Super Admin
+          - button "Toggle theme" [ref=f29e294] [cursor=pointer]
+      - main [ref=f29e296]:
+        - generic [ref=f29e297]:
+          - generic [ref=f29e298]:
+            - paragraph [ref=f29e299]: Estes são os itens do menu do app Incentiva+. O que você alterar aqui aparece no app assim que a tela for recarregada.
+            - generic [ref=f29e300]:
+              - link "Ferramentas avançadas" [ref=f29e301] [cursor=pointer]:
+                - /url: /config/menus/avancado
+              - button "Copiar de outro perfil" [ref=f29e304] [cursor=pointer]
+              - button "Novo item" [ref=f29e308] [cursor=pointer]
+          - generic [ref=f29e310]:
+            - tablist "Menu do perfil" [ref=f29e311]:
+              - tab "Vendedor" [ref=f29e312] [cursor=pointer]
+              - tab "Gerente" [ref=f29e313] [cursor=pointer]
+              - tab "Ponto Focal" [active] [selected] [ref=f29e314] [cursor=pointer]
+            - paragraph [ref=f29e315]: "Itens marcados para “Todos” aparecem em todas as abas: editar um deles muda para todos os perfis."
+          - generic [ref=f29e316]:
+            - list [ref=f29e375]:
+              - listitem [ref=f29e376]:
+                - generic [ref=f29e377]:
+                  - generic [ref=f29e382]:
+                    - paragraph [ref=f29e383]: Início
+                    - paragraph [ref=f29e384]: "Início · Quem vê: Vendedor, Ponto Focal"
+                  - generic [ref=f29e385]:
+                    - button "Subir Início" [disabled] [ref=f29e386]
+                    - button "Descer Início" [ref=f29e389] [cursor=pointer]
+                    - button "Ocultar Início" [ref=f29e392] [cursor=pointer]
+                    - button "Editar Início" [ref=f29e396] [cursor=pointer]
+                    - button "Adicionar submenu em Início" [ref=f29e400] [cursor=pointer]
+                    - button "Excluir Início" [ref=f29e402] [cursor=pointer]
+              - listitem [ref=f29e406]:
+                - generic [ref=f29e407]:
+                  - generic [ref=f29e412]:
+                    - paragraph [ref=f29e413]: Desempenho
+                    - paragraph [ref=f29e414]: "Grupo (abre os submenus) · Quem vê: Todos"
+                  - generic [ref=f29e415]:
+                    - button "Subir Desempenho" [ref=f29e416] [cursor=pointer]
+                    - button "Descer Desempenho" [ref=f29e419] [cursor=pointer]
+                    - button "Ocultar Desempenho" [ref=f29e422] [cursor=pointer]
+                    - button "Editar Desempenho" [ref=f29e426] [cursor=pointer]
+                    - button "Adicionar submenu em Desempenho" [ref=f29e430] [cursor=pointer]
+                    - button "Excluir Desempenho" [ref=f29e432] [cursor=pointer]
+                - list [ref=f29e436]:
+                  - listitem [ref=f29e437]:
+                    - generic [ref=f29e438]:
+                      - generic [ref=f29e444]:
+                        - paragraph [ref=f29e445]: Minhas Vendas
+                        - paragraph [ref=f29e446]: "/vendas (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e447]:
+                        - button "Subir Minhas Vendas" [disabled] [ref=f29e448]
+                        - button "Descer Minhas Vendas" [ref=f29e451] [cursor=pointer]
+                        - button "Ocultar Minhas Vendas" [ref=f29e454] [cursor=pointer]
+                        - button "Editar Minhas Vendas" [ref=f29e458] [cursor=pointer]
+                        - button "Excluir Minhas Vendas" [ref=f29e462] [cursor=pointer]
+                  - listitem [ref=f29e466]:
+                    - generic [ref=f29e467]:
+                      - generic [ref=f29e473]:
+                        - paragraph [ref=f29e474]: Minhas Metas
+                        - paragraph [ref=f29e475]: "/metas (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e476]:
+                        - button "Subir Minhas Metas" [ref=f29e477] [cursor=pointer]
+                        - button "Descer Minhas Metas" [ref=f29e480] [cursor=pointer]
+                        - button "Ocultar Minhas Metas" [ref=f29e483] [cursor=pointer]
+                        - button "Editar Minhas Metas" [ref=f29e487] [cursor=pointer]
+                        - button "Excluir Minhas Metas" [ref=f29e491] [cursor=pointer]
+                  - listitem [ref=f29e495]:
+                    - generic [ref=f29e496]:
+                      - generic [ref=f29e504]:
+                        - paragraph [ref=f29e505]: Ranking
+                        - paragraph [ref=f29e506]: "Ranking · Quem vê: Todos"
+                      - generic [ref=f29e507]:
+                        - button "Subir Ranking" [ref=f29e508] [cursor=pointer]
+                        - button "Descer Ranking" [disabled] [ref=f29e511]
+                        - button "Ocultar Ranking" [ref=f29e514] [cursor=pointer]
+                        - button "Editar Ranking" [ref=f29e518] [cursor=pointer]
+                        - button "Excluir Ranking" [ref=f29e522] [cursor=pointer]
+              - listitem [ref=f29e526]:
+                - generic [ref=f29e527]:
+                  - generic [ref=f29e534]:
+                    - paragraph [ref=f29e535]: Pontos
+                    - paragraph [ref=f29e536]: "Grupo (abre os submenus) · Quem vê: Todos"
+                  - generic [ref=f29e537]:
+                    - button "Subir Pontos" [ref=f29e538] [cursor=pointer]
+                    - button "Descer Pontos" [ref=f29e541] [cursor=pointer]
+                    - button "Ocultar Pontos" [ref=f29e544] [cursor=pointer]
+                    - button "Editar Pontos" [ref=f29e548] [cursor=pointer]
+                    - button "Adicionar submenu em Pontos" [ref=f29e552] [cursor=pointer]
+                    - button "Excluir Pontos" [ref=f29e554] [cursor=pointer]
+                - list [ref=f29e558]:
+                  - listitem [ref=f29e559]:
+                    - generic [ref=f29e560]:
+                      - generic [ref=f29e564]:
+                        - paragraph [ref=f29e565]: Meu Extrato
+                        - paragraph [ref=f29e566]: "Extrato de pontos · Quem vê: Todos"
+                      - generic [ref=f29e567]:
+                        - button "Subir Meu Extrato" [disabled] [ref=f29e568]
+                        - button "Descer Meu Extrato" [ref=f29e571] [cursor=pointer]
+                        - button "Ocultar Meu Extrato" [ref=f29e574] [cursor=pointer]
+                        - button "Editar Meu Extrato" [ref=f29e578] [cursor=pointer]
+                        - button "Excluir Meu Extrato" [ref=f29e582] [cursor=pointer]
+                  - listitem [ref=f29e586]:
+                    - generic [ref=f29e587]:
+                      - generic [ref=f29e593]:
+                        - paragraph [ref=f29e594]: Histórico
+                        - paragraph [ref=f29e595]: "/extrato/historico (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e596]:
+                        - button "Subir Histórico" [ref=f29e597] [cursor=pointer]
+                        - button "Descer Histórico" [disabled] [ref=f29e600]
+                        - button "Ocultar Histórico" [ref=f29e603] [cursor=pointer]
+                        - button "Editar Histórico" [ref=f29e607] [cursor=pointer]
+                        - button "Excluir Histórico" [ref=f29e611] [cursor=pointer]
+              - listitem [ref=f29e615]:
+                - generic [ref=f29e616]:
+                  - generic [ref=f29e621]:
+                    - paragraph [ref=f29e622]: Conteúdos
+                    - paragraph [ref=f29e623]: "Grupo (abre os submenus) · Quem vê: Todos"
+                  - generic [ref=f29e624]:
+                    - button "Subir Conteúdos" [ref=f29e625] [cursor=pointer]
+                    - button "Descer Conteúdos" [ref=f29e628] [cursor=pointer]
+                    - button "Ocultar Conteúdos" [ref=f29e631] [cursor=pointer]
+                    - button "Editar Conteúdos" [ref=f29e635] [cursor=pointer]
+                    - button "Adicionar submenu em Conteúdos" [ref=f29e639] [cursor=pointer]
+                    - button "Excluir Conteúdos" [ref=f29e641] [cursor=pointer]
+                - list [ref=f29e645]:
+                  - listitem [ref=f29e646]:
+                    - generic [ref=f29e647]:
+                      - generic [ref=f29e652]:
+                        - paragraph [ref=f29e653]: Notícias
+                        - paragraph [ref=f29e654]: "/noticias (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e655]:
+                        - button "Subir Notícias" [disabled] [ref=f29e656]
+                        - button "Descer Notícias" [ref=f29e659] [cursor=pointer]
+                        - button "Ocultar Notícias" [ref=f29e662] [cursor=pointer]
+                        - button "Editar Notícias" [ref=f29e666] [cursor=pointer]
+                        - button "Excluir Notícias" [ref=f29e670] [cursor=pointer]
+                  - listitem [ref=f29e674]:
+                    - generic [ref=f29e675]:
+                      - generic [ref=f29e680]:
+                        - paragraph [ref=f29e681]: Treinamentos
+                        - paragraph [ref=f29e682]: "Treinamentos · Quem vê: Todos"
+                      - generic [ref=f29e683]:
+                        - button "Subir Treinamentos" [ref=f29e684] [cursor=pointer]
+                        - button "Descer Treinamentos" [disabled] [ref=f29e687]
+                        - button "Ocultar Treinamentos" [ref=f29e690] [cursor=pointer]
+                        - button "Editar Treinamentos" [ref=f29e694] [cursor=pointer]
+                        - button "Excluir Treinamentos" [ref=f29e698] [cursor=pointer]
+              - listitem [ref=f29e702]:
+                - generic [ref=f29e703]:
+                  - generic [ref=f29e707]:
+                    - paragraph [ref=f29e708]: Gamificação
+                    - paragraph [ref=f29e709]: "Grupo (abre os submenus) · Quem vê: Todos"
+                  - generic [ref=f29e710]:
+                    - button "Subir Gamificação" [ref=f29e711] [cursor=pointer]
+                    - button "Descer Gamificação" [ref=f29e714] [cursor=pointer]
+                    - button "Ocultar Gamificação" [ref=f29e717] [cursor=pointer]
+                    - button "Editar Gamificação" [ref=f29e721] [cursor=pointer]
+                    - button "Adicionar submenu em Gamificação" [ref=f29e725] [cursor=pointer]
+                    - button "Excluir Gamificação" [ref=f29e727] [cursor=pointer]
+                - list [ref=f29e731]:
+                  - listitem [ref=f29e732]:
+                    - generic [ref=f29e733]:
+                      - generic [ref=f29e738]:
+                        - paragraph [ref=f29e739]: Quiz
+                        - paragraph [ref=f29e740]: "/quiz (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e741]:
+                        - button "Subir Quiz" [disabled] [ref=f29e742]
+                        - button "Descer Quiz" [ref=f29e745] [cursor=pointer]
+                        - button "Ocultar Quiz" [ref=f29e748] [cursor=pointer]
+                        - button "Editar Quiz" [ref=f29e752] [cursor=pointer]
+                        - button "Excluir Quiz" [ref=f29e756] [cursor=pointer]
+                  - listitem [ref=f29e760]:
+                    - generic [ref=f29e761]:
+                      - generic [ref=f29e765]:
+                        - paragraph [ref=f29e766]: Missões
+                        - paragraph [ref=f29e767]: "/missoes (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e768]:
+                        - button "Subir Missões" [ref=f29e769] [cursor=pointer]
+                        - button "Descer Missões" [ref=f29e772] [cursor=pointer]
+                        - button "Ocultar Missões" [ref=f29e775] [cursor=pointer]
+                        - button "Editar Missões" [ref=f29e779] [cursor=pointer]
+                        - button "Excluir Missões" [ref=f29e783] [cursor=pointer]
+                  - listitem [ref=f29e787]:
+                    - generic [ref=f29e788]:
+                      - generic [ref=f29e796]:
+                        - paragraph [ref=f29e797]: Medalhas
+                        - paragraph [ref=f29e798]: "/medalhas (sem tela no app) · Quem vê: Todos"
+                      - generic [ref=f29e799]:
+                        - button "Subir Medalhas" [ref=f29e800] [cursor=pointer]
+                        - button "Descer Medalhas" [disabled] [ref=f29e803]
+                        - button "Ocultar Medalhas" [ref=f29e806] [cursor=pointer]
+                        - button "Editar Medalhas" [ref=f29e810] [cursor=pointer]
+                        - button "Excluir Medalhas" [ref=f29e814] [cursor=pointer]
+              - listitem [ref=f29e818]:
+                - generic [ref=f29e819]:
+                  - generic [ref=f29e824]:
+                    - paragraph [ref=f29e825]: Importar Vendas
+                    - paragraph [ref=f29e826]: "Importar vendas · Quem vê: Ponto Focal, Gerente"
+                  - generic [ref=f29e827]:
+                    - button "Subir Importar Vendas" [ref=f29e828] [cursor=pointer]
+                    - button "Descer Importar Vendas" [disabled] [ref=f29e831]
+                    - button "Ocultar Importar Vendas" [ref=f29e834] [cursor=pointer]
+                    - button "Editar Importar Vendas" [ref=f29e838] [cursor=pointer]
+                    - button "Adicionar submenu em Importar Vendas" [ref=f29e842] [cursor=pointer]
+                    - button "Excluir Importar Vendas" [ref=f29e844] [cursor=pointer]
+            - generic [ref=f29e326]:
+              - heading "Como o Ponto Focal vê no app" [level=2] [ref=f29e848]
+              - generic [ref=f29e330]:
+                - generic [ref=f29e331]: Incentiva+
+                - list [ref=f29e849]:
+                  - listitem [ref=f29e850]:
+                    - button "Início" [ref=f29e851] [cursor=pointer]
+                  - listitem [ref=f29e856]:
+                    - button "Desempenho" [ref=f29e857] [cursor=pointer]
+                  - listitem [ref=f29e864]:
+                    - button "Pontos" [ref=f29e865] [cursor=pointer]
+                  - listitem [ref=f29e874]:
+                    - button "Conteúdos" [ref=f29e875] [cursor=pointer]
+                  - listitem [ref=f29e882]:
+                    - button "Gamificação" [ref=f29e883] [cursor=pointer]
+                  - listitem [ref=f29e889]:
+                    - button "Importar Vendas" [ref=f29e890] [cursor=pointer]
+              - paragraph [ref=f29e374]: Toque num grupo para ver os submenus.
+  - region "Notifications alt+T"

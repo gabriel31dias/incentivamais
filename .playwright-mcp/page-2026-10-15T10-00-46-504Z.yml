@@ -1,0 +1,112 @@
+- generic [active] [ref=f23e1]:
+  - generic [ref=f23e2]:
+    - banner [ref=f23e3]:
+      - text: 
+      - link "Notificações" [ref=f23e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e5]: 
+        - emphasis [ref=f23e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f23e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e8]: MA
+        - generic [ref=f23e9]:
+          - text: Mariana Almeida
+          - generic [ref=f23e10]: Vendedor
+        - generic "Sair" [ref=f23e11]: 
+    - generic [ref=f23e12]:
+      - generic [ref=f23e13]:
+        - heading " Ranking" [level=1] [ref=f23e14]:
+          - generic [ref=f23e15]: 
+          - text: Ranking
+        - paragraph [ref=f23e16]: Vendedores com mais pontos lançados no mês.
+      - generic [ref=f23e17] [cursor=pointer]:
+        - generic [ref=f23e18]: 
+        - combobox "Mês" [ref=f23e19]
+        - generic [ref=f23e20]: 
+    - tablist [ref=f23e21]:
+      - button "Geral" [ref=f23e22] [cursor=pointer]
+      - button "Minha Distribuidora" [ref=f23e23] [cursor=pointer]
+      - button "Minha Equipe" [ref=f23e24] [cursor=pointer]
+    - region "Pódio"
+    - generic [ref=f23e25]:
+      - generic [ref=f23e26]:
+        - generic [ref=f23e27]: 
+        - generic [ref=f23e28]: —
+        - text: Vendedores pontuaram
+      - generic [ref=f23e29]:
+        - generic [ref=f23e30]: 
+        - generic [ref=f23e31]: —
+        - text: Distribuidoras
+      - generic [ref=f23e32]:
+        - generic [ref=f23e33]: 
+        - generic [ref=f23e34]: —
+        - text: Sua posição
+      - generic [ref=f23e35]:
+        - generic [ref=f23e36]: 
+        - generic [ref=f23e37]: —
+        - text: Pontos distribuídos
+    - generic [ref=f23e38]:
+      - button " Top 50 vendedores" [ref=f23e40] [cursor=pointer]:
+        - generic [ref=f23e41]: 
+        - text: Top 50 vendedores
+      - generic [ref=f23e42]:
+        - generic [ref=f23e43]:
+          - generic [ref=f23e44]: "#"
+          - generic [ref=f23e45]: Vendedor
+          - generic [ref=f23e46]: Distribuidora
+          - generic [ref=f23e47]: Pontos
+          - generic [ref=f23e48]: x mês ant.
+        - generic [ref=f23e49]:
+          - generic [ref=f23e50]: 
+          - text: Carregando ranking...
+  - navigation [ref=f23e51]:
+    - link "Incentiva+" [ref=f23e52] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f23e54] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f23e55]: 
+      - text: Início
+    - generic [ref=f23e56]:
+      - link " Desempenho" [expanded] [ref=f23e57] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e58]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f23e59]: 
+      - menu [ref=f23e60]:
+        - link " Minhas Vendas" [ref=f23e61] [cursor=pointer]:
+          - /url: vendas.html
+          - generic [ref=f23e62]: 
+          - text: Minhas Vendas
+        - link " Minhas Metas" [ref=f23e63] [cursor=pointer]:
+          - /url: metas.html
+          - generic [ref=f23e64]: 
+          - text: Minhas Metas
+        - link " Ranking" [ref=f23e65] [cursor=pointer]:
+          - /url: ranking.html
+          - generic [ref=f23e66]: 
+          - text: Ranking
+    - generic [ref=f23e67]:
+      - link " Pontos" [ref=f23e68] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e69]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f23e70]: 
+      - text:  
+    - generic [ref=f23e71]:
+      - link " Conteúdos" [ref=f23e72] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e73]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f23e74]: 
+      - text:  
+    - generic [ref=f23e75]:
+      - link " Gamificação" [ref=f23e76] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f23e77]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f23e78]: 
+      - text:   
+    - link " Sair" [ref=f23e79] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f23e80]: 
+      - text: Sair

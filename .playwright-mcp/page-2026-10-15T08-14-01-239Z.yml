@@ -1,0 +1,205 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - banner [ref=f11e3]:
+      - link "Voltar" [ref=f11e4] [cursor=pointer]:
+        - /url: extrato.html
+        - generic [ref=f11e5]: 
+      - link "Incentiva+ Incentiva+ Plataforma de Incentivo de Vendas" [ref=f11e6] [cursor=pointer]:
+        - /url: inicio.html
+        - img "Incentiva+" [ref=f11e7]
+        - generic [ref=f11e8]:
+          - generic [ref=f11e9]: Incentiva+
+          - generic [ref=f11e10]: Plataforma de Incentivo de Vendas
+      - link "Notificações" [ref=f11e11] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e12]: 
+        - emphasis [ref=f11e13]: "3"
+      - link "Mariana Almeida — sair" [ref=f11e14] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e15]: MA
+        - generic "Sair" [ref=f11e16]: 
+    - generic [ref=f11e17]:
+      - generic [ref=f11e18]:
+        - heading "Histórico de Pontos" [level=1] [ref=f11e19]
+        - paragraph [ref=f11e20]: Como seus pontos evoluíram mês a mês.
+      - link " Ver extrato" [ref=f11e21] [cursor=pointer]:
+        - /url: extrato.html
+        - generic [ref=f11e22]: 
+        - text: Ver extrato
+    - generic [ref=f11e23]:
+      - generic [ref=f11e25]:
+        - text: Saldo atual
+        - generic [ref=f11e26]: "8.359"
+        - generic [ref=f11e27]: pontos
+        - paragraph [ref=f11e28]: 66 lançamento(s) desde Fevereiro/2026
+      - generic [ref=f11e29]:
+        - generic [ref=f11e30]: +
+        - text: Créditos no total
+        - generic [ref=f11e32]: "8.359"
+        - text: pontos
+      - generic [ref=f11e33]:
+        - generic [ref=f11e34]: 
+        - text: Débitos no total
+        - generic [ref=f11e36]: "0"
+        - text: pontos
+      - generic [ref=f11e37]:
+        - generic [ref=f11e38]: 
+        - text: Estornos no total
+        - generic [ref=f11e40]: "0"
+        - text: pontos
+    - generic [ref=f11e41]:
+      - generic [ref=f11e42]:
+        - heading "Saldo no fim de cada mês" [level=2] [ref=f11e43]
+        - generic [ref=f11e44]: Toque num mês para ver o extrato
+      - list [ref=f11e45]:
+        - 'listitem "Fevereiro/2026: saldo 1.548 pts (+ 1.548 no mês)" [ref=f11e46] [cursor=pointer]':
+          - generic [ref=f11e48]: Fev
+        - 'listitem "Março/2026: saldo 2.395 pts (+ 847 no mês)" [ref=f11e49] [cursor=pointer]':
+          - generic [ref=f11e51]: Mar
+        - 'listitem "Abril/2026: saldo 3.662 pts (+ 1.267 no mês)" [ref=f11e52] [cursor=pointer]':
+          - generic [ref=f11e54]: Abr
+        - 'listitem "Maio/2026: saldo 4.786 pts (+ 1.124 no mês)" [ref=f11e55] [cursor=pointer]':
+          - generic [ref=f11e57]: Mai
+        - 'listitem "Junho/2026: saldo 5.822 pts (+ 1.036 no mês)" [ref=f11e58] [cursor=pointer]':
+          - generic [ref=f11e60]: Jun
+        - 'listitem "Julho/2026: saldo 6.356 pts (+ 534 no mês)" [ref=f11e61] [cursor=pointer]':
+          - generic [ref=f11e63]: Jul
+        - 'listitem "Agosto/2026: saldo 7.006 pts (+ 650 no mês)" [ref=f11e64] [cursor=pointer]':
+          - generic [ref=f11e66]: Ago
+        - 'listitem "Setembro/2026: saldo 7.310 pts (+ 304 no mês)" [ref=f11e67] [cursor=pointer]':
+          - generic [ref=f11e69]: Set
+        - 'listitem "Outubro/2026: saldo 8.359 pts (+ 1.049 no mês)" [ref=f11e70] [cursor=pointer]':
+          - generic [ref=f11e72]: Out
+    - generic [ref=f11e73]:
+      - link "Outubro/2026 9 lançamento(s) Créditos + 1.049 Débitos 0 Estornos 0 No mês + 1.049 Saldo 8.359" [ref=f11e74] [cursor=pointer]:
+        - /url: extrato.html?month=2026-10
+        - generic [ref=f11e75]:
+          - text: Outubro/2026
+          - generic [ref=f11e76]: 9 lançamento(s)
+        - generic [ref=f11e77]: Créditos + 1.049
+        - generic [ref=f11e78]: Débitos 0
+        - generic [ref=f11e79]: Estornos 0
+        - generic [ref=f11e80]: No mês + 1.049
+        - generic [ref=f11e81]: Saldo 8.359
+        - text: 
+      - link "Setembro/2026 7 lançamento(s) Créditos + 304 Débitos 0 Estornos 0 No mês + 304 Saldo 7.310" [ref=f11e82] [cursor=pointer]:
+        - /url: extrato.html?month=2026-09
+        - generic [ref=f11e83]:
+          - text: Setembro/2026
+          - generic [ref=f11e84]: 7 lançamento(s)
+        - generic [ref=f11e85]: Créditos + 304
+        - generic [ref=f11e86]: Débitos 0
+        - generic [ref=f11e87]: Estornos 0
+        - generic [ref=f11e88]: No mês + 304
+        - generic [ref=f11e89]: Saldo 7.310
+        - text: 
+      - link "Agosto/2026 8 lançamento(s) Créditos + 650 Débitos 0 Estornos 0 No mês + 650 Saldo 7.006" [ref=f11e90] [cursor=pointer]:
+        - /url: extrato.html?month=2026-08
+        - generic [ref=f11e91]:
+          - text: Agosto/2026
+          - generic [ref=f11e92]: 8 lançamento(s)
+        - generic [ref=f11e93]: Créditos + 650
+        - generic [ref=f11e94]: Débitos 0
+        - generic [ref=f11e95]: Estornos 0
+        - generic [ref=f11e96]: No mês + 650
+        - generic [ref=f11e97]: Saldo 7.006
+        - text: 
+      - link "Julho/2026 8 lançamento(s) Créditos + 534 Débitos 0 Estornos 0 No mês + 534 Saldo 6.356" [ref=f11e98] [cursor=pointer]:
+        - /url: extrato.html?month=2026-07
+        - generic [ref=f11e99]:
+          - text: Julho/2026
+          - generic [ref=f11e100]: 8 lançamento(s)
+        - generic [ref=f11e101]: Créditos + 534
+        - generic [ref=f11e102]: Débitos 0
+        - generic [ref=f11e103]: Estornos 0
+        - generic [ref=f11e104]: No mês + 534
+        - generic [ref=f11e105]: Saldo 6.356
+        - text: 
+      - link "Junho/2026 7 lançamento(s) Créditos + 1.036 Débitos 0 Estornos 0 No mês + 1.036 Saldo 5.822" [ref=f11e106] [cursor=pointer]:
+        - /url: extrato.html?month=2026-06
+        - generic [ref=f11e107]:
+          - text: Junho/2026
+          - generic [ref=f11e108]: 7 lançamento(s)
+        - generic [ref=f11e109]: Créditos + 1.036
+        - generic [ref=f11e110]: Débitos 0
+        - generic [ref=f11e111]: Estornos 0
+        - generic [ref=f11e112]: No mês + 1.036
+        - generic [ref=f11e113]: Saldo 5.822
+        - text: 
+      - link "Maio/2026 8 lançamento(s) Créditos + 1.124 Débitos 0 Estornos 0 No mês + 1.124 Saldo 4.786" [ref=f11e114] [cursor=pointer]:
+        - /url: extrato.html?month=2026-05
+        - generic [ref=f11e115]:
+          - text: Maio/2026
+          - generic [ref=f11e116]: 8 lançamento(s)
+        - generic [ref=f11e117]: Créditos + 1.124
+        - generic [ref=f11e118]: Débitos 0
+        - generic [ref=f11e119]: Estornos 0
+        - generic [ref=f11e120]: No mês + 1.124
+        - generic [ref=f11e121]: Saldo 4.786
+        - text: 
+      - link "Abril/2026 7 lançamento(s) Créditos + 1.267 Débitos 0 Estornos 0 No mês + 1.267 Saldo 3.662" [ref=f11e122] [cursor=pointer]:
+        - /url: extrato.html?month=2026-04
+        - generic [ref=f11e123]:
+          - text: Abril/2026
+          - generic [ref=f11e124]: 7 lançamento(s)
+        - generic [ref=f11e125]: Créditos + 1.267
+        - generic [ref=f11e126]: Débitos 0
+        - generic [ref=f11e127]: Estornos 0
+        - generic [ref=f11e128]: No mês + 1.267
+        - generic [ref=f11e129]: Saldo 3.662
+        - text: 
+      - link "Março/2026 6 lançamento(s) Créditos + 847 Débitos 0 Estornos 0 No mês + 847 Saldo 2.395" [ref=f11e130] [cursor=pointer]:
+        - /url: extrato.html?month=2026-03
+        - generic [ref=f11e131]:
+          - text: Março/2026
+          - generic [ref=f11e132]: 6 lançamento(s)
+        - generic [ref=f11e133]: Créditos + 847
+        - generic [ref=f11e134]: Débitos 0
+        - generic [ref=f11e135]: Estornos 0
+        - generic [ref=f11e136]: No mês + 847
+        - generic [ref=f11e137]: Saldo 2.395
+        - text: 
+      - link "Fevereiro/2026 6 lançamento(s) Créditos + 1.548 Débitos 0 Estornos 0 No mês + 1.548 Saldo 1.548" [ref=f11e138] [cursor=pointer]:
+        - /url: extrato.html?month=2026-02
+        - generic [ref=f11e139]:
+          - text: Fevereiro/2026
+          - generic [ref=f11e140]: 6 lançamento(s)
+        - generic [ref=f11e141]: Créditos + 1.548
+        - generic [ref=f11e142]: Débitos 0
+        - generic [ref=f11e143]: Estornos 0
+        - generic [ref=f11e144]: No mês + 1.548
+        - generic [ref=f11e145]: Saldo 1.548
+        - text: 
+  - navigation [ref=f11e146]:
+    - link " Início" [ref=f11e147] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f11e148]: 
+      - text: Início
+    - generic [ref=f11e149]:
+      - link " Desempenho" [ref=f11e150] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e151]: 
+        - text: Desempenho 
+      - text:   
+    - generic [ref=f11e152]:
+      - link " Pontos" [ref=f11e153] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e154]: 
+        - text: Pontos 
+      - text:  
+    - generic [ref=f11e155]:
+      - link " Conteúdos" [ref=f11e156] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e157]: 
+        - text: Conteúdos 
+      - text:  
+    - generic [ref=f11e158]:
+      - link " Gamificação" [ref=f11e159] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f11e160]: 
+        - text: Gamificação 
+      - text:   
+    - link " Sair" [ref=f11e161] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f11e162]: 
+      - text: Sair

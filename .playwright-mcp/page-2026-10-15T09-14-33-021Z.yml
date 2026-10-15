@@ -1,0 +1,161 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e2]:
+    - banner [ref=f15e3]:
+      - text: 
+      - link "Notificações" [ref=f15e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e5]: 
+        - emphasis [ref=f15e6]: "3"
+      - link "Marcelo Costa — sair" [ref=f15e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e8]: MC
+        - generic [ref=f15e9]:
+          - text: Marcelo Costa
+          - generic [ref=f15e10]: Vendedor
+        - generic "Sair" [ref=f15e11]: 
+    - generic [ref=f15e12]:
+      - generic [ref=f15e13]:
+        - heading "Histórico de Pontos" [level=1] [ref=f15e14]
+        - paragraph [ref=f15e15]: Como seus pontos evoluíram mês a mês.
+      - link " Ver extrato" [ref=f15e16] [cursor=pointer]:
+        - /url: extrato.html
+        - generic [ref=f15e17]: 
+        - text: Ver extrato
+    - generic [ref=f15e18]:
+      - generic [ref=f15e20]:
+        - text: Saldo atual
+        - generic [ref=f15e21]: "-120"
+        - generic [ref=f15e22]: pontos
+        - paragraph [ref=f15e23]: 1 lançamento(s) desde Setembro/2026
+      - generic [ref=f15e24]:
+        - generic [ref=f15e25]: +
+        - text: Créditos no total
+        - generic [ref=f15e27]: "0"
+        - text: pontos
+      - generic [ref=f15e28]:
+        - generic [ref=f15e29]: 
+        - text: Débitos no total
+        - generic [ref=f15e31]: "0"
+        - text: pontos
+      - generic [ref=f15e32]:
+        - generic [ref=f15e33]: 
+        - text: Estornos no total
+        - generic [ref=f15e35]: "-120"
+        - text: pontos
+    - generic [ref=f15e36]:
+      - generic [ref=f15e37]:
+        - heading "Saldo no fim de cada mês" [level=2] [ref=f15e38]
+        - generic [ref=f15e39]: Toque num mês para ver o extrato
+      - list [ref=f15e40]:
+        - 'listitem "Setembro/2026: saldo -120 pts (− 120 no mês)" [ref=f15e41] [cursor=pointer]':
+          - emphasis [ref=f15e42]: "-120"
+          - generic [ref=f15e44]: Set
+    - heading "Mês a mês" [level=2] [ref=f15e45]
+    - generic [ref=f15e46]:
+      - generic [ref=f15e47]:
+        - generic [ref=f15e48]: Mês
+        - generic [ref=f15e49]: Créditos
+        - generic [ref=f15e50]: Débitos
+        - generic [ref=f15e51]: Estornos
+        - generic [ref=f15e52]: No mês
+        - generic [ref=f15e53]: Saldo
+      - link "Setembro/2026 1 lançamento(s) 0 0 − 120 − 120 -120 " [ref=f15e54] [cursor=pointer]:
+        - /url: extrato.html?month=2026-09
+        - generic [ref=f15e55]:
+          - text: Setembro/2026
+          - generic [ref=f15e56]: 1 lançamento(s)
+        - generic [ref=f15e57]: "0"
+        - generic [ref=f15e58]: "0"
+        - generic [ref=f15e59]: − 120
+        - generic [ref=f15e60]: − 120
+        - generic [ref=f15e61]: "-120"
+        - generic [ref=f15e62]: 
+    - heading "Pontos por campanha" [level=2] [ref=f15e64]
+    - generic [ref=f15e65]:
+      - generic [ref=f15e66]:
+        - generic [ref=f15e67]: Campanha
+        - generic [ref=f15e68]: Situação
+        - generic [ref=f15e69]: Lançamentos
+        - generic [ref=f15e70]: Pontos
+      - generic [ref=f15e71]:
+        - generic [ref=f15e72]:
+          - text: Incentiva+ 2026
+          - generic [ref=f15e73]: 01/01/2026 a 31/12/2026
+        - emphasis [ref=f15e75]: Ativa
+        - generic [ref=f15e76]: "1"
+        - generic [ref=f15e77]: − 120
+    - generic [ref=f15e78]:
+      - heading "Vendas por competência" [level=2] [ref=f15e79]
+      - link "Ver vendas " [ref=f15e80] [cursor=pointer]:
+        - /url: vendas.html
+        - text: Ver vendas
+        - generic [ref=f15e81]: 
+    - generic [ref=f15e82]:
+      - generic [ref=f15e83]:
+        - generic [ref=f15e84]: Competência
+        - generic [ref=f15e85]: Vendas
+        - generic [ref=f15e86]: Unidades
+        - generic [ref=f15e87]: Valor
+        - generic [ref=f15e88]: Pontos
+      - generic [ref=f15e89]:
+        - generic [ref=f15e90]: 
+        - text: Nenhuma venda registrada ainda.
+    - heading "Estornos" [level=2] [ref=f15e91]
+    - generic [ref=f15e92]:
+      - generic [ref=f15e93]:
+        - generic [ref=f15e94]: Data
+        - generic [ref=f15e95]: Motivo e origem
+        - generic [ref=f15e96]: Pontos
+      - generic [ref=f15e97]:
+        - generic [ref=f15e98]: 18/09/2026
+        - generic [ref=f15e99]:
+          - text: Pedido cancelado pelo cliente final (NF devolvida)
+          - generic [ref=f15e100]: Incentiva+ 2026 · por Carlos Cliente
+        - generic [ref=f15e101]: − 120
+  - navigation [ref=f15e102]:
+    - link "Incentiva+" [ref=f15e103] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f15e105] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f15e106]: 
+      - text: Início
+    - generic [ref=f15e107]:
+      - link " Desempenho" [ref=f15e108] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e109]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f15e110]: 
+      - text:   
+    - generic [ref=f15e111]:
+      - link " Pontos" [expanded] [ref=f15e112] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e113]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f15e114]: 
+      - menu [ref=f15e115]:
+        - link " Meu Extrato" [ref=f15e116] [cursor=pointer]:
+          - /url: extrato.html
+          - generic [ref=f15e117]: 
+          - text: Meu Extrato
+        - link " Histórico" [ref=f15e118] [cursor=pointer]:
+          - /url: historico.html
+          - generic [ref=f15e119]: 
+          - text: Histórico
+    - generic [ref=f15e120]:
+      - link " Conteúdos" [ref=f15e121] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e122]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f15e123]: 
+      - text:  
+    - generic [ref=f15e124]:
+      - link " Gamificação" [ref=f15e125] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f15e126]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f15e127]: 
+      - text:   
+    - link " Sair" [ref=f15e128] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f15e129]: 
+      - text: Sair

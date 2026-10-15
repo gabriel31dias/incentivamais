@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Curso · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="treinamentos.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<a href="treinamentos.html" class="see crs-back"><i class="fa-solid fa-arrow-left"></i> Todos os treinamentos</a>
+
+<div class="crs" id="crs">
+  <div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando curso...</div>
+</div>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="treinamentos.html" class="on"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+</nav>
+
+<script>
+// Curso: aulas do treinamento; tocar uma aula abre o vídeo no player.
+// Dados: GET /app/me/trainings; aula assistida: POST /app/me/trainings/:id/lessons
+const esc = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const $ = (id) => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const id = +params.get('id');
+let course = null;
+let current = null;
+
+/** URL do cadastro → player: YouTube/Vimeo em iframe, arquivo de vídeo em <video>, resto abre fora */
+function player(url) {
+  if (!url) return '<div class="crs-novideo"><i class="fa-solid fa-video-slash"></i>Esta aula não tem vídeo.</div>';
+  const yt = /(?:youtu\.be\/|[?&]v=|embed\/|shorts\/)([\w-]{11})/.exec(url);
+  const vm = /vimeo\.com\/(?:video\/)?(\d+)/.exec(url);
+  const embed = yt ? `https://www.youtube-nocookie.com/embed/${yt[1]}?autoplay=1&rel=0` : vm ? `https://player.vimeo.com/video/${vm[1]}?autoplay=1` : null;
+  if (embed) return `<iframe src="${esc(embed)}" title="Vídeo da aula" allow="autoplay; encrypted-media; picture-in-picture; fullscreen">/iframe>`;
+  if (/\.(mp4|webm|ogg|m3u8)(\?|$)/i.test(url)) return `<video src="${esc(url)}" controls autoplay playsinline></video>`;
+  return `<div class="crs-novideo"><i class="fa-solid fa-up-right-from-square"></i><a href="${esc(url)}" target="_blank" rel="noopener" class="btn">Abrir vídeo em nova aba</a></div>`;
+}
+
+const lessons = () => course.modules.flatMap((m) => m.lessons.map((l) => ({ ...l, module: m.title })));
+const isDone = (key) => course.lessonsDone.includes(key);
+
+function info() {
+  const all = lessons();
+  const i = all.findIndex((l) => l.key === current);
+  const l = all[i];
+  const next = all[i + 1];
+  const done = all.filter((x) => isDone(x.key)).length;
+  const pct = all.length ? Math.round((done / all.length) * 100) : 0;
+  $('now').innerHTML = l ? `
+    <div><small>${esc(l.module)} · Aula ${i + 1} de ${all.length}</small><h1>${esc(l.title)}</h1></div>
+    <div class="crs-acts">
+      ${l.material ? `<a href="${esc(l.material)}" target="_blank" rel="noopener" class="btn-ghost"><i class="fa-solid fa-paperclip"></i>Material</a>` : ''}
+      <button class="btn-ghost${isDone(l.key) ? ' on' : ''}" id="mark" aria-pressed="${isDone(l.key)}"><i class="fa-solid fa-circle-check"></i>${isDone(l.key) ? 'Assistida' : 'Marcar como assistida'}</button>
+      ${next ? `<button class="btn" data-key="${esc(next.key)}">Próxima aula <i class="fa-solid fa-arrow-right"></i></button>` : ''}
+    </div>` : '';
+  $('side').innerHTML = `
+    <h2>${esc(course.title)}</h2>
+    ${course.description ? `<p class="muted">${esc(course.description)}</p>` : ''}
+    <div class="row crs-prog"><div class="bar"><span style="width:${pct}%"></span></div><b>${pct}%</b></div>
+    <small class="muted">${done} de ${all.length} aula(s) assistida(s)${course.points ? ` · <span class="gp"><i class="fa-solid fa-star"></i> ${num(course.points)} pontos ao concluir</span>` : ''}</small>
+    ${course.completedAt ? `<p class="crs-ok"><i class="fa-solid fa-trophy"></i>Curso concluído${course.certificate ? ' · certificado liberado' : ''}</p>` : ''}
+    ${course.modules.map((m) => `
+      <h3>${esc(m.title)}</h3>
+      <ol class="crs-list">${m.lessons.map((x) => `
+        <li><button data-key="${esc(x.key)}" class="${x.key === current ? 'on' : ''}" ${x.key === current ? 'aria-current="true"' : ''}>
+          <i class="fa-${isDone(x.key) ? 'solid fa-circle-check' : x.key === current ? 'solid fa-circle-play' : 'regular fa-circle-play'}"></i>
+          <span>${esc(x.title)}</span>${x.minutes ? `<small>${x.minutes} min</small>` : ''}
+        </button></li>`).join('')}</ol>`).join('')}`;
+}
+
+function play(key) {
+  current = key;
+  history.replaceState(null, '', `?id=${id}${key ? `&aula=${encodeURIComponent(key)}` : ''}`);
+  const l = lessons().find((x) => x.key === key);
+  $('player').innerHTML = l ? player(l.video) : '<div class="crs-novideo"><i class="fa-solid fa-circle-info"></i>Este curso ainda não tem aulas.</div>';
+  const v = $('player').querySelector('video');
+  if (v) v.addEventListener('ended', () => !isDone(key) && mark(key, true));
+  info();
+}
+
+async function mark(key, done) {
+  try {
+    const r = await window.incentiva.api(`/app/me/trainings/${id}/lessons`, { method: 'POST', body: JSON.stringify({ key, done }) });
+    course.lessonsDone = r.lessonsDone;
+    course.completedAt = r.completedAt;
+    info(); // só a lista e os botões: o vídeo continua tocando
+    if (r.earned) window.incentiva.toast(`Parabéns! Curso concluído: + ${num(r.earned)} pontos no seu extrato.`);
+  } catch (e) {
+    window.incentiva.toast(e.message);
+  }
+}
+
+async function load() {
+  try {
+    const d = await window.incentiva.api('/app/me/trainings');
+    course = d.courses.find((c) => c.id === id);
+    if (!course) throw new Error('Treinamento não encontrado ou não disponível para você.');
+    const all = lessons();
+    const asked = params.get('aula');
+    document.title = `${course.title} · Incentiva+`;
+    $('crs').innerHTML = '<section class="crs-main"><div class="crs-player" id="player"></div><div class="crs-now" id="now"></div></section><aside class="card crs-side" id="side"></aside>';
+    play((all.find((l) => l.key === asked) ?? all.find((l) => !isDone(l.key)) ?? all[0])?.key ?? null);
+  } catch (e) {
+    $('crs').innerHTML = `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+$('crs').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-key]');
+  if (b) {
+    play(b.dataset.key);
+    $('player').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    return;
+  }
+  if (e.target.closest('#mark')) mark(current, !isDone(current));
+});
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+<script src="session.js?v=19"></script>
+</body></html>

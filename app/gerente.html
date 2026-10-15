@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Painel do Gerente · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <button class="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  <a href="gerente.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"><img src="img/avatar-gerente.png" alt="Carlos Souza"></a>
+</header>
+
+<section class="page-h">
+  <div><h1><i class="fa-solid fa-users green"></i>Minha Equipe</h1><p>Acompanhe os resultados e ajude sua equipe a bater as metas!</p></div>
+  <button class="select"><i class="fa-regular fa-calendar"></i>Agosto/2025<i class="fa-solid fa-chevron-down"></i></button>
+</section>
+
+<section class="mgr-kpis">
+  <div class="card"><span class="kic" style="background:#0f3d2b;color:var(--green);border-color:var(--green)"><i class="fa-solid fa-dollar-sign"></i></span>
+    <div><small>Vendas<br>da equipe</small><b>R$ 48.250</b><span class="up">↑ +18%</span><em>vs. mês anterior</em></div></div>
+  <div class="card"><span class="kic" style="background:radial-gradient(#ffd75a,#e2a300);color:#7a4b00;border-color:#ffc727"><i class="fa-solid fa-star"></i></span>
+    <div><small>Pontos<br>distribuídos</small><b>12.450</b><span class="up">↑ +22%</span><em>vs. mês anterior</em></div></div>
+  <div class="card goal-k"><div class="row"><span class="kic" style="background:#ff2d48;color:#fff;border-color:#ff2d48"><i class="fa-solid fa-bullseye"></i></span>
+    <div><small>Meta da <em>equipe</em></small><b>78%</b></div></div><div class="bar"><span style="width:78%"></span></div><small>R$ 48.250 / R$ 62.000</small></div>
+  <div class="card"><span class="kic" style="color:var(--green);border:0;font-size:30px"><i class="fa-solid fa-users"></i></span>
+    <div><small>Membros</small><b>12</b><em>10 ativos<br>1 em treinamento<br>1 inativo</em></div></div>
+</section>
+
+<div class="tabs"><button class="on">Desempenho</button><button>Vendedores</button><button>Metas</button><button>Canais</button></div>
+
+<div class="mgr-grid">
+  <section class="card panel chart-card">
+    <div class="between"><h2><i class="fa-solid fa-chart-column green"></i>Evolução de vendas</h2><a href="#" class="see">Ver mais <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="legend"><span><i style="background:var(--green)"></i>Este mês</span><span><i style="background:#8a9592"></i>Mês anterior</span></div>
+    <div class="chart">
+      <div class="ylab"><span>20K</span><span>15K</span><span>10K</span><span>5K</span><span>0</span></div>
+      <div class="plot"><svg id="line" viewBox="0 0 700 200" preserveAspectRatio="none" role="img" aria-label="Vendas diárias de agosto: crescem de cerca de 4 mil para 17 mil, acima do mês anterior"></svg><span class="end" style="top:15%"></span></div>
+      <div class="xlab"><span>01/08</span><span>07/08</span><span>14/08</span><span>21/08</span><span>28/08</span></div>
+    </div>
+  </section>
+
+  <section class="card panel">
+    <div class="between"><h2><i class="fa-solid fa-chart-pie green"></i>Vendas por canal</h2><a href="#" class="see">Ver todos <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="donut-wrap">
+      <div class="donut" role="img" aria-label="Loja Física 42%, Televendas 28%, WhatsApp 18%, E-commerce 8%, Outros 4%"><div><b>R$ 48.250</b>Total</div></div>
+      <ul class="channels">
+        <li><i class="dot" style="background:#1de9a0"></i><i class="fa-solid fa-store green"></i>Loja Física<b>42%</b><span>R$ 20.265</span></li>
+        <li><i class="dot" style="background:#4fb8ff"></i><i class="fa-solid fa-cart-shopping" style="color:#2a8cff"></i>Televendas<b>28%</b><span>R$ 13.510</span></li>
+        <li><i class="dot" style="background:#9b5cf6"></i><i class="fa-solid fa-comment-dots" style="color:#9b5cf6"></i>WhatsApp<b>18%</b><span>R$ 8.690</span></li>
+        <li><i class="dot" style="background:#ffc93a"></i><i class="fa-solid fa-globe" style="color:#ffc93a"></i>E-commerce<b>8%</b><span>R$ 3.860</span></li>
+        <li><i class="dot" style="background:#aab4b1"></i><i class="fa-solid fa-ellipsis" style="color:#aab4b1"></i>Outros<b>4%</b><span>R$ 1.925</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="card panel">
+    <div class="between"><h2><i class="fa-solid fa-trophy" style="color:var(--gold)"></i>Top 3 da equipe</h2><a href="ranking.html" class="see">Ver ranking <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="top3">
+      <div class="card"><span class="medal m1">1</span><img class="av" src="img/r-ana.png" alt=""><div>Ana Lima<p><b>R$ 12.450</b><small><i class="fa-solid fa-star"></i>2.850</small></p><div class="row"><div class="bar"><span style="width:100%"></span></div>125%</div></div></div>
+      <div class="card"><span class="medal m2">2</span><img class="av" src="img/r-pedro.png" alt=""><div>Pedro Santos<p><b>R$ 9.230</b><small><i class="fa-solid fa-star"></i>1.980</small></p><div class="row"><div class="bar"><span style="width:85%;background:#1d8bff"></span></div>92%</div></div></div>
+      <div class="card"><span class="medal m3">3</span><img class="av" src="img/r-juliana.png" alt=""><div>Juliana Costa<p><b>R$ 7.840</b><small><i class="fa-solid fa-star"></i>1.450</small></p><div class="row"><div class="bar"><span style="width:78%;background:#ffc33a"></span></div><span style="color:#ffc33a">78%</span></div></div></div>
+    </div>
+  </section>
+
+  <section class="card panel perf-list">
+    <div class="between"><h2><i class="fa-solid fa-id-badge green"></i>Desempenho da equipe</h2><span class="row"><button class="icon-btn" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button><a href="equipe.html" class="see">Ver todos <i class="fa-solid fa-arrow-right"></i></a></span></div>
+    <a href="equipe.html" class="prow"><span class="pic"><img class="av" src="img/r-ana.png" alt=""></span><span>Ana Lima<small>Vendedora</small></span><span class="v">R$ 12.450</span><span class="sc"><i class="fa-solid fa-star"></i>2.850</span><div class="bar"><span style="width:100%"></span></div><b>125%</b><i class="fa-solid fa-chevron-right"></i></a>
+    <a href="equipe.html" class="prow"><span class="pic"><img class="av" src="img/r-pedro.png" alt=""></span><span>Pedro Santos<small>Vendedor</small></span><span class="v">R$ 9.230</span><span class="sc"><i class="fa-solid fa-star"></i>1.980</span><div class="bar"><span style="width:85%;background:#1d8bff"></span></div><b>92%</b><i class="fa-solid fa-chevron-right"></i></a>
+    <a href="equipe.html" class="prow"><span class="pic"><img class="av" src="img/r-juliana.png" alt=""></span><span>Juliana Costa<small>Vendedora</small></span><span class="v">R$ 7.840</span><span class="sc"><i class="fa-solid fa-star"></i>1.450</span><div class="bar"><span style="width:78%;background:#ffc33a"></span></div><b>78%</b><i class="fa-solid fa-chevron-right"></i></a>
+  </section>
+</div>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html" class="on"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+
+<script>
+// vendas diárias (mil R$) — agosto vs julho
+const cur=[4,5,6.5,8,7,6,9,12,9.5,10,10.5,8,9.5,11,12,11.5,10,11.5,13,14.5,15,15,15,15.5,16,17];
+const prev=[2,3,3.5,4,3.5,3,4.5,5,5,4.5,4.5,5,5.5,6,5.5,5,6,6.5,7,7,7.5,8,8.5,9,9.5,8.5];
+const W=700,H=200,X=i=>i*W/(cur.length-1),Y=v=>H-v/20*H;
+const pts=a=>a.map((v,i)=>`${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(' ');
+const grid=[0,1,2,3,4].map(i=>`<line x1="0" x2="${W}" y1="${i*H/4}" y2="${i*H/4}" class="gl"/>`).join('')
+  +[1,2,3,4].map(i=>`<line y1="0" y2="${H}" x1="${i*W/4.6}" x2="${i*W/4.6}" class="gl"/>`).join('');
+document.getElementById('line').innerHTML=`
+  <defs><linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1df2a0" stop-opacity=".35"/><stop offset="1" stop-color="#1df2a0" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8a9592" stop-opacity=".25"/><stop offset="1" stop-color="#8a9592" stop-opacity="0"/></linearGradient></defs>
+  ${grid}
+  <polygon points="0,${H} ${pts(prev)} ${W},${H}" fill="url(#gp)"/>
+  <polyline points="${pts(prev)}" class="lp"/>
+  <polygon points="0,${H} ${pts(cur)} ${W},${H}" fill="url(#gf)"/>
+  <polyline points="${pts(cur)}" class="lc"/>`;
+</script>
+<script src="session.js?v=19"></script>
+</body></html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Treinamentos · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <button class="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"><img src="img/avatar-mariana.png" alt="Mariana"></a>
+</header>
+
+<section class="page-h">
+  <div><h1><i class="fa-solid fa-graduation-cap" style="color:#b86cff"></i>Treinamentos</h1><p>Desenvolva suas habilidades e conquiste mais pontos!</p></div>
+  <a href="extrato.html" class="gold-box"><i class="fa-solid fa-star" style="color:var(--gold);font-size:36px"></i><div><small>Meus pontos</small><b id="bal">—</b></div><i class="fa-solid fa-chevron-right" style="margin-left:24px"></i></a>
+</section>
+
+<div class="tabs" id="tabs" role="tablist">
+  <button data-f="all" class="on"><i class="fa-solid fa-graduation-cap"></i>Todos</button>
+  <button data-f="doing"><i class="fa-regular fa-circle-play"></i>Em andamento</button>
+  <button data-f="done"><i class="fa-solid fa-circle-check"></i>Concluídos</button>
+  <button data-f="fav"><i class="fa-solid fa-heart"></i>Favoritos</button>
+</div>
+
+<section class="card hero" id="hero" hidden></section>
+
+<section class="card progress">
+  <div class="row" style="gap:26px"><div class="ring" id="ring" style="--p:0">0%</div><div><h3>Meu progresso</h3><small id="prog">—</small></div></div>
+  <div class="pstats">
+    <div><i class="fa-solid fa-circle-play green"></i><b id="s-doing">0</b>Em andamento</div>
+    <div><i class="fa-solid fa-circle-check" style="color:#2a8cff"></i><b id="s-done">0</b>Concluídos</div>
+    <div><i class="fa-solid fa-trophy" style="color:var(--gold)"></i><b id="s-cert">0</b>Certificados</div>
+  </div>
+</section>
+
+<nav class="cats" id="cats">
+  <a href="#" data-c="" class="on"><i class="fa-solid fa-table-cells-large"></i>Todos</a>
+  <a href="#" data-c="Vendas" class="sc-purple"><i class="fa-solid fa-chart-simple"></i>Vendas</a>
+  <a href="#" data-c="Produtos" class="sc-blue"><i class="fa-solid fa-cube"></i>Produtos</a>
+  <a href="#" data-c="Atendimento" class="sc-purple"><i class="fa-solid fa-headset"></i>Atendimento</a>
+  <a href="#" data-c="Sistema" class="sc-yellow"><i class="fa-solid fa-laptop"></i>Sistema</a>
+  <a href="#" data-c="Compliance" class="sc-red"><i class="fa-solid fa-shield-halved"></i>Compliance</a>
+</nav>
+
+<div class="between"><h2 class="sec-title" id="list-title">Cursos</h2></div>
+<section class="courses" id="courses" aria-live="polite"><div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando treinamentos...</div></section>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html" class="on"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+
+<script>
+// Treinamentos: GET /app/me/trainings (cursos publicados para o usuário + progresso dele)
+const esc = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const dur = (m) => (m >= 60 ? `${Math.floor(m / 60)}h${m % 60 ? ` ${m % 60}min` : ''}` : `${m}min`);
+const COLOR = { Vendas: 'purple', Produtos: 'blue', Atendimento: 'orange', Sistema: 'green', Compliance: 'red' };
+const $ = (id) => document.getElementById(id);
+const state = { f: 'all', c: '', courses: [] };
+
+const isDone = (c) => !!c.completedAt;
+const isDoing = (c) => !isDone(c) && c.done > 0;
+const cover = (c) => c.image || `img/course-${((c.id - 1) % 4) + 1}.png`;
+const action = (c) => (isDone(c) ? 'Rever' : c.done ? 'Continuar' : 'Começar');
+
+function render() {
+  const all = state.courses;
+  const done = all.filter(isDone);
+  const pct = all.length ? Math.round((done.length / all.length) * 100) : 0;
+  $('ring').style.setProperty('--p', pct);
+  $('ring').textContent = `${pct}%`;
+  $('prog').textContent = `${done.length} de ${all.length} treinamento(s) concluído(s)`;
+  $('s-doing').textContent = all.filter(isDoing).length;
+  $('s-done').textContent = done.length;
+  $('s-cert').textContent = done.filter((c) => c.certificate).length;
+
+  const hero = all.find(isDoing) ?? all.find((c) => !isDone(c)) ?? all[0];
+  $('hero').hidden = !hero;
+  if (hero)
+    $('hero').innerHTML = `
+      <div><span class="chip outline">${isDoing(hero) ? 'Continue de onde parou' : 'Treinamento em destaque'}</span>
+        <h2>${esc(hero.title)}</h2>
+        <p>${esc(hero.description || `${hero.lessons} aula(s) · + ${num(hero.points)} pontos`)}</p>
+        <a href="curso.html?id=${hero.id}" class="btn">${action(hero)} <i class="fa-solid fa-arrow-right"></i></a></div>
+      <img src="${esc(hero.image || 'img/training-hero.png')}" alt="">`;
+
+  const list = all
+    .filter((c) => state.f === 'all' || (state.f === 'doing' && isDoing(c)) || (state.f === 'done' && isDone(c)) || (state.f === 'fav' && c.favorite))
+    .filter((c) => !state.c || c.category === state.c);
+  $('list-title').textContent = `${state.c || 'Cursos'} (${list.length})`;
+  $('courses').innerHTML = list.length
+    ? list.map((c) => `
+      <article class="card course">
+        <a href="curso.html?id=${c.id}"><img src="${esc(cover(c))}" alt=""></a>
+        <div>${c.category ? `<span class="chip c-${COLOR[c.category] ?? 'green'}">${esc(c.category)}</span>` : ''}<h3><a href="curso.html?id=${c.id}">${esc(c.title)}</a></h3><p>${esc(c.description)}</p>
+          <div class="meta"><span><i class="fa-regular fa-circle-play"></i>${c.lessons} aula(s)</span>${c.minutes ? `<span><i class="fa-regular fa-clock"></i>${dur(c.minutes)}</span>` : ''}${c.points ? `<span class="gp"><i class="fa-solid fa-star"></i>+ ${num(c.points)} pontos</span>` : ''}</div></div>
+        <div class="act"><button class="fav" data-fav="${c.id}" aria-pressed="${c.favorite}" aria-label="${c.favorite ? 'Remover dos favoritos' : 'Favoritar'}"><i class="fa-${c.favorite ? 'solid' : 'regular'} fa-bookmark"></i></button>
+          <div class="row"><div class="bar"><span style="width:${c.percent}%"></span></div>${c.percent}%</div>
+          <a href="curso.html?id=${c.id}" class="btn">${action(c)}</a></div>
+      </article>`).join('')
+    : `<div class="sv-empty"><i class="fa-solid fa-graduation-cap"></i>${all.length ? 'Nenhum treinamento neste filtro.' : 'Nenhum treinamento disponível ainda.'}</div>`;
+}
+
+async function load() {
+  try {
+    const d = await window.incentiva.api('/app/me/trainings');
+    $('bal').textContent = num(d.balance);
+    state.courses = d.courses;
+    render();
+  } catch (e) {
+    $('courses').innerHTML = `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+$('tabs').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  state.f = b.dataset.f;
+  $('tabs').querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
+  render();
+});
+$('cats').addEventListener('click', (e) => {
+  const a = e.target.closest('a');
+  if (!a) return;
+  e.preventDefault();
+  state.c = a.dataset.c;
+  $('cats').querySelectorAll('a').forEach((x) => x.classList.toggle('on', x === a));
+  render();
+});
+$('courses').addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-fav]');
+  if (!b) return;
+  const c = state.courses.find((x) => x.id === +b.dataset.fav);
+  try {
+    c.favorite = (await window.incentiva.api(`/app/me/trainings/${c.id}/favorite`, { method: 'POST', body: JSON.stringify({ favorite: !c.favorite }) })).favorite;
+    render();
+  } catch (err) {
+    window.incentiva.toast(err.message);
+  }
+});
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+<script src="session.js?v=19"></script>
+</body></html>

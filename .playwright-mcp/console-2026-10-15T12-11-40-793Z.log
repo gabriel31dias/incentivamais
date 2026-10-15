@@ -1,0 +1,4 @@
+[      93ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:3333/api/app/me:0
+[   18660ms] [WARNING] Allow attribute will take precedence over 'allowfullscreen'. @ http://localhost:8080/curso.html?id=8:87
+[   19785ms] [INFO] WebGPU is experimental on this platform. See https://github.com/gpuweb/gpuweb/wiki/Implementation-Status#implementation-status @ :0
+[   19785ms] [WARNING] Failed to create WebGPU Context Provider @ :0

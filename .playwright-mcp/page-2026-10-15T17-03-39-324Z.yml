@@ -1,0 +1,100 @@
+- generic [active] [ref=f43e1]:
+  - generic [ref=f43e2]:
+    - banner [ref=f43e3]:
+      - text: 
+      - link "Notificações" [ref=f43e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e5]: 
+        - emphasis [ref=f43e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f43e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e8]: MA
+        - generic [ref=f43e9]:
+          - text: Mariana Almeida
+          - generic [ref=f43e10]: Vendedor
+        - generic "Sair" [ref=f43e11]: 
+    - generic [ref=f43e13]:
+      - heading " Quiz e Enquetes" [level=1] [ref=f43e14]:
+        - generic [ref=f43e15]: 
+        - text: Quiz e Enquetes
+      - paragraph [ref=f43e16]: Responda, acerte e ganhe pontos!
+    - main [ref=f43e17]:
+      - heading "Quizzes" [level=2] [ref=f43e104]
+      - article [ref=f43e106]:
+        - generic [ref=f43e107]:
+          - generic [ref=f43e108]: Quiz
+          - generic [ref=f43e109]:
+            - generic [ref=f43e110]: 
+            - text: Aprovado
+        - heading "Quiz da Semana — Linha Premium" [level=3] [ref=f43e111]
+        - generic [ref=f43e112]:
+          - generic [ref=f43e113]:
+            - generic [ref=f43e114]: 
+            - text: 1 pergunta(s)
+          - generic [ref=f43e115]:
+            - generic [ref=f43e116]: 
+            - text: 5:00
+          - generic [ref=f43e117]:
+            - generic [ref=f43e118]: 
+            - text: + 50 pontos
+        - generic [ref=f43e119]: "Acerte 70% · tentativa(s): 2/2 · melhor: 1/1 · até 19/10/2026"
+      - heading "Enquetes" [level=2] [ref=f43e120]
+      - article [ref=f43e122]:
+        - generic [ref=f43e123]: Enquete
+        - heading "Qual prêmio você mais quer?" [level=3] [ref=f43e124]
+        - generic [ref=f43e125]:
+          - button "Viagem" [ref=f43e126] [cursor=pointer]
+          - button "Eletrônicos" [ref=f43e127] [cursor=pointer]
+          - button "Vale-compras" [ref=f43e128] [cursor=pointer]
+        - generic [ref=f43e129]: Toque numa opção para votar.
+  - navigation [ref=f43e40]:
+    - link "Incentiva+" [ref=f43e41] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f43e43] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f43e44]: 
+      - text: Início
+    - generic [ref=f43e45]:
+      - link " Desempenho" [ref=f43e46] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e47]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f43e48]: 
+      - text:   
+    - generic [ref=f43e49]:
+      - link " Pontos" [ref=f43e50] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e51]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f43e52]: 
+      - text:  
+    - generic [ref=f43e53]:
+      - link " Conteúdos" [ref=f43e54] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e55]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f43e56]: 
+      - text:  
+    - generic [ref=f43e57]:
+      - link " Gamificação" [expanded] [ref=f43e58] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f43e59]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f43e60]: 
+      - menu [ref=f43e61]:
+        - link " Quiz" [ref=f43e62] [cursor=pointer]:
+          - /url: quiz.html
+          - generic [ref=f43e63]: 
+          - text: Quiz
+        - link " Missões" [ref=f43e64] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f43e65]: 
+          - text: Missões
+        - link " Medalhas" [ref=f43e66] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f43e67]: 
+          - text: Medalhas
+    - link " Sair" [ref=f43e68] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f43e69]: 
+      - text: Sair

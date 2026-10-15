@@ -1,0 +1,165 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - banner [ref=f7e3]:
+      - text: 
+      - link "Notificações" [ref=f7e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e5]: 
+        - emphasis [ref=f7e6]: "3"
+      - link "Vinícius Carvalho — sair" [ref=f7e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e8]: VC
+        - generic [ref=f7e9]:
+          - text: Vinícius Carvalho
+          - generic [ref=f7e10]: Gerente
+        - generic "Sair" [ref=f7e11]: 
+    - generic [ref=f7e12]:
+      - generic [ref=f7e13]:
+        - generic [ref=f7e14]: 
+        - generic [ref=f7e15]:
+          - heading "Importação de Vendas" [level=1] [ref=f7e16]
+          - paragraph [ref=f7e17]: Envie o arquivo com as vendas da sua distribuidora
+      - button " Histórico" [ref=f7e18] [cursor=pointer]:
+        - generic [ref=f7e19]: 
+        - text: Histórico
+    - generic [ref=f7e20]:
+      - generic [ref=f7e21]:
+        - generic [ref=f7e22]: Distribuidora
+        - generic [ref=f7e23]:
+          - generic [ref=f7e24]: 
+          - generic [ref=f7e25]: Distribuidora Mineira
+      - generic [ref=f7e26]:
+        - generic [ref=f7e27]: Período das vendas
+        - generic [ref=f7e28] [cursor=pointer]:
+          - generic [ref=f7e29]: 
+          - combobox "Período das vendas" [ref=f7e30]:
+            - option "Out/2026" [selected]
+            - option "Set/2026"
+            - option "Ago/2026"
+            - option "Jul/2026"
+            - option "Jun/2026"
+            - option "Mai/2026"
+            - option "Abr/2026"
+            - option "Mar/2026"
+            - option "Fev/2026"
+            - option "Jan/2026"
+            - option "Dez/2025"
+            - option "Nov/2025"
+          - generic [ref=f7e31]: 
+    - generic [ref=f7e32]:
+      - button "Importar Arquivo" [ref=f7e33] [cursor=pointer]
+      - button "Em validação" [ref=f7e34] [cursor=pointer]
+      - button "Processados" [ref=f7e35] [cursor=pointer]
+    - generic [ref=f7e36]:
+      - generic [ref=f7e37] [cursor=pointer]:
+        - generic [ref=f7e38]: 
+        - generic [ref=f7e39]: Arraste o arquivo aqui
+        - generic [ref=f7e40]: ou toque para selecionar
+        - generic [ref=f7e41]: "Formatos aceitos: .xlsx, .xls, .csv | Tamanho máximo: 10 MB"
+        - generic [ref=f7e42]:
+          - generic [ref=f7e43]: 
+          - text: Selecionar Arquivo
+      - text:  
+      - generic [ref=f7e44]:
+        - link " Baixar modelo de planilha Use o modelo oficial para evitar erros" [ref=f7e45] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f7e46]: 
+          - generic [ref=f7e48]:
+            - generic [ref=f7e49]: Baixar modelo de planilha
+            - text: Use o modelo oficial para evitar erros
+        - link " Ver instruções" [ref=f7e50] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f7e51]: 
+          - text: Ver instruções
+      - paragraph [ref=f7e52]:
+        - text: "Demonstração: baixe uma planilha de exemplo preenchida com vendedores da sua distribuidora —"
+        - link "sem erros" [ref=f7e53] [cursor=pointer]:
+          - /url: "#"
+        - text: ·
+        - link "com inconsistências" [ref=f7e54] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=f7e55]:
+      - heading " Últimas importações" [level=2] [ref=f7e57]:
+        - generic [ref=f7e58]: 
+        - text: Últimas importações
+      - generic [ref=f7e59]:
+        - button " Ago/2026 Enviado em 15/10/2026, 05:03 · vendas-agosto-TESTE.xlsx Devolvido para correção 24 registros 10 erros 12 válidos " [ref=f7e60] [cursor=pointer]:
+          - generic [ref=f7e61]: 
+          - generic [ref=f7e63]:
+            - generic [ref=f7e64]: Ago/2026
+            - generic [ref=f7e65]: Enviado em 15/10/2026, 05:03 · vendas-agosto-TESTE.xlsx
+          - generic [ref=f7e66]: Devolvido para correção
+          - generic [ref=f7e67]:
+            - text: "24"
+            - generic [ref=f7e68]: registros
+          - generic [ref=f7e69]:
+            - text: "10"
+            - generic [ref=f7e70]: erros
+          - generic [ref=f7e71]:
+            - text: "12"
+            - generic [ref=f7e72]: válidos
+          - generic [ref=f7e73]: 
+        - button "! Out/2026 Enviado em 15/10/2026, 04:55 · up.xlsx Com inconsistências 1 registros 1 erros 0 válidos " [ref=f7e75] [cursor=pointer]:
+          - generic [ref=f7e76]: "!"
+          - generic [ref=f7e78]:
+            - generic [ref=f7e79]: Out/2026
+            - generic [ref=f7e80]: Enviado em 15/10/2026, 04:55 · up.xlsx
+          - generic [ref=f7e81]: Com inconsistências
+          - generic [ref=f7e82]:
+            - text: "1"
+            - generic [ref=f7e83]: registros
+          - generic [ref=f7e84]:
+            - text: "1"
+            - generic [ref=f7e85]: erros
+          - generic [ref=f7e86]:
+            - text: "0"
+            - generic [ref=f7e87]: válidos
+          - generic [ref=f7e88]: 
+    - text:  
+  - navigation [ref=f7e90]:
+    - link "Incentiva+" [ref=f7e91] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Inicio" [ref=f7e93] [cursor=pointer]:
+      - /url: gerente.html
+      - generic [ref=f7e94]: 
+      - text: Inicio
+    - generic [ref=f7e95]:
+      - link " Desempenho" [ref=f7e96] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e97]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f7e98]: 
+      - text:   
+    - generic [ref=f7e99]:
+      - link " Pontos" [ref=f7e100] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e101]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f7e102]: 
+      - text:  
+    - generic [ref=f7e103]:
+      - link " Conteúdos" [ref=f7e104] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e105]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f7e106]: 
+      - text:  
+    - generic [ref=f7e107]:
+      - link " Gamificação" [ref=f7e108] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f7e109]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f7e110]: 
+      - text:   
+    - link " Minha Equipe" [ref=f7e111] [cursor=pointer]:
+      - /url: equipe.html
+      - generic [ref=f7e112]: 
+      - text: Minha Equipe
+    - link " Importar Vendas" [ref=f7e113] [cursor=pointer]:
+      - /url: importar.html
+      - generic [ref=f7e114]: 
+      - text: Importar Vendas
+    - link " Sair" [ref=f7e115] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f7e116]: 
+      - text: Sair

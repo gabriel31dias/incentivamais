@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Minhas Metas · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="inicio.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<section class="page-h">
+  <div><h1>Minhas Metas</h1><p id="sub">Acompanhe a meta do mês e o bônus de pontos.</p></div>
+  <label class="select sv-month"><i class="fa-regular fa-calendar"></i><select id="month" aria-label="Competência"></select><i class="fa-solid fa-chevron-down"></i></label>
+</section>
+
+<div id="content" aria-live="polite"><div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando metas...</div></div>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="metas.html" class="on"><i class="fa-solid fa-bullseye"></i>Metas</a>
+  <a href="vendas.html"><i class="fa-solid fa-cart-shopping"></i>Vendas</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+</nav>
+
+<script src="session.js?v=19"></script>
+<script>
+// Minhas Metas: GET /api/app/me/goals — o servidor escolhe as equipes pelo usuário do token
+const MES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+const comp = (c) => { const [y, m] = c.split('-'); return `${MES[+m - 1]}/${y}`; };
+const brl = (c) => (c / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const pct = (v) => `${(v ?? 0).toLocaleString('pt-BR', { maximumFractionDigits: 1 })}%`;
+const num = (n) => n.toLocaleString('pt-BR');
+const day = (d) => d.slice(0, 10).split('-').reverse().join('/');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const $ = (id) => document.getElementById(id);
+const bar = (p) => `<div class="mg-bar${p >= 100 ? ' done' : ''}"><span style="width:${Math.min(100, p ?? 0)}%"></span></div>`;
+
+let competence = null;
+
+async function load() {
+  try {
+    const d = await window.incentiva.api(`/app/me/goals${competence ? `?competence=${competence}` : ''}`);
+    competence = d.competence;
+    $('month').innerHTML = [...d.competences].reverse().map((c) => `<option value="${c}"${c === d.competence ? ' selected' : ''}>${comp(c)}</option>`).join('');
+    $('content').innerHTML = (d.view === 'seller' ? seller(d) : teams(d)) + history(d) + campaigns(d);
+  } catch (e) {
+    $('content').innerHTML = `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+function bonusCard(team, myPoints, bonus) {
+  if (!team || team.goalCents == null) return `<div class="card mg-bonus"><i class="fa-solid fa-gift"></i><div><b>Sem meta neste mês</b><small>Sua equipe ainda não tem meta definida para ${comp(competence)}.</small></div></div>`;
+  if (myPoints > 0) return `<div class="card mg-bonus ok"><i class="fa-solid fa-circle-check"></i><div><b>+${num(myPoints)} pontos de bônus</b><small>Sua equipe bateu a meta e o bônus já entrou no seu extrato.</small></div></div>`;
+  if (team.reached) return `<div class="card mg-bonus wait"><i class="fa-solid fa-hourglass-half"></i><div><b>Meta batida! Bônus a caminho</b><small>Cada vendedor da equipe recebe ${bonus ? num(bonus) + ' pontos' : 'o bônus'} quando a campanha lançar os bônus do mês.</small></div></div>`;
+  return `<div class="card mg-bonus"><i class="fa-solid fa-gift"></i><div><b>Bônus de ${bonus ? num(bonus) + ' pontos' : 'meta'}</b><small>Faltam ${brl(team.goalCents - team.soldCents)} para a equipe bater a meta e todos ganharem o bônus.</small></div></div>`;
+}
+
+function seller(d) {
+  const t = d.teams[0];
+  $('sub').textContent = t ? `${t.name} · ${t.distributorName}` : 'Você ainda não faz parte de uma equipe.';
+  if (!t) return '<div class="sv-empty"><i class="fa-solid fa-users"></i>Você ainda não faz parte de uma equipe.</div>';
+  const hasGoal = t.goalCents != null;
+  return `
+  <section class="mg-grid">
+    <div class="card mg-hero">
+      <div class="between"><span class="chip outline">Meta da equipe · ${comp(d.competence)}</span>${t.reached ? '<span class="chip">Meta batida</span>' : ''}</div>
+      ${hasGoal ? `
+        <b class="mg-big">${pct(t.percent)}</b>
+        ${bar(t.percent)}
+        <p><b>${brl(t.soldCents)}</b> vendidos de <b>${brl(t.goalCents)}</b></p>
+        <small>${t.reached ? 'A equipe já passou da meta deste mês.' : `Faltam ${brl(t.goalCents - t.soldCents)} para a meta.`}</small>`
+      : '<p class="mg-none">Sua equipe não tem meta definida para este mês.</p>'}
+    </div>
+    <div class="card mg-me">
+      <span class="chip outline">Minha contribuição</span>
+      <b class="mg-mid">${brl(d.me.soldCents)}</b>
+      <small>vendidos por você em ${comp(d.competence)}</small>
+      <div class="mg-share"><span style="--p:${Math.min(100, d.me.shareOfTeam)}"><b>${pct(d.me.shareOfTeam)}</b></span><small>das vendas da equipe</small></div>
+      <a href="vendas.html" class="see">Ver minhas vendas <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+  ${bonusCard(t, d.me.bonusPoints, d.bonusPoints)}`;
+}
+
+function teams(d) {
+  $('sub').textContent = `${d.teams.length} equipe(s) sob sua responsabilidade`;
+  if (!d.teams.length) return '<div class="sv-empty"><i class="fa-solid fa-users"></i>Nenhuma equipe vinculada ao seu perfil.</div>';
+  const withGoal = d.teams.filter((t) => t.goalCents != null);
+  const goal = withGoal.reduce((a, t) => a + t.goalCents, 0);
+  const sold = withGoal.reduce((a, t) => a + t.soldCents, 0);
+  return `
+  <section class="sv-kpis">
+    <div class="card"><span class="ic i-green"><i class="fa-solid fa-bullseye"></i></span><small>Meta somada</small><b>${brl(goal)}</b></div>
+    <div class="card"><span class="ic i-blue"><i class="fa-solid fa-sack-dollar"></i></span><small>Vendido</small><b>${brl(sold)}</b></div>
+    <div class="card"><span class="ic i-purple"><i class="fa-solid fa-chart-line"></i></span><small>Atingido</small><b>${pct(goal ? (sold / goal) * 100 : 0)}</b></div>
+    <div class="card"><span class="ic i-gold"><i class="fa-solid fa-trophy"></i></span><small>Equipes na meta</small><b>${withGoal.filter((t) => t.reached).length} de ${withGoal.length}</b></div>
+  </section>
+  <section class="mg-teams">${d.teams.map((t) => `
+    <article class="card mg-team">
+      <div class="between"><div><b>${esc(t.name)}</b><small>${esc(t.managerName ?? 'Sem gerente')} · ${num(t.members)} vendedores</small></div>
+        ${t.bonusLaunched ? '<span class="chip">Bônus pago</span>' : t.reached ? '<span class="chip outline">Bônus pendente</span>' : ''}</div>
+      ${t.goalCents != null ? `<div class="mg-line"><b>${pct(t.percent)}</b>${bar(t.percent)}</div><small>${brl(t.soldCents)} de ${brl(t.goalCents)}</small>` : '<small class="mg-none">Sem meta neste mês</small>'}
+    </article>`).join('')}
+  </section>`;
+}
+
+function history(d) {
+  if (!d.history.length) return '';
+  const isSeller = d.view === 'seller';
+  return `
+  <section class="card mg-hist">
+    <h2>Histórico</h2>
+    <div class="mg-hist-rows">
+      ${[...d.history].reverse().map((h) => {
+        const p = h.goalCents ? (h.soldCents / h.goalCents) * 100 : null;
+        return `<button class="mg-hrow${h.competence === d.competence ? ' on' : ''}" data-c="${h.competence}">
+          <b>${comp(h.competence)}</b>
+          <span class="mg-hbar">${h.goalCents ? bar(p) : '<small>Sem meta</small>'}</span>
+          <span class="mg-hval">${h.goalCents ? `${pct(p)}<small>${brl(h.soldCents)} / ${brl(h.goalCents)}</small>` : ''}</span>
+          ${isSeller ? `<span class="mg-hme">${brl(h.mySoldCents)}<small>${h.bonusPoints ? `+${num(h.bonusPoints)} pts bônus` : h.teamReached ? 'bônus pendente' : 'você vendeu'}</small></span>` : `<span class="mg-hme">${h.reachedTeams} de ${h.teams}<small>equipes na meta</small></span>`}
+        </button>`;
+      }).join('')}
+    </div>
+  </section>`;
+}
+
+function campaigns(d) {
+  if (!d.campaigns.length) return '';
+  return `
+  <h2 class="sec-title">Campanhas que você participa</h2>
+  <section class="mg-teams">${d.campaigns.map((c) => `
+    <article class="card mg-team">
+      <div class="between"><div><b>${esc(c.name)}</b><small>${day(c.startDate)} a ${day(c.endDate)}</small></div>
+        <span class="chip ${c.status === 'active' ? '' : 'outline'}">${{ active: 'Ativa', paused: 'Pausada', ended: 'Encerrada' }[c.status] ?? c.status}</span></div>
+      ${c.goalCents ? `<div class="mg-line"><b>${pct(c.percent)}</b>${bar(c.percent)}</div><small>Campanha: ${brl(c.soldCents)} de ${brl(c.goalCents)}</small>` : ''}
+      ${d.view === 'seller' ? `<small class="mg-mine">Você: <b>${brl(c.mySoldCents)}</b> · <b>${num(c.myPoints)}</b> pontos</small>` : ''}
+    </article>`).join('')}
+  </section>`;
+}
+
+$('month').addEventListener('change', (e) => { competence = e.target.value; load(); });
+$('content').addEventListener('click', (e) => { const r = e.target.closest('[data-c]'); if (r) { competence = r.dataset.c; load(); scrollTo({ top: 0, behavior: 'smooth' }); } });
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+</body></html>

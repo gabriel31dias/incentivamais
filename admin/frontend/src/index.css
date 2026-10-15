@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system copiado do ~/sistema-pg, recolorido com a identidade Incentiva+ */
+
+html {
+  scrollbar-gutter: stable;
+  /* zoom padrão do sistema: vale pra login, cadastro e telas internas */
+  zoom: var(--app-zoom);
+}
+
+:root {
+  --app-zoom: 0.8;
+}
+
+
+/* 100vh/100dvh não enxerga o zoom: sem isso, tela cheia vira 80% da altura */
+.min-h-screen {
+  min-height: calc(100vh / var(--app-zoom));
+}
+
+.h-screen {
+  height: calc(100vh / var(--app-zoom));
+}
+
+/* dropdowns do Radix (select, popover, menu) são posicionados em px de tela;
+   dentro do zoom o translate seria escalado de novo e o menu saía do lugar.
+   Anula o zoom no wrapper que recebe o transform e devolve no conteúdo. */
+[data-radix-popper-content-wrapper] {
+  zoom: calc(1 / var(--app-zoom));
+}
+
+[data-radix-popper-content-wrapper] > * {
+  zoom: var(--app-zoom);
+}
+
+/* as medidas do gatilho vêm em px de tela; sem isso o menu fica mais estreito
+   que o campo depois do zoom de volta */
+[data-radix-popper-content-wrapper] [data-radix-select-viewport] {
+  min-width: calc(var(--radix-select-trigger-width) / var(--app-zoom));
+  height: calc(var(--radix-select-trigger-height) / var(--app-zoom));
+}
+
+.min-h-dvh {
+  min-height: calc(100dvh / var(--app-zoom));
+}
+
+.h-dvh {
+  height: calc(100dvh / var(--app-zoom));
+}
+
+@layer base {
+  :root {
+    --background: 140 25% 97%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 162 100% 45%;
+    --primary-foreground: 160 85% 8%;
+
+    --secondary: 162 100% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 162 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 122 39% 49%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 20%;
+
+    --info: 207 90% 54%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 162 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Toast design tokens (Figma spec) */
+    --toast-success-bg: #45bc56;
+    --toast-error-bg: #cc0854;
+    --toast-warning-bg: #eac645;
+    --toast-info-bg: #3b82f6;
+    --toast-width: 313px;
+    --toast-min-height: 64px;
+    --toast-radius: 10px;
+
+    /* Modal specific colors - #1F1F24 */
+    --modal-title: 0 0% 12%;
+    --modal-subtitle: 0 0% 12%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 162 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 162 100% 45%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 162 100% 45%;
+  }
+
+  .dark {
+    --background: 197 82% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 192 67% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 192 60% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 162 100% 45%;
+    --primary-foreground: 160 85% 8%;
+
+    --secondary: 162 100% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 192 40% 12%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 162 100% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 160 84% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 36 100% 50%;
+    --warning-foreground: 0 0% 20%;
+
+    --info: 207 90% 54%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 190 40% 16%;
+    --input: 190 40% 14%;
+    --ring: 162 100% 45%;
+
+    /* Modal specific colors - dark mode */
+    --modal-title: 0 0% 98%;
+    --modal-subtitle: 0 0% 65%;
+
+    --sidebar-background: 197 82% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 162 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 162 100% 45% / 0.15;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 190 40% 16%;
+    --sidebar-ring: 162 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#F5F8F6] dark:bg-[#020F14] text-foreground;
+    font-family:
+      "Plus Jakarta Sans",
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(162 100% 45% / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(162 100% 45% / 0.5);
+}
+
+
+/* itens de grid encolhem: sem isso uma tabela larga (minWidth) estoura a tela no mobile
+   em vez de rolar dentro do próprio cartão */
+.grid > * {
+  min-width: 0;
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Login · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body>
+<main class="login">
+  <section class="login-hero">
+    <img class="trophy" src="img/login-trophy.png" alt="">
+    <div class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></div>
+    <h1>Mais vendas.<br><span class="green">Mais conquistas.</span><br>Juntos mais longe.</h1>
+    <p>Uma campanha nacional para valorizar quem faz o nosso negócio acontecer.</p>
+  </section>
+
+  <form class="login-form" novalidate>
+    <div class="form-logo"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></div>
+    <label for="email">E-mail</label>
+    <div class="field"><i class="fa-regular fa-envelope"></i><input id="email" type="email" required placeholder="seuemail@empresa.com.br" autocomplete="username"></div>
+    <label for="pw">Senha</label>
+    <div class="field"><i class="fa-solid fa-lock"></i><input id="pw" type="password" required placeholder="••••••••••" autocomplete="current-password">
+      <button type="button" aria-label="Mostrar senha" onclick="pw.type=pw.type==='password'?'text':'password'"><i class="fa-regular fa-eye"></i></button></div>
+    <div class="between"><label class="check" style="margin:0"><input type="checkbox" checked> Lembrar de mim</label><a class="forgot" href="#">Esqueceu sua senha?</a></div>
+    <button class="btn">Entrar <i class="fa-solid fa-arrow-right"></i></button>
+    <div class="or">ou</div>
+    <button type="button" class="google"><i class="fa-brands fa-google" style="font-size:36px;background:conic-gradient(#ea4335 0 25%,#4285f4 0 50%,#34a853 0 75%,#fbbc05 0);-webkit-background-clip:text;color:transparent"></i>Entrar com Google</button>
+    <p class="first-access">Primeiro acesso?<small>Fale com o administrador da sua empresa.</small></p>
+    <img class="team" src="img/login-team.png" alt="Equipe Incentiva+ comemorando">
+    <div class="feats">
+      <div><i class="fa-solid fa-chart-column"></i><span>Mais vendas<small>para todos</small></span></div>
+      <div><i class="fa-solid fa-users"></i><span>Mais conquistas<small>em equipe</small></span></div>
+      <div><i class="fa-solid fa-trophy"></i><span>Juntos<small>mais longe</small></span></div>
+    </div>
+  </form>
+</main>
+<script src="session.js?v=19"></script>
+</body></html>

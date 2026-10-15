@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Início · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <button class="menu" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<section class="hello">
+  <div><h1>Olá!</h1><p>&nbsp;</p></div>
+</section>
+
+<div class="dash">
+<section class="card banner" id="banner" aria-live="polite">
+  <img src="img/banner-trophy.png" alt="">
+  <div><span class="chip" id="b-chip">Destaque</span>
+    <h2 id="b-title">Venda mais e conquiste prêmios <span class="green">incríveis!</span></h2>
+    <a href="extrato.html" class="btn" id="b-link">Ver meus pontos <i class="fa-solid fa-arrow-right"></i></a></div>
+  <div class="dots" id="b-dots"></div>
+</section>
+
+<section class="card points d-points">
+  <div><img class="coin" src="img/coin.png" alt="">
+    <div><small>Meus pontos</small><div class="row"><b class="big" id="p-balance">—</b></div><small id="p-month">&nbsp;</small></div></div>
+  <div class="pos"><i class="fa-solid fa-trophy trophy"></i><div><small>Minha posição</small><b id="p-pos">—</b><small class="muted" id="p-of">&nbsp;</small></div></div>
+</section>
+
+<section class="goal d-goal" id="goal">
+  <div class="card"><i class="fa-solid fa-bullseye"></i>
+    <div style="flex:1"><div class="between" style="font-size:18px"><span id="g-label">Meta da equipe</span><b style="font-size:22px" id="g-pct">—</b></div>
+      <div class="bar"><span id="g-bar" style="width:0"></span></div><span style="font-size:18px" id="g-values">&nbsp;</span>
+      <small class="muted" style="display:block;margin-top:4px" id="g-mine"></small></div></div>
+  <div class="card"><a href="metas.html" class="btn-ghost">Ver detalhes <i class="fa-solid fa-arrow-right"></i></a></div>
+</section>
+
+<nav class="shortcuts d-short">
+  <a href="extrato.html" class="sc-green"><i class="fa-solid fa-file-invoice"></i>Extrato<br> de Pontos</a>
+  <a href="treinamentos.html" class="sc-purple"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="quiz.html" class="sc-blue"><i class="fa-solid fa-gamepad"></i>Quiz e <br>Enquetes</a>
+  <a href="#" class="sc-orange"><i class="fa-solid fa-gift"></i>Premiações</a>
+  <a href="equipe.html" class="sc-teal"><i class="fa-solid fa-users"></i>Minha <br>Equipe</a>
+</nav>
+
+<div class="d-perf"><div class="between"><h2 class="sec-title">Meu desempenho</h2>
+  <label class="select sv-month"><i class="fa-regular fa-calendar"></i><select id="perf-month" aria-label="Competência"></select><i class="fa-solid fa-chevron-down"></i></label></div>
+<section class="perf">
+  <div class="card"><span class="ic" style="color:#1fe28f"><i class="fa-solid fa-chart-column"></i></span><div><small>Vendas</small><b id="f-amount">—</b><span id="f-amount-v"></span></div></div>
+  <div class="card"><span class="ic" style="color:#b86cff"><i class="fa-solid fa-cart-shopping"></i></span><div><small>Pedidos</small><b id="f-count">—</b><span id="f-count-v"></span></div></div>
+  <div class="card"><span class="ic" style="background:#132a52;color:#3b8bff"><i class="fa-solid fa-cube"></i></span><div><small>Produtos</small><b id="f-qty">—</b><span id="f-qty-v"></span></div></div>
+  <div class="card"><span class="ic" style="background:#2b2610;color:var(--gold)"><i class="fa-solid fa-star"></i></span><div><small>Pontos</small><b id="f-points">—</b><span id="f-points-v"></span></div></div>
+</section>
+
+</div>
+<div class="d-team"><div class="between"><h2 class="sec-title">Ranking da minha equipe</h2><a href="ranking.html" class="see">Ver todos <i class="fa-solid fa-arrow-right"></i></a></div>
+<section class="team-rank" id="team-rank"></section>
+
+</div>
+<div class="d-news"><div class="between"><h2 class="sec-title">Últimas notícias</h2></div>
+<section class="news" id="news"></section>
+</div>
+</div>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html" class="on"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+<script src="session.js?v=19"></script>
+<script>
+// Início: cada bloco vem da rota da sua tela (extrato, vendas, metas, ranking) e some se o perfil não tiver acesso a ela
+const MES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+const MES_LONGO = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const comp = (c) => `${MES_LONGO[+c.slice(5) - 1]}/${c.slice(0, 4)}`;
+const short = (c) => `${MES[+c.slice(5) - 1]}/${c.slice(0, 4)}`;
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const brl = (c) => ((c ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const ini = (n) => esc(n.split(' ').filter(Boolean).map((w) => w[0]).slice(0, 2).join('').toUpperCase());
+const day = (d) => new Date(`${d}T12:00:00`).toLocaleDateString('pt-BR', { day: 'numeric', month: 'short', year: 'numeric' });
+const $ = (id) => document.getElementById(id);
+const hide = (el) => el && (el.hidden = true);
+const delta = (cur, prev) => {
+  if (!prev) return '';
+  const p = Math.round(((cur - prev) / prev) * 100);
+  return `<span class="${p >= 0 ? 'up' : 'red'}" title="Comparado à competência anterior">${p >= 0 ? '↑' : '↓'} ${Math.abs(p)}%</span>`;
+};
+
+function banners(list) {
+  if (!list.length) return; // fica o destaque padrão
+  let i = 0;
+  const show = (n) => {
+    i = n;
+    const b = list[n];
+    $('b-chip').textContent = b.endDate ? `Até ${day(b.endDate)}` : 'Destaque';
+    $('b-title').textContent = b.title;
+    if (b.image) $('banner').querySelector('img').src = b.image;
+    // ponytail: o link do banner aponta para o admin (/campanhas/N); no app só vale link externo ou página .html
+    const ok = b.link && /^(https?:\/\/|[\w-]+\.html)/.test(b.link);
+    $('b-link').hidden = !ok;
+    if (ok) $('b-link').href = b.link;
+    $('b-dots').querySelectorAll('i').forEach((d, k) => d.classList.toggle('on', k === n));
+  };
+  $('b-dots').innerHTML = list.length > 1 ? list.map((b, k) => `<i role="button" tabindex="0" aria-label="Destaque ${k + 1}"></i>`).join('') : '';
+  $('b-dots').querySelectorAll('i').forEach((d, k) => d.addEventListener('click', () => show(k)));
+  show(0);
+  if (list.length > 1) setInterval(() => show((i + 1) % list.length), 7000);
+}
+
+function perf(monthly) {
+  const sel = $('perf-month');
+  const render = () => {
+    const k = monthly.findIndex((m) => m.competence === sel.value);
+    const m = monthly[k], p = monthly[k - 1];
+    $('f-amount').textContent = brl(m.amountCents); $('f-amount-v').innerHTML = delta(m.amountCents, p?.amountCents);
+    $('f-count').textContent = num(m.count); $('f-count-v').innerHTML = delta(m.count, p?.count);
+    $('f-qty').textContent = `${num(m.quantity)} un.`; $('f-qty-v').innerHTML = delta(m.quantity, p?.quantity);
+    $('f-points').textContent = num(m.points); $('f-points-v').innerHTML = delta(m.points, p?.points);
+  };
+  sel.innerHTML = [...monthly].reverse().map((m) => `<option value="${m.competence}">${comp(m.competence)}</option>`).join('');
+  sel.onchange = render;
+  render();
+}
+
+async function load() {
+  const api = window.incentiva.api;
+  const [home, points, sales, goals, all, team] = await Promise.allSettled([
+    api('/app/me/home'), api('/app/me/points?per_page=1'), api('/app/me/sales?per_page=1'), api('/app/me/goals'),
+    api('/app/me/ranking?scope=all'), api('/app/me/ranking?scope=team'),
+  ]);
+  const v = (r) => (r.status === 'fulfilled' ? r.value : null);
+
+  if (v(home)) {
+    banners(v(home).banners);
+    const news = v(home).news;
+    $('news').innerHTML = news.length
+      // ponytail: notícia não tem imagem no cadastro; usa as ilustrações padrão do app
+      ? news.map((n, k) => `<a><div class="pic"><img src="img/news-${(k % 2) + 1}.png" alt=""><span class="chip">Notícia</span></div>
+          <div class="txt"><h3>${esc(n.title)}</h3>${n.summary ? `<p style="margin-top:6px;color:#3b4542">${esc(n.summary)}</p>` : ''}${n.publishAt ? `<small>${day(n.publishAt)}</small>` : ''}</div></a>`).join('')
+      : '<p class="muted">Nenhuma notícia por enquanto.</p>';
+  } else hide(document.querySelector('.d-news'));
+
+  if (v(points)) {
+    const d = v(points);
+    $('p-balance').textContent = num(d.balance);
+    $('p-month').textContent = d.month !== 'all' ? `${d.summary.net >= 0 ? '+' : '−'} ${num(Math.abs(d.summary.net))} em ${short(d.month)}` : '';
+  } else hide(document.querySelector('.d-points'));
+
+  const r = v(all);
+  if (r) {
+    $('p-pos').textContent = r.me ? `${num(r.me.position)}º` : '—';
+    $('p-of').innerHTML = r.me ? `de ${num(r.kpis.sellers)}<br>em ${short(r.month)}` : `sem pontos<br>em ${short(r.month)}`;
+  } else hide(document.querySelector('.d-points .pos'));
+
+  const s = v(sales);
+  if (s && s.monthly.length) perf(s.monthly);
+  else hide(document.querySelector('.d-perf'));
+
+  const g = v(goals);
+  const myTeam = g && g.view === 'seller' && g.me ? g.teams.find((t) => t.teamId === g.me.teamId) : null;
+  if (myTeam && myTeam.goalCents) {
+    $('g-label').textContent = `Meta da equipe · ${short(g.competence)}`;
+    $('g-pct').textContent = `${num(myTeam.percent)}%`;
+    $('g-bar').style.width = `${Math.min(100, myTeam.percent)}%`;
+    $('g-values').textContent = `${brl(myTeam.soldCents)} / ${brl(myTeam.goalCents)}`;
+    $('g-mine').textContent = `Sua parte: ${brl(g.me.soldCents)} (${num(g.me.shareOfTeam)}% da equipe)`;
+  } else hide($('goal'));
+
+  const t = v(team);
+  if (t && t.top.length) {
+    const max = t.top[0].points || 1;
+    $('team-rank').innerHTML = t.top.slice(0, 3).map((p) => `
+      <div class="card${p.me ? ' mine' : ''}"><span class="medal m${p.position}">${p.position}</span><span class="av av-ini">${ini(p.name)}</span>
+        <div style="flex:1;min-width:0">${esc(p.name)}${p.me ? ' <em class="you">você</em>' : ''}<br><b>${num(p.points)} <small>pts</small></b>
+        <div class="bar"><span style="width:${(p.points / max) * 100}%"></span></div></div></div>`).join('');
+  } else hide(document.querySelector('.d-team'));
+}
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+</body></html>

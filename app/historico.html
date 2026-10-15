@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Histórico de Pontos · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="extrato.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<section class="page-h">
+  <div><h1>Histórico de Pontos</h1><p>Como seus pontos evoluíram mês a mês.</p></div>
+  <a href="extrato.html" class="btn-ghost"><i class="fa-regular fa-file-lines"></i>Ver extrato</a>
+</section>
+
+<section class="summary">
+  <div class="card main"><img class="coin" src="img/coin.png" alt="">
+    <div style="flex:1">Saldo atual<b id="balance">—</b><div class="between">pontos</div><p style="margin-top:14px;font-size:16px" id="since">&nbsp;</p></div></div>
+  <div class="card"><span class="ic i-green"><i class="fa-solid fa-plus"></i></span>Créditos no total<b id="credits">—</b>pontos</div>
+  <div class="card"><span class="ic i-red"><i class="fa-solid fa-minus"></i></span>Débitos no total<b id="debits">—</b>pontos</div>
+  <div class="card"><span class="ic i-gray"><i class="fa-solid fa-rotate-right"></i></span>Estornos no total<b id="reversals">—</b>pontos</div>
+</section>
+
+<section class="card sv-chart">
+  <div class="between"><h2>Saldo no fim de cada mês</h2><small class="muted">Toque num mês para ver o extrato</small></div>
+  <div class="sv-bars" id="bars" role="list"></div>
+</section>
+
+<h2 class="sec-title">Mês a mês</h2>
+<section class="table hist" id="list" aria-live="polite">
+  <div class="trow head"><span>Mês</span><span>Créditos</span><span>Débitos</span><span>Estornos</span><span>No mês</span><span>Saldo</span><span></span></div>
+</section>
+
+<h2 class="sec-title">Pontos por campanha</h2>
+<section class="table hist" id="camps" style="--cols:minmax(180px,2fr) 130px repeat(2,minmax(0,1fr))">
+  <div class="trow head"><span>Campanha</span><span>Situação</span><span>Lançamentos</span><span>Pontos</span></div>
+</section>
+
+<div class="between"><h2 class="sec-title">Vendas por competência</h2><a href="vendas.html" class="see">Ver vendas <i class="fa-solid fa-arrow-right"></i></a></div>
+<section class="table hist" id="sales" style="--cols:minmax(150px,1.4fr) repeat(4,minmax(0,1fr)) 24px">
+  <div class="trow head"><span>Competência</span><span>Vendas</span><span>Unidades</span><span>Valor</span><span>Pontos</span><span></span></div>
+</section>
+
+<h2 class="sec-title">Estornos</h2>
+<section class="table hist" id="revs" style="--cols:110px minmax(0,1fr) 120px">
+  <div class="trow head"><span>Data</span><span>Motivo e origem</span><span>Pontos</span></div>
+</section>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="historico.html" class="on"><i class="fa-solid fa-clock-rotate-left"></i>Histórico</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+</nav>
+
+<script src="session.js?v=19"></script>
+<script>
+// Histórico de Pontos: resumo mensal do usuário logado (GET /app/me/points/history)
+const MES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+const MES_LONGO = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const comp = (c) => `${MES_LONGO[+c.slice(5) - 1]}/${c.slice(0, 4)}`;
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const signed = (n) => `${n > 0 ? '+ ' : n < 0 ? '− ' : ''}${num(Math.abs(n))}`;
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const $ = (id) => document.getElementById(id);
+const HEAD = $('list').innerHTML;
+const extrato = (m) => `extrato.html?month=${m}`;
+const brl = (c) => ((c ?? 0) / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+const day = (d) => String(d).slice(0, 10).split('-').reverse().join('/');
+const STATUS = { active: ['Ativa', 'st-ok'], scheduled: ['Agendada', 'st-warn'], paused: ['Pausada', 'st-warn'], ended: ['Encerrada', ''], draft: ['Rascunho', ''] };
+const HEADS = Object.fromEntries(['camps', 'sales', 'revs'].map((id) => [id, $(id).innerHTML]));
+const empty = (icon, msg) => `<div class="sv-empty"><i class="fa-solid ${icon}"></i>${msg}</div>`;
+
+async function load() {
+  try {
+    const d = await window.incentiva.api('/app/me/points/history');
+    $('balance').textContent = num(d.balance);
+    $('since').textContent = d.months.length ? `${num(d.totals.count)} lançamento(s) desde ${comp(d.months[0].month)}` : 'Nenhum lançamento ainda';
+    $('credits').textContent = num(d.totals.credits);
+    $('debits').textContent = num(d.totals.debits);
+    $('reversals').textContent = num(d.totals.reversals);
+
+    const max = Math.max(1, ...d.months.map((m) => Math.abs(m.balance)));
+    $('bars').innerHTML = d.months.length
+      ? d.months.map((m) => `
+        <a role="listitem" class="sv-bar" href="${extrato(m.month)}" title="${comp(m.month)}: saldo ${num(m.balance)} pts (${signed(m.net)} no mês)">
+          <em>${num(m.balance)}</em>
+          <span style="height:${Math.max(4, (Math.abs(m.balance) / max) * 100)}%"></span>
+          <small>${MES[+m.month.slice(5) - 1]}</small>
+        </a>`).join('')
+      : '<p class="muted">Sem lançamentos ainda.</p>';
+
+    $('list').innerHTML = HEAD + (d.months.length
+      ? [...d.months].reverse().map((m) => `
+        <a class="trow" href="${extrato(m.month)}">
+          <span><b>${comp(m.month)}</b><small class="muted">${num(m.count)} lançamento(s)</small></span>
+          <span class="green" data-l="Créditos">${signed(m.credits)}</span>
+          <span class="${m.debits ? 'red' : 'muted'}" data-l="Débitos">${signed(m.debits)}</span>
+          <span class="${m.reversals ? 'red' : 'muted'}" data-l="Estornos">${signed(m.reversals)}</span>
+          <span class="${m.net >= 0 ? 'green' : 'red'}" data-l="No mês"><b>${signed(m.net)}</b></span>
+          <span data-l="Saldo"><b>${num(m.balance)}</b></span>
+          <span class="kebab"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>`).join('')
+      : '<div class="sv-empty"><i class="fa-solid fa-clock-rotate-left"></i>Seus pontos vão aparecer aqui mês a mês.</div>');
+
+    $('camps').innerHTML = HEADS.camps + (d.campaigns.length
+      ? d.campaigns.map((c) => {
+        const [label, cls] = STATUS[c.status] ?? [c.status, ''];
+        return `<div class="trow">
+          <span><b>${esc(c.name)}</b><small class="muted">${day(c.startDate)} a ${day(c.endDate)}</small></span>
+          <span data-l="Situação"><em class="st ${cls}">${label}</em></span>
+          <span data-l="Lançamentos">${num(c.count)}</span>
+          <span class="${c.points >= 0 ? 'green' : 'red'}" data-l="Pontos"><b>${signed(c.points)}</b></span>
+        </div>`;
+      }).join('')
+      : empty('fa-bullhorn', 'Você ainda não pontuou em campanhas.'));
+
+    $('sales').innerHTML = HEADS.sales + (d.sales.length
+      ? [...d.sales].reverse().map((s) => `
+        <a class="trow" href="vendas.html?competence=${s.competence}">
+          <span><b>${comp(s.competence)}</b></span>
+          <span data-l="Vendas">${num(s.count)}</span>
+          <span data-l="Unidades">${num(s.quantity)}</span>
+          <span data-l="Valor">${brl(s.amountCents)}</span>
+          <span class="green" data-l="Pontos"><b>${signed(s.points)}</b></span>
+          <span class="kebab"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>`).join('')
+      : empty('fa-cart-shopping', 'Nenhuma venda registrada ainda.'));
+
+    $('revs').innerHTML = HEADS.revs + (d.reversals.length
+      ? d.reversals.map((r) => `<div class="trow">
+          <span><b>${day(r.createdAt)}</b></span>
+          <span><b>${esc(r.reason || 'Estorno')}</b><small class="muted">${[
+            r.originRule || r.originOrigin ? `Origem: ${esc(r.originRule || r.originOrigin)}${r.originPoints != null ? ` (${signed(r.originPoints)} pts em ${day(r.originAt)})` : ''}` : '',
+            r.originSale ? `Venda ${esc(r.originSale)}` : '',
+            r.campaignName ? esc(r.campaignName) : '',
+            r.actorName ? `por ${esc(r.actorName)}` : '',
+          ].filter(Boolean).join(' · ')}</small></span>
+          <span class="red" data-l="Pontos"><b>${signed(r.points)}</b></span>
+        </div>`).join('')
+      : empty('fa-circle-check', 'Nenhum estorno. Todos os seus pontos estão de pé.'));
+  } catch (e) {
+    $('list').innerHTML = HEAD + `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+</body></html>

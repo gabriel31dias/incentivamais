@@ -1,0 +1,38 @@
+- generic [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e6]: Incentiva+
+      - generic [ref=f1e8]:
+        - heading "Painel administrativo da campanha" [level=1] [ref=f1e9]
+        - paragraph [ref=f1e10]: Distribuidoras, equipes, campanhas, regras de pontuação, importação de vendas e menus do app em um só lugar.
+    - generic [ref=f1e12]:
+      - generic [ref=f1e13]:
+        - generic [ref=f1e14]: Ambiente de demonstração · dados fictícios
+        - heading "Faça login" [level=1] [ref=f1e17]
+        - paragraph [ref=f1e18]: Escolha um usuário de demonstração ou entre com e-mail e senha.
+      - generic [ref=f1e19]:
+        - generic [ref=f1e20]:
+          - text: E-mail
+          - textbox "E-mail" [ref=f1e21]: admin@incentiva.demo
+        - generic [ref=f1e22]:
+          - text: Senha
+          - generic [ref=f1e23]:
+            - textbox "Senha" [ref=f1e24]: demo123
+            - button "Mostrar senha" [ref=f1e25] [cursor=pointer]
+        - button "Entrar" [ref=f1e29] [cursor=pointer]
+      - generic [ref=f1e30]:
+        - paragraph [ref=f1e31]: Entrar como (senha demo123)
+        - generic [ref=f1e32]:
+          - button "Ana Administradora Super Admin" [ref=f1e33] [cursor=pointer]:
+            - generic [ref=f1e34]: Ana Administradora
+            - generic [ref=f1e35]: Super Admin
+          - button "Carlos Cliente Admin do Cliente" [ref=f1e36] [cursor=pointer]:
+            - generic [ref=f1e37]: Carlos Cliente
+            - generic [ref=f1e38]: Admin do Cliente
+          - button "Fernanda Barbosa Gerente + Ponto Focal" [ref=f1e39] [cursor=pointer]:
+            - generic [ref=f1e40]: Fernanda Barbosa
+            - generic [ref=f1e41]: Gerente + Ponto Focal
+          - button "Mariana Almeida Vendedor" [ref=f1e42] [cursor=pointer]:
+            - generic [ref=f1e43]: Mariana Almeida
+            - generic [ref=f1e44]: Vendedor
+  - region "Notifications alt+T"

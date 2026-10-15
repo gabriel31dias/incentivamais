@@ -1,0 +1,141 @@
+- generic [active] [ref=f24e1]:
+  - generic [ref=f24e2]:
+    - banner [ref=f24e3]:
+      - text: 
+      - link "Notificações" [ref=f24e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e5]: 
+        - emphasis [ref=f24e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f24e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e8]: MA
+        - generic [ref=f24e9]:
+          - text: Mariana Almeida
+          - generic [ref=f24e10]: Vendedor
+        - generic "Sair" [ref=f24e11]: 
+    - generic [ref=f24e13]:
+      - heading "Olá, Mariana!" [level=1] [ref=f24e14]
+      - paragraph [ref=f24e15]: Vendedor | Distribuidora Central
+    - generic [ref=f24e16]:
+      - generic [ref=f24e18]:
+        - generic [ref=f24e19]: Destaque
+        - heading "Venda mais e conquiste prêmios incríveis!" [level=2] [ref=f24e20]
+        - link "Ver meus pontos " [ref=f24e21] [cursor=pointer]:
+          - /url: extrato.html
+          - text: Ver meus pontos
+          - generic [ref=f24e22]: 
+      - generic [ref=f24e23]:
+        - generic [ref=f24e25]:
+          - generic [ref=f24e26]: Meus pontos
+          - generic [ref=f24e27]: —
+        - link " Minha posição —" [ref=f24e30] [cursor=pointer]:
+          - /url: ranking.html
+          - generic [ref=f24e31]: 
+          - generic [ref=f24e32]:
+            - generic [ref=f24e33]: Minha posição
+            - text: —
+      - generic [ref=f24e35]:
+        - generic [ref=f24e36]:
+          - generic [ref=f24e37]: 
+          - generic [ref=f24e39]:
+            - generic [ref=f24e40]: Meta da equipe
+            - generic [ref=f24e41]: —
+        - link "Ver detalhes " [ref=f24e44] [cursor=pointer]:
+          - /url: metas.html
+          - text: Ver detalhes
+          - generic [ref=f24e45]: 
+      - navigation [ref=f24e46]:
+        - link " Extrato de Pontos" [ref=f24e47] [cursor=pointer]:
+          - /url: extrato.html
+          - generic [ref=f24e48]: 
+          - text: Extrato de Pontos
+        - link " Treinamentos" [ref=f24e49] [cursor=pointer]:
+          - /url: treinamentos.html
+          - generic [ref=f24e50]: 
+          - text: Treinamentos
+        - link " Quiz e Missões" [ref=f24e51] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f24e52]: 
+          - text: Quiz e Missões
+        - link " Premiações" [ref=f24e53] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f24e54]: 
+          - text: Premiações
+        - link " Minha Equipe" [ref=f24e55] [cursor=pointer]:
+          - /url: equipe.html
+          - generic [ref=f24e56]: 
+          - text: Minha Equipe
+      - generic [ref=f24e57]:
+        - generic [ref=f24e58]:
+          - heading "Meu desempenho" [level=2] [ref=f24e59]
+          - generic [ref=f24e60] [cursor=pointer]:
+            - generic [ref=f24e61]: 
+            - combobox "Competência" [ref=f24e62]
+            - generic [ref=f24e63]: 
+        - generic [ref=f24e64]:
+          - generic [ref=f24e65]:
+            - generic [ref=f24e66]: 
+            - generic [ref=f24e68]:
+              - text: Vendas
+              - generic [ref=f24e69]: —
+          - generic [ref=f24e70]:
+            - generic [ref=f24e71]: 
+            - generic [ref=f24e73]:
+              - text: Pedidos
+              - generic [ref=f24e74]: —
+          - generic [ref=f24e75]:
+            - generic [ref=f24e76]: 
+            - generic [ref=f24e78]:
+              - text: Produtos
+              - generic [ref=f24e79]: —
+          - generic [ref=f24e80]:
+            - generic [ref=f24e81]: 
+            - generic [ref=f24e83]:
+              - text: Pontos
+              - generic [ref=f24e84]: —
+      - generic [ref=f24e86]:
+        - heading "Ranking da minha equipe" [level=2] [ref=f24e87]
+        - link "Ver todos " [ref=f24e88] [cursor=pointer]:
+          - /url: ranking.html
+          - text: Ver todos
+          - generic [ref=f24e89]: 
+      - heading "Últimas notícias" [level=2] [ref=f24e92]
+  - navigation [ref=f24e93]:
+    - link "Incentiva+" [ref=f24e94] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f24e96] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f24e97]: 
+      - text: Início
+    - generic [ref=f24e98]:
+      - link " Desempenho" [ref=f24e99] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e100]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f24e101]: 
+      - text:   
+    - generic [ref=f24e102]:
+      - link " Pontos" [ref=f24e103] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e104]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f24e105]: 
+      - text:  
+    - generic [ref=f24e106]:
+      - link " Conteúdos" [ref=f24e107] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e108]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f24e109]: 
+      - text:  
+    - generic [ref=f24e110]:
+      - link " Gamificação" [ref=f24e111] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f24e112]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f24e113]: 
+      - text:   
+    - link " Sair" [ref=f24e114] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f24e115]: 
+      - text: Sair

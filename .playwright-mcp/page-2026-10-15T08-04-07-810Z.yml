@@ -1,0 +1,315 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e2]:
+    - banner [ref=f8e3]:
+      - text: 
+      - link "Notificações" [ref=f8e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e5]: 
+        - emphasis [ref=f8e6]: "3"
+      - link "Vinícius Carvalho — sair" [ref=f8e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e8]: VC
+        - generic [ref=f8e9]:
+          - text: Vinícius Carvalho
+          - generic [ref=f8e10]: Gerente
+        - generic "Sair" [ref=f8e11]: 
+    - generic [ref=f8e12]:
+      - generic [ref=f8e13]:
+        - heading "Extrato de Pontos" [level=1] [ref=f8e14]
+        - paragraph [ref=f8e15]: Acompanhe todos os seus lançamentos, créditos, débitos e estornos.
+      - button " Agosto/2025 " [ref=f8e16] [cursor=pointer]:
+        - generic [ref=f8e17]: 
+        - text: Agosto/2025
+        - generic [ref=f8e18]: 
+    - generic [ref=f8e19]:
+      - generic [ref=f8e21]:
+        - text: Saldo atual
+        - generic [ref=f8e22]: "2.450"
+        - generic [ref=f8e23]:
+          - text: pontos
+          - generic [ref=f8e24]:
+            - generic [ref=f8e25]: 
+            - text: 12%
+        - paragraph [ref=f8e26]: + 260 este mês
+      - generic [ref=f8e27]:
+        - generic [ref=f8e28]: +
+        - text: Créditos
+        - generic [ref=f8e30]: "3.120"
+        - text: pontos
+      - generic [ref=f8e31]:
+        - generic [ref=f8e32]: 
+        - text: Débitos
+        - generic [ref=f8e34]: "-670"
+        - text: pontos
+      - generic [ref=f8e35]:
+        - generic [ref=f8e36]: 
+        - text: Estornos
+        - generic [ref=f8e38]: "120"
+        - text: pontos
+    - generic [ref=f8e39]:
+      - button "Todos" [ref=f8e40] [cursor=pointer]
+      - button "Créditos" [ref=f8e41] [cursor=pointer]
+      - button "Débitos" [ref=f8e42] [cursor=pointer]
+      - button "Estornos" [ref=f8e43] [cursor=pointer]
+    - generic [ref=f8e44]:
+      - button " Agosto/2025 " [ref=f8e45] [cursor=pointer]:
+        - generic [ref=f8e46]: 
+        - text: Agosto/2025
+        - generic [ref=f8e47]: 
+      - button "Todos os tipos " [ref=f8e48] [cursor=pointer]:
+        - text: Todos os tipos
+        - generic [ref=f8e49]: 
+      - button "Todas as campanhas " [ref=f8e50] [cursor=pointer]:
+        - text: Todas as campanhas
+        - generic [ref=f8e51]: 
+    - generic [ref=f8e52]:
+      - generic [ref=f8e53]:
+        - generic [ref=f8e54]:
+          - text: Data
+          - generic [ref=f8e55]: 
+        - generic [ref=f8e56]: Descrição
+        - generic [ref=f8e57]: Origem
+        - generic [ref=f8e58]: Pontos
+      - generic [ref=f8e59]:
+        - generic [ref=f8e60]:
+          - generic [ref=f8e61]: 
+          - generic [ref=f8e62]: 20/08/202514:32
+        - generic [ref=f8e63]:
+          - generic [ref=f8e64]: 
+          - generic [ref=f8e66]:
+            - generic [ref=f8e67]: Venda - Produto A
+            - text: NF 123456 | 10 un.
+        - generic [ref=f8e68]:
+          - text: Distribuidora Sudeste
+          - generic [ref=f8e69]: Campanha Principal
+        - generic [ref=f8e70]:
+          - text: + 120
+          - generic [ref=f8e71]: pontos
+        - generic [ref=f8e72]: 
+      - generic [ref=f8e74]:
+        - generic [ref=f8e75]:
+          - generic [ref=f8e76]: 
+          - generic [ref=f8e77]: 18/08/202510:15
+        - generic [ref=f8e78]:
+          - generic [ref=f8e79]: 
+          - generic [ref=f8e81]:
+            - generic [ref=f8e82]: Conclusão de Treinamento
+            - text: Técnicas de Vendas Avançadas
+        - generic [ref=f8e83]:
+          - text: Plataforma
+          - generic [ref=f8e84]: Treinamento
+        - generic [ref=f8e85]:
+          - text: + 50
+          - generic [ref=f8e86]: pontos
+        - generic [ref=f8e87]: 
+      - generic [ref=f8e89]:
+        - generic [ref=f8e90]:
+          - generic [ref=f8e91]: 
+          - generic [ref=f8e92]: 15/08/202509:20
+        - generic [ref=f8e93]:
+          - generic [ref=f8e94]: 
+          - generic [ref=f8e96]:
+            - generic [ref=f8e97]: Venda - Produto B
+            - text: NF 123455 | 5 un.
+        - generic [ref=f8e98]:
+          - text: Distribuidora Sudeste
+          - generic [ref=f8e99]: Campanha Principal
+        - generic [ref=f8e100]:
+          - text: + 80
+          - generic [ref=f8e101]: pontos
+        - generic [ref=f8e102]: 
+      - generic [ref=f8e104]:
+        - generic [ref=f8e105]:
+          - generic [ref=f8e106]: 
+          - generic [ref=f8e107]: 12/08/202516:45
+        - generic [ref=f8e108]:
+          - generic [ref=f8e109]: 
+          - generic [ref=f8e111]:
+            - generic [ref=f8e112]: Bônus de Meta
+            - text: Atingiu 80% da meta mensal
+        - generic [ref=f8e113]:
+          - text: Campanha de Metas
+          - generic [ref=f8e114]: Meta Mensal
+        - generic [ref=f8e115]:
+          - text: + 200
+          - generic [ref=f8e116]: pontos
+        - generic [ref=f8e117]: 
+      - generic [ref=f8e119]:
+        - generic [ref=f8e120]:
+          - generic [ref=f8e121]: 
+          - generic [ref=f8e122]: 10/08/202511:10
+        - generic [ref=f8e123]:
+          - generic [ref=f8e124]: 
+          - generic [ref=f8e126]:
+            - generic [ref=f8e127]: Ajuste de Estorno
+            - text: Correção de venda cancelada
+        - generic [ref=f8e128]: Distribuidora Sudeste
+        - generic [ref=f8e129]:
+          - text: "- 30"
+          - generic [ref=f8e130]: pontos
+        - generic [ref=f8e131]: 
+      - generic [ref=f8e133]:
+        - generic [ref=f8e134]:
+          - generic [ref=f8e135]: 
+          - generic [ref=f8e136]: 08/08/202514:22
+        - generic [ref=f8e137]:
+          - generic [ref=f8e138]: 
+          - generic [ref=f8e140]:
+            - generic [ref=f8e141]: Quiz da Semana
+            - text: Aproveitamento 90%
+        - generic [ref=f8e142]:
+          - text: Plataforma
+          - generic [ref=f8e143]: Quiz e Missões
+        - generic [ref=f8e144]:
+          - text: + 50
+          - generic [ref=f8e145]: pontos
+        - generic [ref=f8e146]: 
+      - generic [ref=f8e148]:
+        - generic [ref=f8e149]:
+          - generic [ref=f8e150]: 
+          - generic [ref=f8e151]: 05/08/202509:18
+        - generic [ref=f8e152]:
+          - generic [ref=f8e153]: 
+          - generic [ref=f8e155]:
+            - generic [ref=f8e156]: Venda - Produto C
+            - text: NF 123450 | 8 un.
+        - generic [ref=f8e157]:
+          - text: Distribuidora Sudeste
+          - generic [ref=f8e158]: Campanha Principal
+        - generic [ref=f8e159]:
+          - text: + 200
+          - generic [ref=f8e160]: pontos
+        - generic [ref=f8e161]: 
+      - generic [ref=f8e163]:
+        - generic [ref=f8e164]:
+          - generic [ref=f8e165]: 
+          - generic [ref=f8e166]: 01/08/202517:03
+        - generic [ref=f8e167]:
+          - generic [ref=f8e168]: 
+          - generic [ref=f8e170]:
+            - generic [ref=f8e171]: Estorno de Venda
+            - text: Pedido cancelado
+        - generic [ref=f8e172]: Distribuidora Sudeste
+        - generic [ref=f8e173]:
+          - text: "- 100"
+          - generic [ref=f8e174]: pontos
+        - generic [ref=f8e175]: 
+      - generic [ref=f8e177]:
+        - generic [ref=f8e178]:
+          - generic [ref=f8e179]: 
+          - generic [ref=f8e180]: 28/07/202512:40
+        - generic [ref=f8e181]:
+          - generic [ref=f8e182]: 
+          - generic [ref=f8e184]:
+            - generic [ref=f8e185]: Premiação Especial
+            - text: Top 10 do mês
+        - generic [ref=f8e186]:
+          - text: Campanha de Premiação
+          - generic [ref=f8e187]: Premiação
+        - generic [ref=f8e188]:
+          - text: + 500
+          - generic [ref=f8e189]: pontos
+        - generic [ref=f8e190]: 
+      - generic [ref=f8e192]:
+        - generic [ref=f8e193]:
+          - generic [ref=f8e194]: 
+          - generic [ref=f8e195]: 25/07/202515:11
+        - generic [ref=f8e196]:
+          - generic [ref=f8e197]: 
+          - generic [ref=f8e199]:
+            - generic [ref=f8e200]: Conclusão de Treinamento
+            - text: Atendimento ao Cliente
+        - generic [ref=f8e201]:
+          - text: Plataforma
+          - generic [ref=f8e202]: Treinamento
+        - generic [ref=f8e203]:
+          - text: + 50
+          - generic [ref=f8e204]: pontos
+        - generic [ref=f8e205]: 
+      - generic [ref=f8e207]:
+        - generic [ref=f8e208]:
+          - generic [ref=f8e209]: 
+          - generic [ref=f8e210]: 22/07/202510:05
+        - generic [ref=f8e211]:
+          - generic [ref=f8e212]: 
+          - generic [ref=f8e214]:
+            - generic [ref=f8e215]: Venda - Produto A
+            - text: NF 123440 | 12 un.
+        - generic [ref=f8e216]:
+          - text: Distribuidora Sudeste
+          - generic [ref=f8e217]: Campanha Principal
+        - generic [ref=f8e218]:
+          - text: + 120
+          - generic [ref=f8e219]: pontos
+        - generic [ref=f8e220]: 
+      - generic [ref=f8e222]:
+        - generic [ref=f8e223]:
+          - generic [ref=f8e224]: 
+          - generic [ref=f8e225]: 20/07/202509:30
+        - generic [ref=f8e226]:
+          - generic [ref=f8e227]: 
+          - generic [ref=f8e229]:
+            - generic [ref=f8e230]: Ajuste de Estorno
+            - text: Duplicidade detectada
+        - generic [ref=f8e231]:
+          - text: Sistema
+          - generic [ref=f8e232]: Ajuste Automático
+        - generic [ref=f8e233]:
+          - text: "- 50"
+          - generic [ref=f8e234]: pontos
+        - generic [ref=f8e235]: 
+  - navigation [ref=f8e237]:
+    - link "Incentiva+" [ref=f8e238] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Inicio" [ref=f8e240] [cursor=pointer]:
+      - /url: gerente.html
+      - generic [ref=f8e241]: 
+      - text: Inicio
+    - generic [ref=f8e242]:
+      - link " Desempenho" [ref=f8e243] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e244]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f8e245]: 
+      - text:   
+    - generic [ref=f8e246]:
+      - link " Pontos" [expanded] [ref=f8e247] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e248]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f8e249]: 
+      - menu [ref=f8e250]:
+        - link " Meu Extrato" [ref=f8e251] [cursor=pointer]:
+          - /url: extrato.html
+          - generic [ref=f8e252]: 
+          - text: Meu Extrato
+        - link " Histórico" [ref=f8e253] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f8e254]: 
+          - text: Histórico
+    - generic [ref=f8e255]:
+      - link " Conteúdos" [ref=f8e256] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e257]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f8e258]: 
+      - text:  
+    - generic [ref=f8e259]:
+      - link " Gamificação" [ref=f8e260] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f8e261]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f8e262]: 
+      - text:   
+    - link " Minha Equipe" [ref=f8e263] [cursor=pointer]:
+      - /url: equipe.html
+      - generic [ref=f8e264]: 
+      - text: Minha Equipe
+    - link " Importar Vendas" [ref=f8e265] [cursor=pointer]:
+      - /url: importar.html
+      - generic [ref=f8e266]: 
+      - text: Importar Vendas
+    - link " Sair" [ref=f8e267] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f8e268]: 
+      - text: Sair

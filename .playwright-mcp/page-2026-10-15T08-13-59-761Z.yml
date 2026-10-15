@@ -1,0 +1,223 @@
+- generic [active] [ref=f10e1]:
+  - generic [ref=f10e2]:
+    - banner [ref=f10e3]:
+      - text: 
+      - link "Notificações" [ref=f10e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e5]: 
+        - emphasis [ref=f10e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f10e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e8]: MA
+        - generic [ref=f10e9]:
+          - text: Mariana Almeida
+          - generic [ref=f10e10]: Vendedor
+        - generic "Sair" [ref=f10e11]: 
+    - generic [ref=f10e12]:
+      - generic [ref=f10e13]:
+        - heading "Extrato de Pontos" [level=1] [ref=f10e14]
+        - paragraph [ref=f10e15]: Acompanhe todos os seus lançamentos, créditos, débitos e estornos.
+      - generic [ref=f10e16] [cursor=pointer]:
+        - generic [ref=f10e17]: 
+        - combobox "Mês dos lançamentos" [ref=f10e18]:
+          - option "Todo o período"
+          - option "Outubro/2026"
+          - option "Setembro/2026"
+          - option "Agosto/2026" [selected]
+          - option "Julho/2026"
+          - option "Junho/2026"
+          - option "Maio/2026"
+          - option "Abril/2026"
+          - option "Março/2026"
+          - option "Fevereiro/2026"
+        - generic [ref=f10e19]: 
+    - generic [ref=f10e20]:
+      - generic [ref=f10e22]:
+        - text: Saldo atual
+        - generic [ref=f10e23]: "8.359"
+        - generic [ref=f10e24]: pontos
+        - paragraph [ref=f10e25]: + 650 em Agosto/2026
+      - generic [ref=f10e26]:
+        - generic [ref=f10e27]: +
+        - text: Créditos
+        - generic [ref=f10e29]: "650"
+        - text: pontos
+      - generic [ref=f10e30]:
+        - generic [ref=f10e31]: 
+        - text: Débitos
+        - generic [ref=f10e33]: "0"
+        - text: pontos
+      - generic [ref=f10e34]:
+        - generic [ref=f10e35]: 
+        - text: Estornos
+        - generic [ref=f10e37]: "0"
+        - text: pontos
+    - generic [ref=f10e38]:
+      - button "Todos" [ref=f10e39] [cursor=pointer]
+      - button "Créditos" [ref=f10e40] [cursor=pointer]
+      - button "Débitos" [ref=f10e41] [cursor=pointer]
+      - button "Estornos" [ref=f10e42] [cursor=pointer]
+    - generic [ref=f10e44] [cursor=pointer]:
+      - generic [ref=f10e45]: 
+      - combobox "Campanha" [ref=f10e46]:
+        - option "Todas as campanhas" [selected]
+        - option "Incentiva+ 2026"
+      - generic [ref=f10e47]: 
+    - paragraph [ref=f10e48]: 8 lançamento(s) em Agosto/2026
+    - generic [ref=f10e49]:
+      - generic [ref=f10e50]:
+        - generic [ref=f10e51]: Data
+        - generic [ref=f10e52]: Descrição
+        - generic [ref=f10e53]: Origem
+        - generic [ref=f10e54]: Pontos
+      - generic [ref=f10e55]:
+        - generic [ref=f10e56]: 06/08/202612:44
+        - generic [ref=f10e58]:
+          - generic [ref=f10e59]: 
+          - generic [ref=f10e61]:
+            - generic [ref=f10e62]: Venda NF2026070040
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e63]:
+          - text: Distribuidora Central
+          - generic [ref=f10e64]: Incentiva+ 2026
+        - generic [ref=f10e65]:
+          - text: + 54
+          - generic [ref=f10e66]: pontos
+      - generic [ref=f10e67]:
+        - generic [ref=f10e68]: 06/08/202612:44
+        - generic [ref=f10e70]:
+          - generic [ref=f10e71]: 
+          - generic [ref=f10e73]:
+            - generic [ref=f10e74]: Venda NF2026070035
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e75]:
+          - text: Distribuidora Central
+          - generic [ref=f10e76]: Incentiva+ 2026
+        - generic [ref=f10e77]:
+          - text: + 190
+          - generic [ref=f10e78]: pontos
+      - generic [ref=f10e79]:
+        - generic [ref=f10e80]: 06/08/202612:44
+        - generic [ref=f10e82]:
+          - generic [ref=f10e83]: 
+          - generic [ref=f10e85]:
+            - generic [ref=f10e86]: Venda NF2026070030
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e87]:
+          - text: Distribuidora Central
+          - generic [ref=f10e88]: Incentiva+ 2026
+        - generic [ref=f10e89]:
+          - text: + 111
+          - generic [ref=f10e90]: pontos
+      - generic [ref=f10e91]:
+        - generic [ref=f10e92]: 06/08/202612:44
+        - generic [ref=f10e94]:
+          - generic [ref=f10e95]: 
+          - generic [ref=f10e97]:
+            - generic [ref=f10e98]: Venda NF2026070025
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e99]:
+          - text: Distribuidora Central
+          - generic [ref=f10e100]: Incentiva+ 2026
+        - generic [ref=f10e101]:
+          - text: + 7
+          - generic [ref=f10e102]: pontos
+      - generic [ref=f10e103]:
+        - generic [ref=f10e104]: 06/08/202612:44
+        - generic [ref=f10e106]:
+          - generic [ref=f10e107]: 
+          - generic [ref=f10e109]:
+            - generic [ref=f10e110]: Venda NF2026070020
+            - text: Produto A por unidade (v1)
+        - generic [ref=f10e111]:
+          - text: Distribuidora Central
+          - generic [ref=f10e112]: Incentiva+ 2026
+        - generic [ref=f10e113]:
+          - text: + 90
+          - generic [ref=f10e114]: pontos
+      - generic [ref=f10e115]:
+        - generic [ref=f10e116]: 06/08/202612:44
+        - generic [ref=f10e118]:
+          - generic [ref=f10e119]: 
+          - generic [ref=f10e121]:
+            - generic [ref=f10e122]: Venda NF2026070015
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e123]:
+          - text: Distribuidora Central
+          - generic [ref=f10e124]: Incentiva+ 2026
+        - generic [ref=f10e125]:
+          - text: + 174
+          - generic [ref=f10e126]: pontos
+      - generic [ref=f10e127]:
+        - generic [ref=f10e128]: 06/08/202612:44
+        - generic [ref=f10e130]:
+          - generic [ref=f10e131]: 
+          - generic [ref=f10e133]:
+            - generic [ref=f10e134]: Venda NF2026070010
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f10e135]:
+          - text: Distribuidora Central
+          - generic [ref=f10e136]: Incentiva+ 2026
+        - generic [ref=f10e137]:
+          - text: + 14
+          - generic [ref=f10e138]: pontos
+      - generic [ref=f10e139]:
+        - generic [ref=f10e140]: 06/08/202612:44
+        - generic [ref=f10e142]:
+          - generic [ref=f10e143]: 
+          - generic [ref=f10e145]:
+            - generic [ref=f10e146]: Venda NF2026070005
+            - text: Produto A por unidade (v1)
+        - generic [ref=f10e147]:
+          - text: Distribuidora Central
+          - generic [ref=f10e148]: Incentiva+ 2026
+        - generic [ref=f10e149]:
+          - text: + 10
+          - generic [ref=f10e150]: pontos
+  - navigation [ref=f10e151]:
+    - link "Incentiva+" [ref=f10e152] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f10e154] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f10e155]: 
+      - text: Início
+    - generic [ref=f10e156]:
+      - link " Desempenho" [ref=f10e157] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e158]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f10e159]: 
+      - text:   
+    - generic [ref=f10e160]:
+      - link " Pontos" [expanded] [ref=f10e161] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e162]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f10e163]: 
+      - menu [ref=f10e164]:
+        - link " Meu Extrato" [ref=f10e165] [cursor=pointer]:
+          - /url: extrato.html
+          - generic [ref=f10e166]: 
+          - text: Meu Extrato
+        - link " Histórico" [ref=f10e167] [cursor=pointer]:
+          - /url: historico.html
+          - generic [ref=f10e168]: 
+          - text: Histórico
+    - generic [ref=f10e169]:
+      - link " Conteúdos" [ref=f10e170] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e171]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f10e172]: 
+      - text:  
+    - generic [ref=f10e173]:
+      - link " Gamificação" [ref=f10e174] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f10e175]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f10e176]: 
+      - text:   
+    - link " Sair" [ref=f10e177] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f10e178]: 
+      - text: Sair

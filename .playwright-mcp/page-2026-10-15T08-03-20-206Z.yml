@@ -1,0 +1,56 @@
+- main [ref=f4e2]:
+  - generic [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - img "Incentiva+" [ref=f4e5]
+      - generic [ref=f4e6]:
+        - generic [ref=f4e7]: Incentiva+
+        - generic [ref=f4e8]: Plataforma de Incentivo de Vendas
+    - heading "Mais vendas. Mais conquistas. Juntos mais longe." [level=1] [ref=f4e9]: Mais vendas.Mais conquistas.Juntos mais longe.
+    - paragraph [ref=f4e10]: Uma campanha nacional para valorizar quem faz o nosso negócio acontecer.
+  - generic [ref=f4e11]:
+    - generic [ref=f4e12]: Incentiva+
+    - generic [ref=f4e14]: E-mail
+    - generic [ref=f4e15]:
+      - generic [ref=f4e16]: 
+      - textbox "E-mail" [ref=f4e17]:
+        - /placeholder: seuemail@empresa.com.br
+    - generic [ref=f4e18]: Senha
+    - generic [ref=f4e19]:
+      - generic [ref=f4e20]: 
+      - textbox "Senha" [ref=f4e21]:
+        - /placeholder: ••••••••••
+      - button "Mostrar senha" [ref=f4e22] [cursor=pointer]:
+        - generic [ref=f4e23]: 
+    - generic [ref=f4e24]:
+      - generic [ref=f4e25]:
+        - checkbox "Lembrar de mim" [checked] [ref=f4e26] [cursor=pointer]: 
+        - text: Lembrar de mim
+      - link "Esqueceu sua senha?" [ref=f4e27] [cursor=pointer]:
+        - /url: "#"
+    - button "Entrar " [ref=f4e28] [cursor=pointer]:
+      - text: Entrar
+      - generic [ref=f4e29]: 
+    - generic [ref=f4e30]: ou
+    - button " Entrar com Google" [ref=f4e31] [cursor=pointer]:
+      - generic [ref=f4e32]: 
+      - text: Entrar com Google
+    - paragraph [ref=f4e33]:
+      - text: Primeiro acesso?
+      - generic [ref=f4e34]: Fale com o administrador da sua empresa.
+    - img "Equipe Incentiva+ comemorando" [ref=f4e35]
+    - generic [ref=f4e36]:
+      - generic [ref=f4e37]:
+        - generic [ref=f4e38]: 
+        - generic [ref=f4e39]:
+          - text: Mais vendas
+          - generic [ref=f4e40]: para todos
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]: 
+        - generic [ref=f4e43]:
+          - text: Mais conquistas
+          - generic [ref=f4e44]: em equipe
+      - generic [ref=f4e45]:
+        - generic [ref=f4e46]: 
+        - generic [ref=f4e47]:
+          - text: Juntos
+          - generic [ref=f4e48]: mais longe

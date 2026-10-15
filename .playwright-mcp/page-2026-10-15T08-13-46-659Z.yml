@@ -1,0 +1,230 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e2]:
+    - banner [ref=f9e3]:
+      - text: 
+      - link "Notificações" [ref=f9e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e5]: 
+        - emphasis [ref=f9e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f9e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e8]: MA
+        - generic [ref=f9e9]:
+          - text: Mariana Almeida
+          - generic [ref=f9e10]: Vendedor
+        - generic "Sair" [ref=f9e11]: 
+    - generic [ref=f9e12]:
+      - generic [ref=f9e13]:
+        - heading "Histórico de Pontos" [level=1] [ref=f9e14]
+        - paragraph [ref=f9e15]: Como seus pontos evoluíram mês a mês.
+      - link " Ver extrato" [ref=f9e16] [cursor=pointer]:
+        - /url: extrato.html
+        - generic [ref=f9e17]: 
+        - text: Ver extrato
+    - generic [ref=f9e18]:
+      - generic [ref=f9e20]:
+        - text: Saldo atual
+        - generic [ref=f9e21]: "8.359"
+        - generic [ref=f9e22]: pontos
+        - paragraph [ref=f9e23]: 66 lançamento(s) desde Fevereiro/2026
+      - generic [ref=f9e24]:
+        - generic [ref=f9e25]: +
+        - text: Créditos no total
+        - generic [ref=f9e27]: "8.359"
+        - text: pontos
+      - generic [ref=f9e28]:
+        - generic [ref=f9e29]: 
+        - text: Débitos no total
+        - generic [ref=f9e31]: "0"
+        - text: pontos
+      - generic [ref=f9e32]:
+        - generic [ref=f9e33]: 
+        - text: Estornos no total
+        - generic [ref=f9e35]: "0"
+        - text: pontos
+    - generic [ref=f9e36]:
+      - generic [ref=f9e37]:
+        - heading "Saldo no fim de cada mês" [level=2] [ref=f9e38]
+        - generic [ref=f9e39]: Toque num mês para ver o extrato
+      - list [ref=f9e40]:
+        - 'listitem "Fevereiro/2026: saldo 1.548 pts (+ 1.548 no mês)" [ref=f9e41] [cursor=pointer]':
+          - emphasis [ref=f9e42]: "1.548"
+          - generic [ref=f9e44]: Fev
+        - 'listitem "Março/2026: saldo 2.395 pts (+ 847 no mês)" [ref=f9e45] [cursor=pointer]':
+          - emphasis [ref=f9e46]: "2.395"
+          - generic [ref=f9e48]: Mar
+        - 'listitem "Abril/2026: saldo 3.662 pts (+ 1.267 no mês)" [ref=f9e49] [cursor=pointer]':
+          - emphasis [ref=f9e50]: "3.662"
+          - generic [ref=f9e52]: Abr
+        - 'listitem "Maio/2026: saldo 4.786 pts (+ 1.124 no mês)" [ref=f9e53] [cursor=pointer]':
+          - emphasis [ref=f9e54]: "4.786"
+          - generic [ref=f9e56]: Mai
+        - 'listitem "Junho/2026: saldo 5.822 pts (+ 1.036 no mês)" [ref=f9e57] [cursor=pointer]':
+          - emphasis [ref=f9e58]: "5.822"
+          - generic [ref=f9e60]: Jun
+        - 'listitem "Julho/2026: saldo 6.356 pts (+ 534 no mês)" [ref=f9e61] [cursor=pointer]':
+          - emphasis [ref=f9e62]: "6.356"
+          - generic [ref=f9e64]: Jul
+        - 'listitem "Agosto/2026: saldo 7.006 pts (+ 650 no mês)" [ref=f9e65] [cursor=pointer]':
+          - emphasis [ref=f9e66]: "7.006"
+          - generic [ref=f9e68]: Ago
+        - 'listitem "Setembro/2026: saldo 7.310 pts (+ 304 no mês)" [ref=f9e69] [cursor=pointer]':
+          - emphasis [ref=f9e70]: "7.310"
+          - generic [ref=f9e72]: Set
+        - 'listitem "Outubro/2026: saldo 8.359 pts (+ 1.049 no mês)" [ref=f9e73] [cursor=pointer]':
+          - emphasis [ref=f9e74]: "8.359"
+          - generic [ref=f9e76]: Out
+    - generic [ref=f9e77]:
+      - generic [ref=f9e78]:
+        - generic [ref=f9e79]: Mês
+        - generic [ref=f9e80]: Créditos
+        - generic [ref=f9e81]: Débitos
+        - generic [ref=f9e82]: Estornos
+        - generic [ref=f9e83]: No mês
+        - generic [ref=f9e84]: Saldo
+      - link "Outubro/2026 9 lançamento(s) + 1.049 0 0 + 1.049 8.359 " [ref=f9e85] [cursor=pointer]:
+        - /url: extrato.html?month=2026-10
+        - generic [ref=f9e86]:
+          - text: Outubro/2026
+          - generic [ref=f9e87]: 9 lançamento(s)
+        - generic [ref=f9e88]: + 1.049
+        - generic [ref=f9e89]: "0"
+        - generic [ref=f9e90]: "0"
+        - generic [ref=f9e91]: + 1.049
+        - generic [ref=f9e92]: "8.359"
+        - generic [ref=f9e93]: 
+      - link "Setembro/2026 7 lançamento(s) + 304 0 0 + 304 7.310 " [ref=f9e95] [cursor=pointer]:
+        - /url: extrato.html?month=2026-09
+        - generic [ref=f9e96]:
+          - text: Setembro/2026
+          - generic [ref=f9e97]: 7 lançamento(s)
+        - generic [ref=f9e98]: + 304
+        - generic [ref=f9e99]: "0"
+        - generic [ref=f9e100]: "0"
+        - generic [ref=f9e101]: + 304
+        - generic [ref=f9e102]: "7.310"
+        - generic [ref=f9e103]: 
+      - link "Agosto/2026 8 lançamento(s) + 650 0 0 + 650 7.006 " [ref=f9e105] [cursor=pointer]:
+        - /url: extrato.html?month=2026-08
+        - generic [ref=f9e106]:
+          - text: Agosto/2026
+          - generic [ref=f9e107]: 8 lançamento(s)
+        - generic [ref=f9e108]: + 650
+        - generic [ref=f9e109]: "0"
+        - generic [ref=f9e110]: "0"
+        - generic [ref=f9e111]: + 650
+        - generic [ref=f9e112]: "7.006"
+        - generic [ref=f9e113]: 
+      - link "Julho/2026 8 lançamento(s) + 534 0 0 + 534 6.356 " [ref=f9e115] [cursor=pointer]:
+        - /url: extrato.html?month=2026-07
+        - generic [ref=f9e116]:
+          - text: Julho/2026
+          - generic [ref=f9e117]: 8 lançamento(s)
+        - generic [ref=f9e118]: + 534
+        - generic [ref=f9e119]: "0"
+        - generic [ref=f9e120]: "0"
+        - generic [ref=f9e121]: + 534
+        - generic [ref=f9e122]: "6.356"
+        - generic [ref=f9e123]: 
+      - link "Junho/2026 7 lançamento(s) + 1.036 0 0 + 1.036 5.822 " [ref=f9e125] [cursor=pointer]:
+        - /url: extrato.html?month=2026-06
+        - generic [ref=f9e126]:
+          - text: Junho/2026
+          - generic [ref=f9e127]: 7 lançamento(s)
+        - generic [ref=f9e128]: + 1.036
+        - generic [ref=f9e129]: "0"
+        - generic [ref=f9e130]: "0"
+        - generic [ref=f9e131]: + 1.036
+        - generic [ref=f9e132]: "5.822"
+        - generic [ref=f9e133]: 
+      - link "Maio/2026 8 lançamento(s) + 1.124 0 0 + 1.124 4.786 " [ref=f9e135] [cursor=pointer]:
+        - /url: extrato.html?month=2026-05
+        - generic [ref=f9e136]:
+          - text: Maio/2026
+          - generic [ref=f9e137]: 8 lançamento(s)
+        - generic [ref=f9e138]: + 1.124
+        - generic [ref=f9e139]: "0"
+        - generic [ref=f9e140]: "0"
+        - generic [ref=f9e141]: + 1.124
+        - generic [ref=f9e142]: "4.786"
+        - generic [ref=f9e143]: 
+      - link "Abril/2026 7 lançamento(s) + 1.267 0 0 + 1.267 3.662 " [ref=f9e145] [cursor=pointer]:
+        - /url: extrato.html?month=2026-04
+        - generic [ref=f9e146]:
+          - text: Abril/2026
+          - generic [ref=f9e147]: 7 lançamento(s)
+        - generic [ref=f9e148]: + 1.267
+        - generic [ref=f9e149]: "0"
+        - generic [ref=f9e150]: "0"
+        - generic [ref=f9e151]: + 1.267
+        - generic [ref=f9e152]: "3.662"
+        - generic [ref=f9e153]: 
+      - link "Março/2026 6 lançamento(s) + 847 0 0 + 847 2.395 " [ref=f9e155] [cursor=pointer]:
+        - /url: extrato.html?month=2026-03
+        - generic [ref=f9e156]:
+          - text: Março/2026
+          - generic [ref=f9e157]: 6 lançamento(s)
+        - generic [ref=f9e158]: + 847
+        - generic [ref=f9e159]: "0"
+        - generic [ref=f9e160]: "0"
+        - generic [ref=f9e161]: + 847
+        - generic [ref=f9e162]: "2.395"
+        - generic [ref=f9e163]: 
+      - link "Fevereiro/2026 6 lançamento(s) + 1.548 0 0 + 1.548 1.548 " [ref=f9e165] [cursor=pointer]:
+        - /url: extrato.html?month=2026-02
+        - generic [ref=f9e166]:
+          - text: Fevereiro/2026
+          - generic [ref=f9e167]: 6 lançamento(s)
+        - generic [ref=f9e168]: + 1.548
+        - generic [ref=f9e169]: "0"
+        - generic [ref=f9e170]: "0"
+        - generic [ref=f9e171]: + 1.548
+        - generic [ref=f9e172]: "1.548"
+        - generic [ref=f9e173]: 
+  - navigation [ref=f9e175]:
+    - link "Incentiva+" [ref=f9e176] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f9e178] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f9e179]: 
+      - text: Início
+    - generic [ref=f9e180]:
+      - link " Desempenho" [ref=f9e181] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e182]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f9e183]: 
+      - text:   
+    - generic [ref=f9e184]:
+      - link " Pontos" [expanded] [ref=f9e185] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e186]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f9e187]: 
+      - menu [ref=f9e188]:
+        - link " Meu Extrato" [ref=f9e189] [cursor=pointer]:
+          - /url: extrato.html
+          - generic [ref=f9e190]: 
+          - text: Meu Extrato
+        - link " Histórico" [ref=f9e191] [cursor=pointer]:
+          - /url: historico.html
+          - generic [ref=f9e192]: 
+          - text: Histórico
+    - generic [ref=f9e193]:
+      - link " Conteúdos" [ref=f9e194] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e195]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f9e196]: 
+      - text:  
+    - generic [ref=f9e197]:
+      - link " Gamificação" [ref=f9e198] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f9e199]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f9e200]: 
+      - text:   
+    - link " Sair" [ref=f9e201] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f9e202]: 
+      - text: Sair

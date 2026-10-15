@@ -1,0 +1,56 @@
+- main [ref=f21e2]:
+  - generic [ref=f21e3]:
+    - generic [ref=f21e4]:
+      - img "Incentiva+" [ref=f21e5]
+      - generic [ref=f21e6]:
+        - generic [ref=f21e7]: Incentiva+
+        - generic [ref=f21e8]: Plataforma de Incentivo de Vendas
+    - heading "Mais vendas. Mais conquistas. Juntos mais longe." [level=1] [ref=f21e9]: Mais vendas.Mais conquistas.Juntos mais longe.
+    - paragraph [ref=f21e10]: Uma campanha nacional para valorizar quem faz o nosso negócio acontecer.
+  - generic [ref=f21e11]:
+    - generic [ref=f21e12]: Incentiva+
+    - generic [ref=f21e14]: E-mail
+    - generic [ref=f21e15]:
+      - generic [ref=f21e16]: 
+      - textbox "E-mail" [ref=f21e17]:
+        - /placeholder: seuemail@empresa.com.br
+    - generic [ref=f21e18]: Senha
+    - generic [ref=f21e19]:
+      - generic [ref=f21e20]: 
+      - textbox "Senha" [ref=f21e21]:
+        - /placeholder: ••••••••••
+      - button "Mostrar senha" [ref=f21e22] [cursor=pointer]:
+        - generic [ref=f21e23]: 
+    - generic [ref=f21e24]:
+      - generic [ref=f21e25]:
+        - checkbox "Lembrar de mim" [checked] [ref=f21e26] [cursor=pointer]: 
+        - text: Lembrar de mim
+      - link "Esqueceu sua senha?" [ref=f21e27] [cursor=pointer]:
+        - /url: "#"
+    - button "Entrar " [ref=f21e28] [cursor=pointer]:
+      - text: Entrar
+      - generic [ref=f21e29]: 
+    - generic [ref=f21e30]: ou
+    - button " Entrar com Google" [ref=f21e31] [cursor=pointer]:
+      - generic [ref=f21e32]: 
+      - text: Entrar com Google
+    - paragraph [ref=f21e33]:
+      - text: Primeiro acesso?
+      - generic [ref=f21e34]: Fale com o administrador da sua empresa.
+    - img "Equipe Incentiva+ comemorando" [ref=f21e35]
+    - generic [ref=f21e36]:
+      - generic [ref=f21e37]:
+        - generic [ref=f21e38]: 
+        - generic [ref=f21e39]:
+          - text: Mais vendas
+          - generic [ref=f21e40]: para todos
+      - generic [ref=f21e41]:
+        - generic [ref=f21e42]: 
+        - generic [ref=f21e43]:
+          - text: Mais conquistas
+          - generic [ref=f21e44]: em equipe
+      - generic [ref=f21e45]:
+        - generic [ref=f21e46]: 
+        - generic [ref=f21e47]:
+          - text: Juntos
+          - generic [ref=f21e48]: mais longe

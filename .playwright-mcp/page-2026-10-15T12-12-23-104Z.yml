@@ -1,0 +1,121 @@
+- generic [active] [ref=f38e1]:
+  - generic [ref=f38e2]:
+    - banner [ref=f38e3]:
+      - text: 
+      - link "Notificações" [ref=f38e4] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e5]: 
+        - emphasis [ref=f38e6]: "3"
+      - link "Mariana Almeida — sair" [ref=f38e7] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e8]: MA
+        - generic [ref=f38e9]:
+          - text: Mariana Almeida
+          - generic [ref=f38e10]: Vendedor
+        - generic "Sair" [ref=f38e11]: 
+    - link " Todos os treinamentos" [ref=f38e12] [cursor=pointer]:
+      - /url: treinamentos.html
+      - generic [ref=f38e13]: 
+      - text: Todos os treinamentos
+    - generic [ref=f38e14]:
+      - generic [ref=f38e15]:
+        - generic [ref=f38e17]:
+          - generic [ref=f38e18]: 
+          - text: Esta aula não tem vídeo.
+        - generic [ref=f38e19]:
+          - generic [ref=f38e20]:
+            - text: Abordagem · Aula 1 de 5
+            - heading "Aula 1" [level=1] [ref=f38e21]
+          - generic [ref=f38e22]:
+            - button " Assistida" [pressed] [ref=f38e23] [cursor=pointer]:
+              - generic [ref=f38e24]: 
+              - text: Assistida
+            - button "Próxima aula " [ref=f38e25] [cursor=pointer]:
+              - text: Próxima aula
+              - generic [ref=f38e26]: 
+      - complementary [ref=f38e27]:
+        - heading "Técnicas de Vendas Avançadas" [level=2] [ref=f38e28]
+        - generic [ref=f38e29]: 100%
+        - generic [ref=f38e33]:
+          - text: 5 de 5 aula(s) assistida(s) ·
+          - generic [ref=f38e34]:
+            - generic [ref=f38e35]: 
+            - text: 50 pontos ao concluir
+        - paragraph [ref=f38e36]:
+          - generic [ref=f38e37]: 
+          - text: Curso concluído · certificado liberado
+        - heading "Abordagem" [level=3] [ref=f38e38]
+        - list [ref=f38e39]:
+          - listitem [ref=f38e40]:
+            - button " Aula 1" [ref=f38e41] [cursor=pointer]:
+              - generic [ref=f38e42]: 
+              - generic [ref=f38e43]: Aula 1
+          - listitem [ref=f38e44]:
+            - button " Aula 2" [ref=f38e45] [cursor=pointer]:
+              - generic [ref=f38e46]: 
+              - generic [ref=f38e47]: Aula 2
+          - listitem [ref=f38e48]:
+            - button " Aula 3" [ref=f38e49] [cursor=pointer]:
+              - generic [ref=f38e50]: 
+              - generic [ref=f38e51]: Aula 3
+          - listitem [ref=f38e52]:
+            - button " Aula 4" [ref=f38e53] [cursor=pointer]:
+              - generic [ref=f38e54]: 
+              - generic [ref=f38e55]: Aula 4
+        - heading "Objeções" [level=3] [ref=f38e56]
+        - list [ref=f38e57]:
+          - listitem [ref=f38e58]:
+            - button " Aula1" [ref=f38e59] [cursor=pointer]:
+              - generic [ref=f38e60]: 
+              - generic [ref=f38e61]: Aula1
+  - navigation [ref=f38e62]:
+    - link "Incentiva+" [ref=f38e63] [cursor=pointer]:
+      - /url: inicio.html
+    - link " Início" [ref=f38e65] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f38e66]: 
+      - text: Início
+    - generic [ref=f38e67]:
+      - link " Desempenho" [ref=f38e68] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e69]: 
+        - text: Desempenho
+        - generic [aria-hidden] [ref=f38e70]: 
+      - text:   
+    - generic [ref=f38e71]:
+      - link " Pontos" [ref=f38e72] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e73]: 
+        - text: Pontos
+        - generic [aria-hidden] [ref=f38e74]: 
+      - text:  
+    - generic [ref=f38e75]:
+      - link " Conteúdos" [expanded] [ref=f38e76] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e77]: 
+        - text: Conteúdos
+        - generic [aria-hidden] [ref=f38e78]: 
+      - menu [ref=f38e79]:
+        - link " Notícias" [ref=f38e80] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f38e81]: 
+          - text: Notícias
+        - link " Treinamentos" [ref=f38e82] [cursor=pointer]:
+          - /url: treinamentos.html
+          - generic [ref=f38e83]: 
+          - text: Treinamentos
+    - generic [ref=f38e84]:
+      - link " Gamificação" [ref=f38e85] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f38e86]: 
+        - text: Gamificação
+        - generic [aria-hidden] [ref=f38e87]: 
+      - text:   
+    - link " xx" [ref=f38e88] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f38e89]: 
+      - text: xx
+    - link " Sair" [ref=f38e90] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f38e91]: 
+      - text: Sair

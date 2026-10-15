@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Extrato · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="inicio.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"><img src="img/avatar-mariana.png" alt="Mariana"></a>
+</header>
+
+<section class="page-h">
+  <div><h1>Extrato de Pontos</h1><p>Acompanhe todos os seus lançamentos, créditos, débitos e estornos.</p></div>
+  <label class="select sv-month"><i class="fa-regular fa-calendar"></i><select id="month" aria-label="Mês dos lançamentos"></select><i class="fa-solid fa-chevron-down"></i></label>
+</section>
+
+<section class="summary">
+  <div class="card main"><img class="coin" src="img/coin.png" alt="">
+    <div style="flex:1">Saldo atual<b id="balance">—</b><div class="between">pontos</div><p style="margin-top:14px;font-size:16px" id="net">&nbsp;</p></div></div>
+  <div class="card"><span class="ic i-green"><i class="fa-solid fa-plus"></i></span>Créditos<b id="credits">—</b>pontos</div>
+  <div class="card"><span class="ic i-red"><i class="fa-solid fa-minus"></i></span>Débitos<b id="debits">—</b>pontos</div>
+  <div class="card"><span class="ic i-gray"><i class="fa-solid fa-rotate-right"></i></span>Estornos<b id="reversals">—</b>pontos</div>
+</section>
+
+<div class="tabs" id="tabs">
+  <button class="on" data-f="">Todos</button><button data-f="c">Créditos</button><button data-f="d">Débitos</button><button data-f="e">Estornos</button>
+</div>
+
+<section class="filters">
+  <label class="select sv-month"><i class="fa-solid fa-bullhorn"></i><select id="campaign" aria-label="Campanha"><option value="">Todas as campanhas</option></select><i class="fa-solid fa-chevron-down"></i></label>
+</section>
+
+<p class="sv-count" id="count"></p>
+<section class="table" id="list">
+  <div class="trow head"><span>Data</span><span>Descrição</span><span>Origem</span><span style="text-align:center">Pontos</span><span></span></div>
+</section>
+<button class="btn-ghost sv-more" id="more" hidden>Carregar mais</button>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html" class="on"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+
+
+<script src="session.js?v=19"></script>
+<script>
+// Extrato de Pontos: lançamentos do usuário logado (GET /app/me/points)
+const MES = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+const comp = (c) => `${MES[+c.slice(5) - 1]}/${c.slice(0, 4)}`;
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const $ = (id) => document.getElementById(id);
+// tipo → [ícone, cor, título]
+const KIND = {
+  credit: ['cart-shopping', 'green', 'Crédito'],
+  bonus: ['trophy', 'gold', 'Bônus'],
+  adjustment: ['sliders', 'blue', 'Ajuste'],
+  debit: ['minus', 'red', 'Débito'],
+  reversal: ['rotate-right', 'gray', 'Estorno'],
+};
+// ?month=AAAA-MM vem do Histórico
+let state = { month: new URLSearchParams(location.search).get('month'), type: '', campaignId: '', page: 1 };
+
+async function load(append = false) {
+  const qs = new URLSearchParams({ page: state.page, per_page: 20, type: state.type, ...(state.month ? { month: state.month } : {}), ...(state.campaignId ? { campaignId: state.campaignId } : {}) });
+  if (!append) $('list').innerHTML = HEAD + '<div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando...</div>';
+  try {
+    const d = await window.incentiva.api(`/app/me/points?${qs}`);
+    state.month = d.month;
+    renderFilters(d);
+    $('balance').textContent = num(d.balance);
+    $('net').textContent = d.month === 'all' ? 'Todo o período' : `${d.summary.net >= 0 ? '+' : '−'} ${num(Math.abs(d.summary.net))} em ${comp(d.month)}`;
+    $('credits').textContent = num(d.summary.credits);
+    $('debits').textContent = num(d.summary.debits);
+    $('reversals').textContent = num(d.summary.reversals);
+    const rows = d.data.map(row).join('');
+    $('list').innerHTML = (append ? $('list').innerHTML : HEAD) + rows;
+    if (!append && !d.data.length) $('list').innerHTML = HEAD + '<div class="sv-empty"><i class="fa-regular fa-file-lines"></i>Nenhum lançamento neste filtro.</div>';
+    $('count').textContent = `${num(d.pagination.total)} lançamento(s)${d.month === 'all' ? '' : ` em ${comp(d.month)}`}`;
+    $('more').hidden = d.pagination.page >= d.pagination.lastPage;
+  } catch (e) {
+    $('list').innerHTML = HEAD + `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+function row(e) {
+  const [ic, color, label] = KIND[e.type] ?? ['circle', 'gray', e.type];
+  const at = new Date(`${String(e.createdAt).replace(' ', 'T')}Z`);
+  const sub = e.reason || e.ruleLabel || label;
+  const p = e.points;
+  return `
+  <div class="trow">
+    <span class="date"><span>${at.toLocaleDateString('pt-BR')}<br>${at.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</span></span>
+    <span class="desc"><span class="ico i-${color}"><i class="fa-solid fa-${ic}"></i></span><span><b>${esc(e.origin)}</b><small>${esc(sub)}</small></span></span>
+    <span class="origin">${esc(e.distributorName ?? 'Plataforma')}${e.campaignName ? `<br><span class="tag t-purple">${esc(e.campaignName)}</span>` : ''}</span>
+    <span class="pts ${p >= 0 ? 'green' : 'red'}">${p >= 0 ? '+ ' : '- '}${num(Math.abs(p))}<small>pontos</small></span>
+    <span></span>
+  </div>`;
+}
+
+function renderFilters(d) {
+  const months = [['all', 'Todo o período'], ...[...d.months].reverse().map((m) => [m, comp(m)])];
+  $('month').innerHTML = months.map(([v, l]) => `<option value="${v}"${v === d.month ? ' selected' : ''}>${l}</option>`).join('');
+  $('campaign').innerHTML = '<option value="">Todas as campanhas</option>' +
+    d.campaigns.map((c) => `<option value="${c.id}"${String(c.id) === String(state.campaignId) ? ' selected' : ''}>${esc(c.name)}</option>`).join('');
+}
+
+const HEAD = $('list').innerHTML;
+const reset = (patch) => { Object.assign(state, patch, { page: 1 }); load(); };
+$('month').addEventListener('change', (e) => reset({ month: e.target.value }));
+$('campaign').addEventListener('change', (e) => reset({ campaignId: e.target.value }));
+$('more').addEventListener('click', () => { state.page++; load(true); });
+$('tabs').addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-f]');
+  if (!b) return;
+  document.querySelector('#tabs .on').classList.remove('on');
+  b.classList.add('on');
+  reset({ type: b.dataset.f });
+});
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+</body></html>

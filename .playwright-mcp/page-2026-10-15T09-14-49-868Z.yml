@@ -1,0 +1,235 @@
+- generic [active] [ref=f17e1]:
+  - generic [ref=f17e2]:
+    - banner [ref=f17e3]:
+      - link "Voltar" [ref=f17e4] [cursor=pointer]:
+        - /url: inicio.html
+        - generic [ref=f17e5]: 
+      - link "Incentiva+ Incentiva+ Plataforma de Incentivo de Vendas" [ref=f17e6] [cursor=pointer]:
+        - /url: inicio.html
+        - img "Incentiva+" [ref=f17e7]
+        - generic [ref=f17e8]:
+          - generic [ref=f17e9]: Incentiva+
+          - generic [ref=f17e10]: Plataforma de Incentivo de Vendas
+      - link "Notificações" [ref=f17e11] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e12]: 
+        - emphasis [ref=f17e13]: "3"
+      - link "Mariana Almeida — sair" [ref=f17e14] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e15]: MA
+        - generic "Sair" [ref=f17e16]: 
+    - generic [ref=f17e17]:
+      - generic [ref=f17e18]:
+        - heading "Minhas Vendas" [level=1] [ref=f17e19]
+        - paragraph [ref=f17e20]: Vendas enviadas pela sua distribuidora e os pontos que cada uma gerou.
+      - generic [ref=f17e21] [cursor=pointer]:
+        - generic [ref=f17e22]: 
+        - combobox "Competência" [ref=f17e23]:
+          - option "Todos os meses"
+          - option "Set/2026"
+          - option "Ago/2026" [selected]
+          - option "Jul/2026"
+          - option "Jun/2026"
+          - option "Mai/2026"
+          - option "Abr/2026"
+          - option "Mar/2026"
+          - option "Fev/2026"
+          - option "Jan/2026"
+        - generic [ref=f17e24]: 
+    - generic [ref=f17e25]:
+      - generic [ref=f17e26]:
+        - generic [ref=f17e27]: 
+        - generic [ref=f17e29]: Total vendido
+        - generic [ref=f17e30]: R$ 4.369,20
+      - generic [ref=f17e31]:
+        - generic [ref=f17e32]: 
+        - generic [ref=f17e34]: Vendas
+        - generic [ref=f17e35]: "7"
+      - generic [ref=f17e36]:
+        - generic [ref=f17e37]: 
+        - generic [ref=f17e39]: Unidades
+        - generic [ref=f17e40]: "45"
+      - generic [ref=f17e41]:
+        - generic [ref=f17e42]: 
+        - generic [ref=f17e44]: Pontos ganhos
+        - generic [ref=f17e45]: "304"
+    - generic [ref=f17e46]:
+      - generic [ref=f17e47]:
+        - heading "Evolução mensal" [level=2] [ref=f17e48]
+        - generic [ref=f17e49]: Toque num mês para filtrar
+      - list [ref=f17e50]:
+        - 'listitem "Jan/2026: R$ 16.040,20 · 1.548 pts" [ref=f17e51] [cursor=pointer]':
+          - generic [ref=f17e53]: Jan
+        - 'listitem "Fev/2026: R$ 8.493,60 · 847 pts" [ref=f17e54] [cursor=pointer]':
+          - generic [ref=f17e56]: Fev
+        - 'listitem "Mar/2026: R$ 14.652,80 · 1.267 pts" [ref=f17e57] [cursor=pointer]':
+          - generic [ref=f17e59]: Mar
+        - 'listitem "Abr/2026: R$ 12.398,10 · 1.124 pts" [ref=f17e60] [cursor=pointer]':
+          - generic [ref=f17e62]: Abr
+        - 'listitem "Mai/2026: R$ 11.917,50 · 1.036 pts" [ref=f17e63] [cursor=pointer]':
+          - generic [ref=f17e65]: Mai
+        - 'listitem "Jun/2026: R$ 5.771,00 · 534 pts" [ref=f17e66] [cursor=pointer]':
+          - generic [ref=f17e68]: Jun
+        - 'listitem "Jul/2026: R$ 7.433,10 · 650 pts" [ref=f17e69] [cursor=pointer]':
+          - generic [ref=f17e71]: Jul
+        - 'listitem "Ago/2026: R$ 4.369,20 · 304 pts" [ref=f17e72] [cursor=pointer]':
+          - generic [ref=f17e74]: Ago
+        - 'listitem "Set/2026: R$ 12.117,60 · 1.049 pts" [ref=f17e75] [cursor=pointer]':
+          - generic [ref=f17e77]: Set
+    - generic [ref=f17e79]:
+      - generic [ref=f17e80]: 
+      - searchbox "Buscar vendas" [ref=f17e81]
+    - generic [ref=f17e82]:
+      - paragraph [ref=f17e83]: 7 venda(s) em Ago/2026
+      - article [ref=f17e84]:
+        - generic [ref=f17e85]: 
+        - generic [ref=f17e87]:
+          - generic [ref=f17e88]: Acessório Plus
+          - generic [ref=f17e89]: PRD-F · NF 2026080010 · 25/08/2026
+          - generic [ref=f17e90]:
+            - generic [ref=f17e91]: 
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f17e92]:
+          - generic [ref=f17e93]: Qtd.
+          - text: "12"
+        - generic [ref=f17e94]:
+          - generic [ref=f17e95]: Valor
+          - text: R$ 598,80
+        - generic [ref=f17e96]:
+          - generic [ref=f17e97]: "+59"
+          - text: pontos
+      - article [ref=f17e98]:
+        - generic [ref=f17e99]: 
+        - generic [ref=f17e101]:
+          - generic [ref=f17e102]: Linha Verde Sustentável
+          - generic [ref=f17e103]: PRD-H · NF 2026080015 · 22/08/2026
+          - generic [ref=f17e104]:
+            - generic [ref=f17e105]: 
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f17e106]:
+          - generic [ref=f17e107]: Qtd.
+          - text: "7"
+        - generic [ref=f17e108]:
+          - generic [ref=f17e109]: Valor
+          - text: R$ 1.113,00
+        - generic [ref=f17e110]:
+          - generic [ref=f17e111]: "+111"
+          - text: pontos
+      - article [ref=f17e112]:
+        - generic [ref=f17e113]: 
+        - generic [ref=f17e115]:
+          - generic [ref=f17e116]: Acessório Plus
+          - generic [ref=f17e117]: PRD-F · NF 2026080035 · 20/08/2026
+          - generic [ref=f17e118]:
+            - generic [ref=f17e119]: 
+            - text: Demais produtos por valor (v1)
+        - generic [ref=f17e120]:
+          - generic [ref=f17e121]: Qtd.
+          - text: "2"
+        - generic [ref=f17e122]:
+          - generic [ref=f17e123]: Valor
+          - text: R$ 99,80
+        - generic [ref=f17e124]:
+          - generic [ref=f17e125]: "+9"
+          - text: pontos
+      - article [ref=f17e126]:
+        - generic [ref=f17e127]: 
+        - generic [ref=f17e129]:
+          - generic [ref=f17e130]: Produto C — Linha Essencial
+          - generic [ref=f17e131]: PRD-C · NF 2026080025 · 15/08/2026
+          - generic [ref=f17e132]:
+            - generic [ref=f17e133]: 
+            - text: Produto C por valor (v1)
+        - generic [ref=f17e134]:
+          - generic [ref=f17e135]: Qtd.
+          - text: "7"
+        - generic [ref=f17e136]:
+          - generic [ref=f17e137]: Valor
+          - text: R$ 629,30
+        - generic [ref=f17e138]:
+          - generic [ref=f17e139]: "+30"
+          - text: pontos
+      - article [ref=f17e140]:
+        - generic [ref=f17e141]: 
+        - generic [ref=f17e143]:
+          - generic [ref=f17e144]: Produto C — Linha Essencial
+          - generic [ref=f17e145]: PRD-C · NF 2026080030 · 03/08/2026
+          - generic [ref=f17e146]:
+            - generic [ref=f17e147]: 
+            - text: Produto C por valor (v1)
+        - generic [ref=f17e148]:
+          - generic [ref=f17e149]: Qtd.
+          - text: "9"
+        - generic [ref=f17e150]:
+          - generic [ref=f17e151]: Valor
+          - text: R$ 809,10
+        - generic [ref=f17e152]:
+          - generic [ref=f17e153]: "+40"
+          - text: pontos
+      - article [ref=f17e154]:
+        - generic [ref=f17e155]: 
+        - generic [ref=f17e157]:
+          - generic [ref=f17e158]: Produto C — Linha Essencial
+          - generic [ref=f17e159]: PRD-C · NF 2026080020 · 03/08/2026
+          - generic [ref=f17e160]:
+            - generic [ref=f17e161]: 
+            - text: Produto C por valor (v1)
+        - generic [ref=f17e162]:
+          - generic [ref=f17e163]: Qtd.
+          - text: "4"
+        - generic [ref=f17e164]:
+          - generic [ref=f17e165]: Valor
+          - text: R$ 359,60
+        - generic [ref=f17e166]:
+          - generic [ref=f17e167]: "+15"
+          - text: pontos
+      - article [ref=f17e168]:
+        - generic [ref=f17e169]: 
+        - generic [ref=f17e171]:
+          - generic [ref=f17e172]: Produto A — Linha Premium
+          - generic [ref=f17e173]: PRD-A · NF 2026080005 · 02/08/2026
+          - generic [ref=f17e174]:
+            - generic [ref=f17e175]: 
+            - text: Produto A por unidade (v1)
+        - generic [ref=f17e176]:
+          - generic [ref=f17e177]: Qtd.
+          - text: "4"
+        - generic [ref=f17e178]:
+          - generic [ref=f17e179]: Valor
+          - text: R$ 759,60
+        - generic [ref=f17e180]:
+          - generic [ref=f17e181]: "+40"
+          - text: pontos
+  - navigation [ref=f17e182]:
+    - link " Início" [ref=f17e183] [cursor=pointer]:
+      - /url: inicio.html
+      - generic [ref=f17e184]: 
+      - text: Início
+    - generic [ref=f17e185]:
+      - link " Desempenho" [ref=f17e186] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e187]: 
+        - text: Desempenho 
+      - text:   
+    - generic [ref=f17e188]:
+      - link " Pontos" [ref=f17e189] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e190]: 
+        - text: Pontos 
+      - text:  
+    - generic [ref=f17e191]:
+      - link " Conteúdos" [ref=f17e192] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e193]: 
+        - text: Conteúdos 
+      - text:  
+    - generic [ref=f17e194]:
+      - link " Gamificação" [ref=f17e195] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=f17e196]: 
+        - text: Gamificação 
+      - text:   
+    - link " Sair" [ref=f17e197] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=f17e198]: 
+      - text: Sair

@@ -1,0 +1,471 @@
+- generic [active] [ref=f39e1]:
+  - generic [ref=f39e2]:
+    - generic [aria-hidden] [ref=f39e3]:
+      - complementary [ref=f39e4]:
+        - generic [ref=f39e5]:
+          - generic [ref=f39e6]: Incentiva+
+          - button [ref=f39e384] [cursor=pointer]
+        - navigation [ref=f39e9]:
+          - generic [ref=f39e10]:
+            - button [expanded] [ref=f39e385] [cursor=pointer]: Visão Geral
+            - generic [ref=f39e14]:
+              - link [ref=f39e386] [cursor=pointer]:
+                - /url: /dashboard
+                - generic [ref=f39e18]: Dashboard
+              - link [ref=f39e387] [cursor=pointer]:
+                - /url: /atividades
+                - generic [ref=f39e22]: Central de atividades
+          - generic [ref=f39e23]:
+            - button [expanded] [ref=f39e388] [cursor=pointer]: Gestão Comercial
+            - generic [ref=f39e27]:
+              - link [ref=f39e389] [cursor=pointer]:
+                - /url: /distribuidoras
+                - generic [ref=f39e33]: Distribuidoras
+              - link [ref=f39e390] [cursor=pointer]:
+                - /url: /equipes
+                - generic [ref=f39e39]: Equipes
+              - link [ref=f39e391] [cursor=pointer]:
+                - /url: /gerentes
+                - generic [ref=f39e53]: Gerentes
+              - link [ref=f39e392] [cursor=pointer]:
+                - /url: /vendedores
+                - generic [ref=f39e60]: Vendedores
+              - link [ref=f39e393] [cursor=pointer]:
+                - /url: /pontos-focais
+                - generic [ref=f39e65]: Pontos Focais
+          - generic [ref=f39e66]:
+            - button [expanded] [ref=f39e394] [cursor=pointer]: Campanhas e Incentivos
+            - generic [ref=f39e70]:
+              - link [ref=f39e395] [cursor=pointer]:
+                - /url: /campanhas
+                - generic [ref=f39e75]: Campanhas
+              - link [ref=f39e396] [cursor=pointer]:
+                - /url: /metas
+                - generic [ref=f39e81]: Metas
+              - link [ref=f39e397] [cursor=pointer]:
+                - /url: /regras
+                - generic [ref=f39e87]: Regras de Pontuação
+              - link [ref=f39e398] [cursor=pointer]:
+                - /url: /extrato
+                - generic [ref=f39e94]: Extrato de Pontos
+              - link [ref=f39e399] [cursor=pointer]:
+                - /url: /ajustes
+                - generic [ref=f39e97]: Ajustes de Pontos
+              - link [ref=f39e400] [cursor=pointer]:
+                - /url: /premiacoes
+                - generic [ref=f39e103]: Premiações
+          - generic [ref=f39e104]:
+            - button [expanded] [ref=f39e401] [cursor=pointer]: Importação de Vendas
+            - generic [ref=f39e108]:
+              - link [ref=f39e402] [cursor=pointer]:
+                - /url: /importacao/nova
+                - generic [ref=f39e113]: Nova Importação
+              - link [ref=f39e403] [cursor=pointer]:
+                - /url: /importacao/lotes
+                - generic [ref=f39e119]: Histórico de Lotes
+              - link [ref=f39e404] [cursor=pointer]:
+                - /url: /importacao/validacao
+                - generic [ref=f39e123]: Validação e Inconsistências
+              - link [ref=f39e405] [cursor=pointer]:
+                - /url: /importacao/reprocessamentos
+                - generic [ref=f39e130]: Reprocessamentos
+          - generic [ref=f39e131]:
+            - button [expanded] [ref=f39e406] [cursor=pointer]: Conteúdos
+            - generic [ref=f39e135]:
+              - link [ref=f39e407] [cursor=pointer]:
+                - /url: /conteudos/noticias
+                - generic [ref=f39e140]: Notícias
+              - link [ref=f39e408] [cursor=pointer]:
+                - /url: /conteudos/banners
+                - generic [ref=f39e146]: Banners
+              - link [ref=f39e409] [cursor=pointer]:
+                - /url: /conteudos/comunicados
+                - generic [ref=f39e151]: Comunicados
+              - link [ref=f39e410] [cursor=pointer]:
+                - /url: /conteudos/treinamentos
+                - generic [ref=f39e156]: Treinamentos
+              - link [ref=f39e411] [cursor=pointer]:
+                - /url: /conteudos/quiz
+                - generic [ref=f39e162]: Quiz e Enquetes
+              - link [ref=f39e412] [cursor=pointer]:
+                - /url: /conteudos/gamificacao
+                - generic [ref=f39e166]: Missões e Medalhas
+          - generic [ref=f39e167]:
+            - button [expanded] [ref=f39e413] [cursor=pointer]: Configurações
+            - generic [ref=f39e171]:
+              - link [ref=f39e414] [cursor=pointer]:
+                - /url: /config/menus
+                - generic [ref=f39e176]: Menus Dinâmicos
+              - link [ref=f39e415] [cursor=pointer]:
+                - /url: /config/perfis
+                - generic [ref=f39e181]: Perfis e Permissões
+              - link [ref=f39e416] [cursor=pointer]:
+                - /url: /config/usuarios
+                - generic [ref=f39e188]: Usuários
+              - link [ref=f39e417] [cursor=pointer]:
+                - /url: /config/auditoria
+                - generic [ref=f39e193]: Logs e Auditoria
+              - link [ref=f39e418] [cursor=pointer]:
+                - /url: /config/seguranca
+                - generic [ref=f39e198]: Segurança
+              - link [ref=f39e419] [cursor=pointer]:
+                - /url: /config/geral
+                - generic [ref=f39e203]: Configurações Gerais
+          - generic [ref=f39e204]:
+            - button [expanded] [ref=f39e420] [cursor=pointer]: Atendimento
+            - generic [ref=f39e208]:
+              - link [ref=f39e421] [cursor=pointer]:
+                - /url: /atendimento/chamados
+                - generic [ref=f39e212]: Chamados
+              - link [ref=f39e422] [cursor=pointer]:
+                - /url: /atendimento/chatbot
+                - generic [ref=f39e217]: Chatbot
+              - link [ref=f39e423] [cursor=pointer]:
+                - /url: /atendimento/historico
+                - generic [ref=f39e223]: Histórico de Atendimentos
+          - generic [ref=f39e224]:
+            - button [expanded] [ref=f39e424] [cursor=pointer]: Relatórios
+            - generic [ref=f39e228]:
+              - link [ref=f39e425] [cursor=pointer]:
+                - /url: /relatorios/vendas
+                - generic [ref=f39e233]: Vendas
+              - link [ref=f39e426] [cursor=pointer]:
+                - /url: /relatorios/desempenho
+                - generic [ref=f39e237]: Desempenho
+              - link [ref=f39e427] [cursor=pointer]:
+                - /url: /relatorios/pontuacao
+                - generic [ref=f39e244]: Pontuação
+              - link [ref=f39e428] [cursor=pointer]:
+                - /url: /relatorios/distribuidoras
+                - generic [ref=f39e250]: Distribuidoras
+              - link [ref=f39e429] [cursor=pointer]:
+                - /url: /relatorios/campanhas
+                - generic [ref=f39e255]: Campanhas
+              - link [ref=f39e430] [cursor=pointer]:
+                - /url: /relatorios/rankings
+                - generic [ref=f39e263]: Rankings
+              - link [ref=f39e431] [cursor=pointer]:
+                - /url: /relatorios/exportacoes
+                - generic [ref=f39e269]: Exportações
+        - button [ref=f39e432] [cursor=pointer]:
+          - generic [ref=f39e275]: Sair
+      - generic [ref=f39e276]:
+        - banner [ref=f39e277]:
+          - heading [level=1] [ref=f39e433]: Menus Dinâmicos
+          - generic [ref=f39e283]:
+            - button [ref=f39e434] [cursor=pointer]:
+              - generic [ref=f39e285]: Tutorial
+            - generic [ref=f39e435]: Ambiente de demonstração
+            - button [ref=f39e436] [cursor=pointer]:
+              - generic [ref=f39e290]: A
+              - generic [ref=f39e292]: Ana Administradora
+              - generic [ref=f39e293]: Super Admin
+            - button [ref=f39e437] [cursor=pointer]:
+              - generic [ref=f39e295]: Toggle theme
+        - main [ref=f39e296]:
+          - generic [ref=f39e297]:
+            - generic [ref=f39e298]:
+              - paragraph [ref=f39e299]: Estes são os itens do menu do app Incentiva+. O que você alterar aqui aparece no app assim que a tela for recarregada.
+              - generic [ref=f39e300]:
+                - link [ref=f39e438] [cursor=pointer]:
+                  - /url: /config/menus/avancado
+                  - text: Ferramentas avançadas
+                - button [ref=f39e439] [cursor=pointer]: Copiar de outro perfil
+                - button [ref=f39e440] [cursor=pointer]: Novo item
+            - generic [ref=f39e310]:
+              - tablist [ref=f39e441]:
+                - tab [selected] [ref=f39e442] [cursor=pointer]: Vendedor
+                - tab [ref=f39e443] [cursor=pointer]: Gerente
+                - tab [ref=f39e444] [cursor=pointer]: Ponto Focal
+              - combobox [ref=f39e445]
+            - paragraph [ref=f39e322]: "Itens marcados para “Todos” aparecem em todas as abas: editar um deles muda para todos os perfis."
+            - generic [ref=f39e323]:
+              - list [ref=f39e446]:
+                - listitem [ref=f39e447]:
+                  - generic [ref=f39e448]:
+                    - generic [ref=f39e453]:
+                      - paragraph [ref=f39e454]: Início
+                      - paragraph [ref=f39e455]: "Início · Quem vê: Vendedor, Ponto Focal"
+                    - generic [ref=f39e456]:
+                      - button [disabled] [ref=f39e457]
+                      - button [ref=f39e460] [cursor=pointer]
+                      - button [ref=f39e463] [cursor=pointer]
+                      - button [ref=f39e467] [cursor=pointer]
+                      - button [ref=f39e471] [cursor=pointer]
+                      - button [ref=f39e473] [cursor=pointer]
+                - listitem [ref=f39e477]:
+                  - generic [ref=f39e478]:
+                    - generic [ref=f39e483]:
+                      - paragraph [ref=f39e484]: Desempenho
+                      - paragraph [ref=f39e485]: "Grupo (abre os submenus) · Quem vê: Todos"
+                    - generic [ref=f39e486]:
+                      - button [ref=f39e487] [cursor=pointer]
+                      - button [ref=f39e490] [cursor=pointer]
+                      - button [ref=f39e493] [cursor=pointer]
+                      - button [ref=f39e497] [cursor=pointer]
+                      - button [ref=f39e501] [cursor=pointer]
+                      - button [ref=f39e503] [cursor=pointer]
+                  - list [ref=f39e507]:
+                    - listitem [ref=f39e508]:
+                      - generic [ref=f39e509]:
+                        - generic [ref=f39e515]:
+                          - paragraph [ref=f39e516]: Minhas Vendas
+                          - paragraph [ref=f39e517]: "Minhas vendas · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e518]:
+                          - button [disabled] [ref=f39e519]
+                          - button [ref=f39e522] [cursor=pointer]
+                          - button [ref=f39e525] [cursor=pointer]
+                          - button [ref=f39e529] [cursor=pointer]
+                          - button [ref=f39e533] [cursor=pointer]
+                    - listitem [ref=f39e537]:
+                      - generic [ref=f39e538]:
+                        - generic [ref=f39e544]:
+                          - paragraph [ref=f39e545]: Minhas Metas
+                          - paragraph [ref=f39e546]: "Minhas metas · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e547]:
+                          - button [ref=f39e548] [cursor=pointer]
+                          - button [ref=f39e551] [cursor=pointer]
+                          - button [ref=f39e554] [cursor=pointer]
+                          - button [ref=f39e558] [cursor=pointer]
+                          - button [ref=f39e562] [cursor=pointer]
+                    - listitem [ref=f39e566]:
+                      - generic [ref=f39e567]:
+                        - generic [ref=f39e575]:
+                          - paragraph [ref=f39e576]: Ranking
+                          - paragraph [ref=f39e577]: "Ranking · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e578]:
+                          - button [ref=f39e579] [cursor=pointer]
+                          - button [disabled] [ref=f39e582]
+                          - button [ref=f39e585] [cursor=pointer]
+                          - button [ref=f39e589] [cursor=pointer]
+                          - button [ref=f39e593] [cursor=pointer]
+                - listitem [ref=f39e597]:
+                  - generic [ref=f39e598]:
+                    - generic [ref=f39e605]:
+                      - paragraph [ref=f39e606]: Pontos
+                      - paragraph [ref=f39e607]: "Grupo (abre os submenus) · Quem vê: Todos"
+                    - generic [ref=f39e608]:
+                      - button [ref=f39e609] [cursor=pointer]
+                      - button [ref=f39e612] [cursor=pointer]
+                      - button [ref=f39e615] [cursor=pointer]
+                      - button [ref=f39e619] [cursor=pointer]
+                      - button [ref=f39e623] [cursor=pointer]
+                      - button [ref=f39e625] [cursor=pointer]
+                  - list [ref=f39e629]:
+                    - listitem [ref=f39e630]:
+                      - generic [ref=f39e631]:
+                        - generic [ref=f39e635]:
+                          - paragraph [ref=f39e636]: Meu Extrato
+                          - paragraph [ref=f39e637]: "Extrato de pontos · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e638]:
+                          - button [disabled] [ref=f39e639]
+                          - button [ref=f39e642] [cursor=pointer]
+                          - button [ref=f39e645] [cursor=pointer]
+                          - button [ref=f39e649] [cursor=pointer]
+                          - button [ref=f39e653] [cursor=pointer]
+                    - listitem [ref=f39e657]:
+                      - generic [ref=f39e658]:
+                        - generic [ref=f39e664]:
+                          - paragraph [ref=f39e665]: Histórico
+                          - paragraph [ref=f39e666]: "Histórico de pontos · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e667]:
+                          - button [ref=f39e668] [cursor=pointer]
+                          - button [disabled] [ref=f39e671]
+                          - button [ref=f39e674] [cursor=pointer]
+                          - button [ref=f39e678] [cursor=pointer]
+                          - button [ref=f39e682] [cursor=pointer]
+                - listitem [ref=f39e686]:
+                  - generic [ref=f39e687]:
+                    - generic [ref=f39e692]:
+                      - paragraph [ref=f39e693]: Conteúdos
+                      - paragraph [ref=f39e694]: "Grupo (abre os submenus) · Quem vê: Todos"
+                    - generic [ref=f39e695]:
+                      - button [ref=f39e696] [cursor=pointer]
+                      - button [ref=f39e699] [cursor=pointer]
+                      - button [ref=f39e702] [cursor=pointer]
+                      - button [ref=f39e706] [cursor=pointer]
+                      - button [ref=f39e710] [cursor=pointer]
+                      - button [ref=f39e712] [cursor=pointer]
+                  - list [ref=f39e716]:
+                    - listitem [ref=f39e717]:
+                      - generic [ref=f39e718]:
+                        - generic [ref=f39e723]:
+                          - paragraph [ref=f39e724]: Notícias
+                          - paragraph [ref=f39e725]: "/noticias (sem tela no app) · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e726]:
+                          - button [disabled] [ref=f39e727]
+                          - button [ref=f39e730] [cursor=pointer]
+                          - button [ref=f39e733] [cursor=pointer]
+                          - button [ref=f39e737] [cursor=pointer]
+                          - button [ref=f39e741] [cursor=pointer]
+                    - listitem [ref=f39e745]:
+                      - generic [ref=f39e746]:
+                        - generic [ref=f39e751]:
+                          - paragraph [ref=f39e752]: Treinamentos
+                          - paragraph [ref=f39e753]: "Treinamentos · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e754]:
+                          - button [ref=f39e755] [cursor=pointer]
+                          - button [disabled] [ref=f39e758]
+                          - button [ref=f39e761] [cursor=pointer]
+                          - button [ref=f39e765] [cursor=pointer]
+                          - button [ref=f39e769] [cursor=pointer]
+                - listitem [ref=f39e773]:
+                  - generic [ref=f39e774]:
+                    - generic [ref=f39e778]:
+                      - paragraph [ref=f39e779]: Gamificação
+                      - paragraph [ref=f39e780]: "Grupo (abre os submenus) · Quem vê: Todos"
+                    - generic [ref=f39e781]:
+                      - button [ref=f39e782] [cursor=pointer]
+                      - button [ref=f39e785] [cursor=pointer]
+                      - button [ref=f39e788] [cursor=pointer]
+                      - button [ref=f39e792] [cursor=pointer]
+                      - button [ref=f39e796] [cursor=pointer]
+                      - button [ref=f39e798] [cursor=pointer]
+                  - list [ref=f39e802]:
+                    - listitem [ref=f39e803]:
+                      - generic [ref=f39e804]:
+                        - generic [ref=f39e809]:
+                          - paragraph [ref=f39e810]: Quiz
+                          - paragraph [ref=f39e811]: "/quiz (sem tela no app) · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e812]:
+                          - button [disabled] [ref=f39e813]
+                          - button [ref=f39e816] [cursor=pointer]
+                          - button [ref=f39e819] [cursor=pointer]
+                          - button [ref=f39e823] [cursor=pointer]
+                          - button [ref=f39e827] [cursor=pointer]
+                    - listitem [ref=f39e831]:
+                      - generic [ref=f39e832]:
+                        - generic [ref=f39e836]:
+                          - paragraph [ref=f39e837]: Missões
+                          - paragraph [ref=f39e838]: "/missoes (sem tela no app) · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e839]:
+                          - button [ref=f39e840] [cursor=pointer]
+                          - button [ref=f39e843] [cursor=pointer]
+                          - button [ref=f39e846] [cursor=pointer]
+                          - button [ref=f39e850] [cursor=pointer]
+                          - button [ref=f39e854] [cursor=pointer]
+                    - listitem [ref=f39e858]:
+                      - generic [ref=f39e859]:
+                        - generic [ref=f39e867]:
+                          - paragraph [ref=f39e868]: Medalhas
+                          - paragraph [ref=f39e869]: "/medalhas (sem tela no app) · Quem vê: quem vê o grupo"
+                        - generic [ref=f39e870]:
+                          - button [ref=f39e871] [cursor=pointer]
+                          - button [disabled] [ref=f39e874]
+                          - button [ref=f39e877] [cursor=pointer]
+                          - button [ref=f39e881] [cursor=pointer]
+                          - button [ref=f39e885] [cursor=pointer]
+                - listitem [ref=f39e889]:
+                  - generic [ref=f39e890]:
+                    - generic [ref=f39e894]:
+                      - paragraph [ref=f39e895]: xx
+                      - paragraph [ref=f39e896]: "Início · Quem vê: Vendedor, Gerente, Ponto Focal"
+                    - generic [ref=f39e897]:
+                      - button [ref=f39e898] [cursor=pointer]
+                      - button [disabled] [ref=f39e901]
+                      - button [ref=f39e904] [cursor=pointer]
+                      - button [ref=f39e908] [cursor=pointer]
+                      - button [ref=f39e912] [cursor=pointer]
+                      - button [ref=f39e914] [cursor=pointer]
+              - generic [ref=f39e333]:
+                - generic [ref=f39e334]:
+                  - heading [level=2] [ref=f39e918]: Como Vendedor vê no app
+                  - generic [ref=f39e338]:
+                    - generic [ref=f39e339]: Incentiva+
+                    - list [ref=f39e919]:
+                      - listitem [ref=f39e920]:
+                        - button [ref=f39e921] [cursor=pointer]:
+                          - generic [ref=f39e925]: Início
+                      - listitem [ref=f39e926]:
+                        - button [ref=f39e927] [cursor=pointer]:
+                          - generic [ref=f39e931]: Desempenho
+                      - listitem [ref=f39e934]:
+                        - button [ref=f39e935] [cursor=pointer]:
+                          - generic [ref=f39e941]: Pontos
+                      - listitem [ref=f39e944]:
+                        - button [ref=f39e945] [cursor=pointer]:
+                          - generic [ref=f39e949]: Conteúdos
+                      - listitem [ref=f39e952]:
+                        - button [ref=f39e953] [cursor=pointer]:
+                          - generic [ref=f39e956]: Gamificação
+                      - listitem [ref=f39e959]:
+                        - button [ref=f39e960] [cursor=pointer]:
+                          - generic [ref=f39e963]: xx
+                  - paragraph [ref=f39e348]: Toque num grupo para ver os submenus.
+                - generic [ref=f39e349]:
+                  - generic [ref=f39e350]:
+                    - heading [level=2] [ref=f39e964]: Modelos de navegação
+                    - button [ref=f39e965] [cursor=pointer]: Salvar este menu
+                  - paragraph [ref=f39e361]: Monte um menu uma vez, salve como modelo e aplique em várias distribuidoras de uma vez.
+                  - list [ref=f39e966]:
+                    - listitem [ref=f39e967]:
+                      - generic [ref=f39e968]:
+                        - paragraph [ref=f39e969]: Navegação vendedor
+                        - paragraph [ref=f39e970]: 16 menu(s)
+                      - button [ref=f39e971] [cursor=pointer]: Aplicar
+                      - button [ref=f39e974] [cursor=pointer]
+                    - listitem [ref=f39e978]:
+                      - generic [ref=f39e979]:
+                        - paragraph [ref=f39e980]: Gamificação padrão
+                        - paragraph [ref=f39e981]: 4 menu(s) · Quiz, missões e medalhas — base para novas campanhas
+                      - button [ref=f39e982] [cursor=pointer]: Aplicar
+                      - button [ref=f39e985] [cursor=pointer]
+    - region "Notifications alt+T":
+      - list:
+        - listitem [ref=f39e1124]:
+          - generic [ref=f39e1128]: "\"Navegação vendedor\" aplicado em 2 distribuidora(s)"
+  - dialog [ref=f39e1130]:
+    - generic [ref=f39e997]:
+      - generic [ref=f39e998]:
+        - heading "Aplicar \"undefined\"" [level=2] [ref=f39e1131]
+        - paragraph [ref=f39e1000]: Cada distribuidora marcada ganha uma cópia do modelo como menu próprio, no lugar do menu geral. Sem distribuidora marcada, o modelo substitui o menu geral do perfil.
+      - generic [ref=f39e1001]:
+        - generic [ref=f39e1002]:
+          - generic [ref=f39e1003]: Para o perfil
+          - combobox "Para o perfil" [ref=f39e1004]:
+            - option "Vendedor" [selected]
+            - option "Gerente"
+            - option "Ponto Focal"
+        - generic [ref=f39e1005]:
+          - generic [ref=f39e1006]: Nas distribuidoras
+          - generic [ref=f39e1007]:
+            - checkbox "Distribuidora Acreana" [ref=f39e1008] [cursor=pointer]
+            - checkbox "Distribuidora Alagoana" [ref=f39e1011] [cursor=pointer]
+            - checkbox "Distribuidora Amapaense" [ref=f39e1014] [cursor=pointer]
+            - checkbox "Distribuidora Amazonense" [ref=f39e1017] [cursor=pointer]
+            - checkbox "Distribuidora Baiana" [ref=f39e1020] [cursor=pointer]
+            - checkbox "Distribuidora Brasiliense" [ref=f39e1023] [cursor=pointer]
+            - checkbox "Distribuidora Campineira" [ref=f39e1026] [cursor=pointer]
+            - checkbox "Distribuidora Capixaba" [ref=f39e1029] [cursor=pointer]
+            - checkbox "Distribuidora Carioca" [ref=f39e1032] [cursor=pointer]
+            - checkbox "Distribuidora Catarinense" [ref=f39e1035] [cursor=pointer]
+            - checkbox "Distribuidora Cearense" [ref=f39e1038] [cursor=pointer]
+            - checkbox "Distribuidora Central" [ref=f39e1041] [cursor=pointer]
+            - checkbox "Distribuidora Cuiabana" [ref=f39e1044] [cursor=pointer]
+            - checkbox "Distribuidora Gaúcha" [ref=f39e1047] [cursor=pointer]
+            - checkbox "Distribuidora Goiana" [ref=f39e1050] [cursor=pointer]
+            - checkbox "Distribuidora Litoral Norte" [ref=f39e1053] [cursor=pointer]
+            - checkbox "Distribuidora Maranhense" [ref=f39e1056] [cursor=pointer]
+            - checkbox "Distribuidora Mineira" [ref=f39e1059] [cursor=pointer]
+            - checkbox "Distribuidora Paraense" [ref=f39e1062] [cursor=pointer]
+            - checkbox "Distribuidora Paraibana" [ref=f39e1065] [cursor=pointer]
+            - checkbox "Distribuidora Paranaense" [ref=f39e1068] [cursor=pointer]
+            - checkbox "Distribuidora Paulista" [ref=f39e1071] [cursor=pointer]
+            - checkbox "Distribuidora Pernambucana" [ref=f39e1074] [cursor=pointer]
+            - checkbox "Distribuidora Piauiense" [ref=f39e1077] [cursor=pointer]
+            - checkbox "Distribuidora Potiguar" [ref=f39e1080] [cursor=pointer]
+            - checkbox "Distribuidora Rondoniense" [ref=f39e1083] [cursor=pointer]
+            - checkbox "Distribuidora Roraimense" [ref=f39e1086] [cursor=pointer]
+            - checkbox "Distribuidora Santista" [ref=f39e1089] [cursor=pointer]
+            - checkbox "Distribuidora Sergipana" [ref=f39e1092] [cursor=pointer]
+            - checkbox "Distribuidora Serra Gaúcha" [ref=f39e1095] [cursor=pointer]
+            - checkbox "Distribuidora Sudeste" [ref=f39e1098] [cursor=pointer]
+            - checkbox "Distribuidora Sul-Mato-Grossense" [ref=f39e1101] [cursor=pointer]
+            - checkbox "Distribuidora Tocantinense" [ref=f39e1104] [cursor=pointer]
+            - checkbox "Distribuidora Triângulo" [ref=f39e1107] [cursor=pointer]
+            - checkbox "Distribuidora Vale do Paraíba" [ref=f39e1110] [cursor=pointer]
+          - generic [ref=f39e1113]: Nenhuma marcada = menu geral do perfil (todas as distribuidoras sem menu próprio)
+      - generic [ref=f39e1114]:
+        - button "Cancelar" [ref=f39e1115] [cursor=pointer]
+        - button "Substituir o menu geral" [ref=f39e1132] [cursor=pointer]
+    - button "Close" [ref=f39e1117] [cursor=pointer]

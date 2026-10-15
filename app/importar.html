@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Importação de Vendas · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="inicio.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-chevron-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me who"><span class="ini">PF</span><span class="nm">João Silva<small>Ponto Focal</small></span><i class="fa-solid fa-chevron-down"></i></a>
+</header>
+
+<section class="page-h">
+  <div class="row imp-title"><i class="fa-solid fa-cloud-arrow-up green"></i><div><h1>Importação de Vendas</h1><p>Envie o arquivo com as vendas da sua distribuidora</p></div></div>
+  <button class="btn-ghost" id="goHist"><i class="fa-solid fa-clock-rotate-left"></i>Histórico</button>
+</section>
+
+<section class="imp-sel">
+  <div class="card"><small>Distribuidora</small><div class="select"><i class="fa-regular fa-building"></i><span id="dist">—</span></div></div>
+  <div class="card"><small>Período das vendas</small><label class="select sv-month"><i class="fa-regular fa-calendar"></i><select id="month" aria-label="Período das vendas"></select><i class="fa-solid fa-chevron-down"></i></label></div>
+</section>
+
+<div class="tabs" id="tabs"><button class="on" data-t="import">Importar Arquivo</button><button data-t="validation">Em validação</button><button data-t="done">Processados</button></div>
+
+<div id="importView">
+  <label class="drop" id="drop">
+    <input type="file" id="file" accept=".xlsx,.xls,.csv" hidden>
+    <i class="fa-solid fa-file-excel xl"></i>
+    <b id="dropT">Arraste o arquivo aqui</b>
+    <span id="dropS">ou toque para selecionar</span>
+    <small>Formatos aceitos: .xlsx, .xls, .csv &nbsp;|&nbsp; Tamanho máximo: 10 MB</small>
+    <span class="btn" id="pick"><i class="fa-solid fa-cloud-arrow-up"></i>Selecionar Arquivo</span>
+  </label>
+  <div class="imp-send" id="sendBar" hidden>
+    <button class="btn-ghost" id="clear"><i class="fa-solid fa-xmark"></i>Trocar arquivo</button>
+    <button class="btn" id="send"><i class="fa-solid fa-paper-plane"></i>Enviar para validação</button>
+  </div>
+
+  <section class="imp-help">
+    <a href="#" class="card" id="tpl"><span class="ico i-green"><i class="fa-regular fa-file-lines"></i></span><span><b>Baixar modelo de planilha</b><small>Use o modelo oficial para evitar erros</small></span></a>
+    <a href="#" class="btn-ghost" id="howto"><i class="fa-solid fa-book-open"></i>Ver instruções</a>
+  </section>
+  <p class="imp-demo">Demonstração: baixe uma planilha de exemplo preenchida com vendedores da sua distribuidora —
+    <a href="#" data-sample="valid">sem erros</a> · <a href="#" data-sample="errors">com inconsistências</a></p>
+
+  <section id="result"></section>
+</div>
+
+<section class="table imp-list" id="list">
+  <div class="between imp-head"><h2 id="listTitle"><i class="fa-regular fa-clock"></i>Últimas importações</h2></div>
+  <div id="rows"></div>
+</section>
+
+<dialog class="modal imp-dlg" id="howtoDlg" aria-labelledby="howtoT">
+  <div class="modal-box">
+    <header class="modal-h"><span class="modal-ic"><i class="fa-solid fa-book-open"></i></span><h3 id="howtoT">Como preencher a planilha</h3>
+      <button type="button" class="modal-x" aria-label="Fechar" onclick="howtoDlg.close()"><i class="fa-solid fa-xmark"></i></button></header>
+    <div class="modal-b">
+      <p>Uma linha por item vendido. A primeira linha tem os nomes das colunas, igual ao modelo.</p>
+      <table class="imp-cols">
+        <tr><th>Coluna</th><th>Como preencher</th></tr>
+        <tr><td>documento</td><td>Número da nota fiscal ou pedido (obrigatório)</td></tr>
+        <tr><td>item</td><td>Número do item dentro do documento (padrão 1)</td></tr>
+        <tr><td>cpf_vendedor</td><td>CPF do vendedor cadastrado na sua distribuidora</td></tr>
+        <tr><td>sku</td><td>Código do produto, ex.: PRD-A</td></tr>
+        <tr><td>data</td><td>DD/MM/AAAA, dentro do período escolhido</td></tr>
+        <tr><td>quantidade</td><td>Número inteiro maior que zero</td></tr>
+        <tr><td>valor</td><td>Valor total da linha, ex.: 1.250,00</td></tr>
+      </table>
+      <p>Depois do envio a planilha é validada na hora. Sem erros, ela vai para a <b>aprovação do administrador</b>; aprovada, as vendas viram pontos. Reenviar a mesma venda não duplica pontos.</p>
+    </div>
+  </div>
+</dialog>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="gerente.html"><i class="fa-solid fa-chart-pie"></i>Gerente</a>
+  <a href="importar.html" class="on"><i class="fa-solid fa-cloud-arrow-up"></i>Importar</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="treinamentos.html"><i class="fa-solid fa-graduation-cap"></i>Treinamentos</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+  <a href="equipe.html"><i class="fa-solid fa-users"></i>Equipe</a>
+  <a href="#"><i class="fa-solid fa-ellipsis"></i>Mais</a>
+</nav>
+
+<script src="importar.js?v=2"></script>
+<script src="session.js?v=19"></script>
+</body></html>

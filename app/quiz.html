@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Quiz · Incentiva+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css?v=25"></head>
+<body><div class="app">
+<header class="topbar">
+  <a href="inicio.html" class="menu" aria-label="Voltar"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="inicio.html" class="brand"><img src="img/logo.png" alt="Incentiva+"><div><b>Incentiva<i>+</i></b><small>Plataforma de Incentivo de Vendas</small></div></a>
+  <a href="#" class="bell" aria-label="Notificações"><i class="fa-regular fa-bell"></i><em>3</em></a>
+  <a href="#" class="me"></a>
+</header>
+
+<section class="page-h">
+  <div><h1><i class="fa-solid fa-circle-question" style="color:#3b8bff"></i>Quiz e Enquetes</h1><p>Responda, acerte e ganhe pontos!</p></div>
+</section>
+
+<main id="view" aria-live="polite"><div class="sv-empty"><i class="fa-solid fa-spinner fa-spin"></i>Carregando...</div></main>
+</div>
+
+<nav class="nav">
+  <a href="inicio.html" class="nav-brand"><img src="img/logo.png" alt=""><b>Incentiva<i>+</i></b></a>
+  <a href="inicio.html"><i class="fa-solid fa-house"></i>Início</a>
+  <a href="quiz.html" class="on"><i class="fa-solid fa-circle-question"></i>Quiz</a>
+  <a href="extrato.html"><i class="fa-regular fa-file-lines"></i>Extrato</a>
+  <a href="ranking.html"><i class="fa-solid fa-trophy"></i>Ranking</a>
+</nav>
+
+<script>
+// Quiz e enquetes: GET /app/me/quizzes; jogar: POST .../start e .../submit; votar: POST /app/me/polls/:id/vote
+const esc = (x) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const num = (n) => (n ?? 0).toLocaleString('pt-BR');
+const day = (d) => d.split('-').reverse().join('/');
+const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+const view = document.getElementById('view');
+const api = (path, body) => window.incentiva.api(path, body === undefined ? {} : { method: 'POST', body: JSON.stringify(body) });
+let data = null;
+let game = null; // { quiz, questions, answers, i, left, timer }
+
+function status(q) {
+  if (q.passed) return ['ok', 'fa-circle-check', 'Aprovado'];
+  if (q.inProgress) return ['doing', 'fa-circle-play', 'Em andamento'];
+  if (!q.canPlay) return ['off', 'fa-lock', 'Tentativas esgotadas'];
+  return null;
+}
+
+function renderList() {
+  const { quizzes, polls } = data;
+  view.innerHTML = `
+    <h2 class="sec-title">Quizzes</h2>
+    <section class="qz-grid">${quizzes.length ? quizzes.map((q) => {
+      const st = status(q);
+      return `<article class="card qz-card">
+        <div class="between"><span class="chip c-blue">Quiz</span>${st ? `<span class="qz-st ${st[0]}"><i class="fa-solid ${st[1]}"></i>${st[2]}</span>` : ''}</div>
+        <h3>${esc(q.title)}</h3>
+        <div class="meta"><span><i class="fa-regular fa-circle-question"></i>${q.questions} pergunta(s)</span>${q.timeLimit ? `<span><i class="fa-regular fa-clock"></i>${mmss(q.timeLimit)}</span>` : ''}${q.points ? `<span class="gp"><i class="fa-solid fa-star"></i>+ ${num(q.points)} pontos</span>` : ''}</div>
+        <small class="muted">Acerte ${q.passPct}% · tentativa(s): ${Math.min(q.used, q.attempts)}/${q.attempts}${q.best ? ` · melhor: ${q.best.score}/${q.best.total}` : ''}${q.endDate ? ` · até ${day(q.endDate)}` : ''}</small>
+        ${!q.questions ? '<small class="qz-st off"><i class="fa-solid fa-hourglass-half"></i>Em preparação: ainda sem perguntas.</small>' : ''}
+        ${q.canPlay && q.questions ? `<button class="btn" data-play="${q.id}">${q.inProgress ? 'Continuar' : q.used ? 'Tentar de novo' : 'Começar'} <i class="fa-solid fa-arrow-right"></i></button>` : ''}
+      </article>`;
+    }).join('') : '<div class="sv-empty"><i class="fa-solid fa-circle-question"></i>Nenhum quiz disponível agora.</div>'}</section>
+    <h2 class="sec-title">Enquetes</h2>
+    <section class="qz-grid">${polls.length ? polls.map((p) => {
+      const total = p.votes ? p.votes.reduce((a, b) => a + b, 0) || 1 : 1;
+      return `<article class="card qz-card">
+        <span class="chip c-purple" style="align-self:flex-start">Enquete</span>
+        <h3>${esc(p.title)}</h3>
+        <div class="qz-opts">${p.options.map((o, i) => p.votes
+          ? `<div class="qz-res${i === p.myVote ? ' mine' : ''}"><span style="width:${(p.votes[i] / total) * 100}%"></span><b>${esc(o)}${i === p.myVote ? ' <i class="fa-solid fa-check"></i>' : ''}</b><em>${Math.round((p.votes[i] / total) * 100)}%</em></div>`
+          : `<button class="qz-opt" data-poll="${p.id}" data-opt="${i}">${esc(o)}</button>`).join('')}</div>
+        ${p.votes ? `<small class="muted">${num(total)} voto(s) · obrigado por participar!</small>` : '<small class="muted">Toque numa opção para votar.</small>'}
+      </article>`;
+    }).join('') : '<div class="sv-empty"><i class="fa-solid fa-square-poll-vertical"></i>Nenhuma enquete aberta.</div>'}</section>`;
+}
+
+function renderGame() {
+  const { quiz, questions, answers, i, left } = game;
+  const q = questions[i];
+  view.innerHTML = `
+    <section class="card qz-play">
+      <div class="between">
+        <div><small class="muted">${esc(quiz.title)}</small><h2>Pergunta ${i + 1} de ${questions.length}</h2></div>
+        ${left != null ? `<span class="qz-timer${left <= 30 ? ' warn' : ''}" role="timer" aria-label="Tempo restante"><i class="fa-regular fa-clock"></i><b id="left">${mmss(left)}</b></span>` : ''}
+      </div>
+      <div class="bar qz-prog"><span style="width:${((i + 1) / questions.length) * 100}%"></span></div>
+      <h3 class="qz-q">${esc(q.q)}</h3>
+      <div class="qz-opts" role="radiogroup" aria-label="Alternativas">${q.options.map((o, k) => `
+        <button class="qz-opt${answers[i] === k ? ' on' : ''}" role="radio" aria-checked="${answers[i] === k}" data-ans="${k}"><em>${String.fromCharCode(65 + k)}</em>${esc(o)}</button>`).join('')}</div>
+      <div class="between qz-nav">
+        <button class="btn-ghost" data-step="-1" ${i ? '' : 'disabled'}><i class="fa-solid fa-arrow-left"></i> Anterior</button>
+        ${i < questions.length - 1
+          ? `<button class="btn" data-step="1" ${answers[i] == null ? 'disabled' : ''}>Próxima <i class="fa-solid fa-arrow-right"></i></button>`
+          : `<button class="btn" data-send ${answers.some((a) => a == null) ? 'disabled' : ''}>Enviar respostas <i class="fa-solid fa-paper-plane"></i></button>`}
+      </div>
+    </section>`;
+}
+
+function renderResult(quiz, questions, answers, r) {
+  view.innerHTML = `
+    <section class="card qz-play qz-result">
+      <i class="fa-solid ${r.passed ? 'fa-trophy' : 'fa-circle-xmark'} qz-big ${r.passed ? 'ok' : 'bad'}"></i>
+      <h2>${r.late ? 'Tempo esgotado' : r.passed ? 'Parabéns, você passou!' : 'Não foi dessa vez'}</h2>
+      <p class="qz-score"><b>${r.score}</b>/${r.total} acertos</p>
+      ${r.earned ? `<p class="gp"><i class="fa-solid fa-star"></i> + ${num(r.earned)} pontos no seu extrato</p>` : ''}
+      ${!r.passed ? `<p class="muted">${r.attemptsLeft ? `Você ainda tem ${r.attemptsLeft} tentativa(s).` : 'Suas tentativas acabaram.'}</p>` : ''}
+      <ol class="qz-review">${questions.map((q, k) => `
+        <li class="${r.results[k] ? 'ok' : 'bad'}"><i class="fa-solid ${r.results[k] ? 'fa-circle-check' : 'fa-circle-xmark'}"></i>
+          <div><b>${esc(q.q)}</b><small>Sua resposta: ${answers[k] != null ? esc(q.options[answers[k]]) : '—'}${r.correct && !r.results[k] ? ` · Certa: ${esc(q.options[r.correct[k]])}` : ''}</small></div></li>`).join('')}</ol>
+      <button class="btn" data-back>Voltar aos quizzes</button>
+    </section>`;
+}
+
+async function load() {
+  try {
+    data = await api('/app/me/quizzes');
+    renderList();
+  } catch (e) {
+    view.innerHTML = `<div class="sv-empty"><i class="fa-solid fa-triangle-exclamation"></i>${esc(e.message)}</div>`;
+  }
+}
+
+async function play(id) {
+  const quiz = data.quizzes.find((q) => q.id === id);
+  try {
+    const s = await api(`/app/me/quizzes/${id}/start`, {});
+    game = { quiz, questions: s.questions, answers: s.questions.map(() => null), i: 0, left: s.secondsLeft };
+    if (game.left != null)
+      game.timer = setInterval(() => {
+        game.left = Math.max(0, game.left - 1);
+        const el = document.getElementById('left');
+        if (el) { el.textContent = mmss(game.left); el.parentElement.classList.toggle('warn', game.left <= 30); }
+        if (!game.left) send(); // tempo acabou: envia o que tiver
+      }, 1000);
+    renderGame();
+  } catch (e) {
+    window.incentiva.toast(e.message);
+    load();
+  }
+}
+
+async function send() {
+  const g = game;
+  if (!g) return;
+  clearInterval(g.timer);
+  game = null;
+  try {
+    const r = await api(`/app/me/quizzes/${g.quiz.id}/submit`, { answers: g.answers.map((a) => a ?? -1) });
+    renderResult(g.quiz, g.questions, g.answers, r);
+  } catch (e) {
+    window.incentiva.toast(e.message);
+    load();
+  }
+}
+
+view.addEventListener('click', async (e) => {
+  const t = e.target.closest('button');
+  if (!t || t.disabled) return;
+  if (t.dataset.play) return play(+t.dataset.play);
+  if (t.dataset.ans != null && game) { game.answers[game.i] = +t.dataset.ans; return renderGame(); }
+  if (t.dataset.step && game) { game.i += +t.dataset.step; return renderGame(); }
+  if (t.hasAttribute('data-send')) return send();
+  if (t.hasAttribute('data-back')) return load();
+  if (t.dataset.poll) {
+    try {
+      const r = await api(`/app/me/polls/${t.dataset.poll}/vote`, { option: +t.dataset.opt });
+      Object.assign(data.polls.find((p) => p.id === +t.dataset.poll), r);
+      renderList();
+    } catch (err) {
+      window.incentiva.toast(err.message);
+    }
+  }
+});
+
+if (window.incentiva) load();
+else document.addEventListener('incentiva:ready', () => load(), { once: true });
+</script>
+<script src="session.js?v=19"></script>
+</body></html>

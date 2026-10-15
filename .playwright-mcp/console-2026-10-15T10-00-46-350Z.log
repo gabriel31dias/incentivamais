@@ -1,0 +1,2 @@
+[  146433ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3333/socket.io/?EIO=4&transport=polling&t=dezv1879:0
+[  148053ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ http://localhost:3333/socket.io/?EIO=4&transport=polling&t=df13zhki&sid=MaC-24Z4OOOaMSdwAAAB:0

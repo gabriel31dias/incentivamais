@@ -1,0 +1,217 @@
+- generic [ref=f18e2]:
+  - generic [ref=f18e3]:
+    - complementary [ref=f18e4]:
+      - generic [ref=f18e5]:
+        - generic [ref=f18e6]: Incentiva+
+        - button "Recolher menu" [ref=f18e8] [cursor=pointer]
+      - navigation [ref=f18e9]:
+        - generic [ref=f18e10]:
+          - button "Visão Geral" [expanded] [ref=f18e11] [cursor=pointer]
+          - generic [ref=f18e14]:
+            - link "Dashboard" [ref=f18e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=f18e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=f18e23]:
+          - button "Gestão Comercial" [expanded] [ref=f18e24] [cursor=pointer]
+          - generic [ref=f18e27]:
+            - link "Distribuidoras" [ref=f18e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=f18e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=f18e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=f18e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=f18e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=f18e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=f18e67] [cursor=pointer]
+          - generic [ref=f18e70]:
+            - link "Campanhas" [ref=f18e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=f18e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=f18e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=f18e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=f18e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=f18e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=f18e104]:
+          - button "Importação de Vendas" [expanded] [ref=f18e105] [cursor=pointer]
+          - generic [ref=f18e108]:
+            - link "Nova Importação" [ref=f18e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=f18e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=f18e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=f18e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=f18e131]:
+          - button "Conteúdos" [expanded] [ref=f18e132] [cursor=pointer]
+          - generic [ref=f18e135]:
+            - link "Notícias" [ref=f18e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=f18e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=f18e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=f18e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=f18e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=f18e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=f18e167]:
+          - button "Configurações" [expanded] [ref=f18e168] [cursor=pointer]
+          - generic [ref=f18e171]:
+            - link "Menus Dinâmicos" [ref=f18e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Modelos de Menus" [ref=f18e177] [cursor=pointer]:
+              - /url: /config/menus/modelos
+            - link "Perfis e Permissões" [ref=f18e183] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=f18e188] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=f18e195] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=f18e200] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=f18e205] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=f18e210]:
+          - button "Atendimento" [expanded] [ref=f18e211] [cursor=pointer]
+          - generic [ref=f18e214]:
+            - link "Chamados" [ref=f18e215] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=f18e219] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=f18e224] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=f18e230]:
+          - button "Relatórios" [expanded] [ref=f18e231] [cursor=pointer]
+          - generic [ref=f18e234]:
+            - link "Vendas" [ref=f18e235] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=f18e240] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=f18e244] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=f18e251] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=f18e257] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=f18e262] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=f18e270] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=f18e277] [cursor=pointer]
+    - generic [ref=f18e282]:
+      - banner [ref=f18e283]:
+        - heading "Metas" [level=1] [ref=f18e289]
+        - generic [ref=f18e290]:
+          - button "Abrir tutorial" [ref=f18e291] [cursor=pointer]:
+            - generic [ref=f18e292]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=f18e293]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=f18e296] [cursor=pointer]:
+            - generic [ref=f18e297]: A
+            - generic [ref=f18e299]: Ana Administradora
+            - generic [ref=f18e300]: Super Admin
+          - button "Toggle theme" [ref=f18e301] [cursor=pointer]
+      - main [ref=f18e303]:
+        - generic [ref=f18e304]:
+          - generic [ref=f18e305]:
+            - tablist [ref=f18e306]:
+              - tab "Metas das equipes" [selected] [ref=f18e307] [cursor=pointer]
+              - tab "Metas das campanhas" [ref=f18e308] [cursor=pointer]
+            - generic [ref=f18e309]:
+              - text: Competência
+              - combobox "Competência" [ref=f18e310]:
+                - option "Todas as competências"
+                - option "Jan/2026"
+                - option "Fev/2026"
+                - option "Mar/2026"
+                - option "Abr/2026"
+                - option "Mai/2026"
+                - option "Jun/2026"
+                - option "Jul/2026"
+                - option "Ago/2026"
+                - option "Set/2026" [selected]
+                - option "Out/2026"
+                - option "Nov/2026"
+                - option "Dez/2026"
+          - generic [ref=f18e311]:
+            - generic [ref=f18e312]:
+              - generic [ref=f18e319]:
+                - paragraph [ref=f18e320]: Equipes com meta
+                - paragraph [ref=f18e321]: —
+                - paragraph [ref=f18e322]: Set/2026
+              - generic [ref=f18e331]:
+                - paragraph [ref=f18e332]: Bateram a meta
+                - paragraph [ref=f18e333]: —
+              - generic [ref=f18e340]:
+                - paragraph [ref=f18e341]: Vendido / meta
+                - paragraph [ref=f18e342]: —
+              - generic [ref=f18e349]:
+                - paragraph [ref=f18e350]: Bônus pendentes
+                - paragraph [ref=f18e351]: —
+                - paragraph [ref=f18e352]: equipes que bateram e ainda não receberam
+            - generic [ref=f18e353]:
+              - generic [ref=f18e354]:
+                - searchbox "Buscar equipe, gerente..." [ref=f18e356]
+                - combobox "Distribuidora" [ref=f18e357]:
+                  - option "Todas as distribuidoras" [selected]
+                  - option "Distribuidora Acreana"
+                  - option "Distribuidora Alagoana"
+                  - option "Distribuidora Amapaense"
+                  - option "Distribuidora Amazonense"
+                  - option "Distribuidora Baiana"
+                  - option "Distribuidora Brasiliense"
+                  - option "Distribuidora Campineira"
+                  - option "Distribuidora Capixaba"
+                  - option "Distribuidora Carioca"
+                  - option "Distribuidora Catarinense"
+                  - option "Distribuidora Cearense"
+                  - option "Distribuidora Central"
+                  - option "Distribuidora Cuiabana"
+                  - option "Distribuidora Gaúcha"
+                  - option "Distribuidora Goiana"
+                  - option "Distribuidora Litoral Norte"
+                  - option "Distribuidora Maranhense"
+                  - option "Distribuidora Mineira"
+                  - option "Distribuidora Paraense"
+                  - option "Distribuidora Paraibana"
+                  - option "Distribuidora Paranaense"
+                  - option "Distribuidora Paulista"
+                  - option "Distribuidora Pernambucana"
+                  - option "Distribuidora Piauiense"
+                  - option "Distribuidora Potiguar"
+                  - option "Distribuidora Rondoniense"
+                  - option "Distribuidora Roraimense"
+                  - option "Distribuidora Santista"
+                  - option "Distribuidora Sergipana"
+                  - option "Distribuidora Serra Gaúcha"
+                  - option "Distribuidora Sudeste"
+                  - option "Distribuidora Sul-Mato-Grossense"
+                  - option "Distribuidora Tocantinense"
+                  - option "Distribuidora Triângulo"
+                  - option "Distribuidora Vale do Paraíba"
+              - generic [ref=f18e358]:
+                - button "Nova meta" [ref=f18e359] [cursor=pointer]
+                - button "Lançar bônus de meta" [disabled] [ref=f18e361]
+            - row "Competência Equipe Distribuidora Membros Meta Vendido Atingido Bônus Ações" [ref=f18e369]:
+              - button "Competência" [ref=f18e371] [cursor=pointer]
+              - button "Equipe" [ref=f18e376] [cursor=pointer]
+              - generic [ref=f18e380]: Distribuidora
+              - generic [ref=f18e381]: Membros
+              - button "Meta" [ref=f18e383] [cursor=pointer]
+              - button "Vendido" [ref=f18e388] [cursor=pointer]
+              - button "Atingido" [ref=f18e393] [cursor=pointer]
+              - generic [ref=f18e397]: Bônus
+              - generic [ref=f18e398]: Ações
+            - paragraph [ref=f18e460]: A meta vale só para a competência indicada. Remover uma meta deixa a equipe sem meta naquele mês; metas com bônus já lançado não podem ser removidas.
+  - region "Notifications alt+T"

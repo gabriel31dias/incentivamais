@@ -1,0 +1,259 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: Incentiva+
+        - button "Recolher menu" [ref=e8] [cursor=pointer]
+      - navigation [ref=e9]:
+        - generic [ref=e10]:
+          - button "Visão Geral" [expanded] [ref=e11] [cursor=pointer]
+          - generic [ref=e14]:
+            - link "Dashboard" [ref=e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=e23]:
+          - button "Gestão Comercial" [expanded] [ref=e24] [cursor=pointer]
+          - generic [ref=e27]:
+            - link "Distribuidoras" [ref=e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=e67] [cursor=pointer]
+          - generic [ref=e70]:
+            - link "Campanhas" [ref=e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=e104]:
+          - button "Importação de Vendas" [expanded] [ref=e105] [cursor=pointer]
+          - generic [ref=e108]:
+            - link "Nova Importação" [ref=e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=e131]:
+          - button "Conteúdos" [expanded] [ref=e132] [cursor=pointer]
+          - generic [ref=e135]:
+            - link "Notícias" [ref=e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=e167]:
+          - button "Configurações" [expanded] [ref=e168] [cursor=pointer]
+          - generic [ref=e171]:
+            - link "Menus Dinâmicos" [ref=e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Modelos de Menus" [ref=e177] [cursor=pointer]:
+              - /url: /config/menus/modelos
+            - link "Perfis e Permissões" [ref=e183] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=e188] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=e195] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=e200] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=e205] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=e210]:
+          - button "Atendimento" [expanded] [ref=e211] [cursor=pointer]
+          - generic [ref=e214]:
+            - link "Chamados" [ref=e215] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=e219] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=e224] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=e230]:
+          - button "Relatórios" [expanded] [ref=e231] [cursor=pointer]
+          - generic [ref=e234]:
+            - link "Vendas" [ref=e235] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=e240] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=e244] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=e251] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=e257] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=e262] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=e270] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=e277] [cursor=pointer]
+    - generic [ref=e282]:
+      - banner [ref=e283]:
+        - heading "Histórico de Lotes" [level=1] [ref=e289]
+        - generic [ref=e290]:
+          - button "Abrir tutorial" [ref=e291] [cursor=pointer]:
+            - generic [ref=e292]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=e293]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=e296] [cursor=pointer]:
+            - generic [ref=e297]: A
+            - generic [ref=e299]: Ana Administradora
+            - generic [ref=e300]: Super Admin
+          - button "Toggle theme" [ref=e301] [cursor=pointer]
+      - main [ref=e303]:
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - button "Voltar" [ref=e307] [cursor=pointer]
+              - generic [ref=e310]: Com inconsistências
+            - generic [ref=e311]:
+              - button "Erros (CSV)" [ref=e312] [cursor=pointer]
+              - link "Reenviar corrigido" [ref=e316] [cursor=pointer]:
+                - /url: /importacao/nova?distributorId=5&competence=2026-08&replaces=310
+              - button "Devolver para correção" [ref=e322] [cursor=pointer]
+              - button "Confirmar lote" [ref=e326] [cursor=pointer]
+          - paragraph [ref=e329]:
+            - generic [ref=e330]: "Lote #310"
+            - text: · Distribuidora Mineira · Ago/2026 · vendas-agosto-TESTE.xlsx · enviado por Vinícius Carvalho em 15/10/2026, 05:03
+          - generic [ref=e331]:
+            - generic [ref=e332]:
+              - paragraph [ref=e333]: Total de registros
+              - paragraph [ref=e334]: "24"
+            - generic [ref=e335]:
+              - paragraph [ref=e336]: Válidos
+              - paragraph [ref=e337]: "12"
+            - generic [ref=e338]:
+              - paragraph [ref=e339]: Inválidos
+              - paragraph [ref=e340]: "10"
+            - generic [ref=e341]:
+              - paragraph [ref=e342]: Duplicidades / já importadas
+              - paragraph [ref=e343]: "2"
+            - generic [ref=e344]:
+              - paragraph [ref=e345]: Correções
+              - paragraph [ref=e346]: "0"
+            - generic [ref=e347]:
+              - paragraph [ref=e348]: Pontos previstos
+              - paragraph [ref=e349]: "854"
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]:
+                - heading [level=2] [ref=e354]
+                - list "Etapas do lote" [ref=e360]:
+                  - listitem [ref=e361]:
+                    - generic [ref=e366]:
+                      - paragraph [ref=e367]: Recebido15/10/2026, 05:03
+                      - paragraph [ref=e368]: vendas-agosto-TESTE.xlsx
+                  - listitem [ref=e369]:
+                    - paragraph [ref=e375]: Validando
+                  - listitem [ref=e376]:
+                    - generic [ref=e382]:
+                      - paragraph [ref=e383]: Com inconsistências
+                      - paragraph [ref=e384]: 12 válidas · 0 correções · 12 ignoradas/inválidas
+                  - listitem [ref=e385]:
+                    - paragraph [ref=e391]: Aguardando confirmação
+                  - listitem [ref=e392]:
+                    - paragraph [ref=e404]: Concluído
+              - generic [ref=e405]:
+                - heading [level=2] [ref=e407]
+                - list [ref=e411]:
+                  - listitem [ref=e412]:
+                    - generic [ref=e413]:
+                      - generic [ref=e414]: Campo obrigatório vazio
+                      - generic [ref=e418]: "1"
+                    - paragraph [ref=e421]: Preencha documento, CPF do vendedor, SKU, data, quantidade e valor em todas as linhas.
+                  - listitem [ref=e424]:
+                    - generic [ref=e425]:
+                      - generic [ref=e426]: CPF inválido
+                      - generic [ref=e430]: "1"
+                    - paragraph [ref=e433]: Confira os 11 dígitos do CPF do vendedor (os dígitos verificadores não batem).
+                  - listitem [ref=e436]:
+                    - generic [ref=e437]:
+                      - generic [ref=e438]: Vendedor inexistente
+                      - generic [ref=e442]: "1"
+                    - paragraph [ref=e445]: O CPF não pertence a nenhum vendedor cadastrado. Cadastre o vendedor antes ou corrija o CPF.
+                  - listitem [ref=e448]:
+                    - generic [ref=e449]:
+                      - generic [ref=e450]: Vendedor de outra distribuidora
+                      - generic [ref=e454]: "1"
+                    - paragraph [ref=e457]: O vendedor está vinculado a outra distribuidora. Envie a venda pela distribuidora correta ou peça a transferência.
+                  - listitem [ref=e460]:
+                    - generic [ref=e461]:
+                      - generic [ref=e462]: Vendedor inativo
+                      - generic [ref=e466]: "1"
+                    - paragraph [ref=e469]: O vendedor está inativo ou bloqueado. Reative o cadastro antes de pontuar a venda.
+                  - listitem [ref=e472]:
+                    - generic [ref=e473]:
+                      - generic [ref=e474]: Produto inexistente
+                      - generic [ref=e478]: "1"
+                    - paragraph [ref=e481]: "O SKU não existe no catálogo. Use os SKUs do modelo (ex.: PRD-A)."
+                  - listitem [ref=e484]:
+                    - generic [ref=e485]:
+                      - generic [ref=e486]: Data inválida
+                      - generic [ref=e490]: "1"
+                    - paragraph [ref=e493]: "Use o formato DD/MM/AAAA (ex.: 15/09/2026)."
+                  - listitem [ref=e496]:
+                    - generic [ref=e497]:
+                      - generic [ref=e498]: Data fora da competência
+                      - generic [ref=e502]: "1"
+                    - paragraph [ref=e505]: A data da venda precisa estar dentro do mês da competência informada no envio.
+                  - listitem [ref=e508]:
+                    - generic [ref=e509]:
+                      - generic [ref=e510]: Quantidade inválida
+                      - generic [ref=e514]: "1"
+                    - paragraph [ref=e517]: Informe um número inteiro maior que zero.
+                  - listitem [ref=e520]:
+                    - generic [ref=e521]:
+                      - generic [ref=e522]: Valor inválido
+                      - generic [ref=e526]: "1"
+                    - paragraph [ref=e529]: "Informe o valor total da venda maior que zero (ex.: 1.250,00)."
+                  - listitem [ref=e532]:
+                    - generic [ref=e533]:
+                      - generic [ref=e534]: Documento duplicado no arquivo
+                      - generic [ref=e538]: "1"
+                    - paragraph [ref=e541]: O mesmo documento + item aparece mais de uma vez. Remova a linha repetida.
+                  - listitem [ref=e544]:
+                    - generic [ref=e545]:
+                      - generic [ref=e546]: Venda já importada
+                      - generic [ref=e550]: "1"
+                    - paragraph [ref=e553]: Esta venda já foi pontuada com os mesmos dados e será ignorada (sem pontos em dobro).
+            - generic [ref=e556]:
+              - tablist [ref=e557]:
+                - tab "Todas (24)" [selected] [ref=e558] [cursor=pointer]
+                - tab "Válidas (12)" [ref=e559] [cursor=pointer]
+                - tab "Correções (0)" [ref=e560] [cursor=pointer]
+                - tab "Inválidas (10)" [ref=e561] [cursor=pointer]
+                - tab "Duplicadas" [ref=e562] [cursor=pointer]
+                - tab "Já importadas" [ref=e563] [cursor=pointer]
+              - row "Linha Documento CPF vendedor SKU Data Qtd Valor Pontos Situação" [ref=e567]:
+                - generic [ref=e568]: Linha
+                - generic [ref=e569]: Documento
+                - generic [ref=e570]: CPF vendedor
+                - generic [ref=e571]: SKU
+                - generic [ref=e572]: Data
+                - generic [ref=e573]: Qtd
+                - generic [ref=e574]: Valor
+                - generic [ref=e575]: Pontos
+                - generic [ref=e576]: Situação
+  - region "Notifications alt+T"

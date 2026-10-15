@@ -1,0 +1,146 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - complementary [ref=f3e4]:
+      - generic [ref=f3e5]:
+        - generic [ref=f3e6]: Incentiva+
+        - button "Recolher menu" [ref=f3e8] [cursor=pointer]
+      - navigation [ref=f3e9]:
+        - generic [ref=f3e10]:
+          - button "Visão Geral" [expanded] [ref=f3e11] [cursor=pointer]
+          - generic [ref=f3e14]:
+            - link "Dashboard" [ref=f3e15] [cursor=pointer]:
+              - /url: /dashboard
+            - link "Central de atividades" [ref=f3e19] [cursor=pointer]:
+              - /url: /atividades
+        - generic [ref=f3e23]:
+          - button "Gestão Comercial" [expanded] [ref=f3e24] [cursor=pointer]
+          - generic [ref=f3e27]:
+            - link "Distribuidoras" [ref=f3e28] [cursor=pointer]:
+              - /url: /distribuidoras
+            - link "Equipes" [ref=f3e34] [cursor=pointer]:
+              - /url: /equipes
+            - link "Gerentes" [ref=f3e40] [cursor=pointer]:
+              - /url: /gerentes
+            - link "Vendedores" [ref=f3e54] [cursor=pointer]:
+              - /url: /vendedores
+            - link "Pontos Focais" [ref=f3e61] [cursor=pointer]:
+              - /url: /pontos-focais
+        - generic [ref=f3e66]:
+          - button "Campanhas e Incentivos" [expanded] [ref=f3e67] [cursor=pointer]
+          - generic [ref=f3e70]:
+            - link "Campanhas" [ref=f3e71] [cursor=pointer]:
+              - /url: /campanhas
+            - link "Metas" [ref=f3e76] [cursor=pointer]:
+              - /url: /metas
+            - link "Regras de Pontuação" [ref=f3e82] [cursor=pointer]:
+              - /url: /regras
+            - link "Extrato de Pontos" [ref=f3e88] [cursor=pointer]:
+              - /url: /extrato
+            - link "Ajustes de Pontos" [ref=f3e95] [cursor=pointer]:
+              - /url: /ajustes
+            - link "Premiações" [ref=f3e98] [cursor=pointer]:
+              - /url: /premiacoes
+        - generic [ref=f3e104]:
+          - button "Importação de Vendas" [expanded] [ref=f3e105] [cursor=pointer]
+          - generic [ref=f3e108]:
+            - link "Nova Importação" [ref=f3e109] [cursor=pointer]:
+              - /url: /importacao/nova
+            - link "Histórico de Lotes" [ref=f3e114] [cursor=pointer]:
+              - /url: /importacao/lotes
+            - link "Validação e Inconsistências" [ref=f3e120] [cursor=pointer]:
+              - /url: /importacao/validacao
+            - link "Reprocessamentos" [ref=f3e124] [cursor=pointer]:
+              - /url: /importacao/reprocessamentos
+        - generic [ref=f3e131]:
+          - button "Conteúdos" [expanded] [ref=f3e132] [cursor=pointer]
+          - generic [ref=f3e135]:
+            - link "Notícias" [ref=f3e136] [cursor=pointer]:
+              - /url: /conteudos/noticias
+            - link "Banners" [ref=f3e141] [cursor=pointer]:
+              - /url: /conteudos/banners
+            - link "Comunicados" [ref=f3e147] [cursor=pointer]:
+              - /url: /conteudos/comunicados
+            - link "Treinamentos" [ref=f3e152] [cursor=pointer]:
+              - /url: /conteudos/treinamentos
+            - link "Quiz e Enquetes" [ref=f3e157] [cursor=pointer]:
+              - /url: /conteudos/quiz
+            - link "Missões e Medalhas" [ref=f3e163] [cursor=pointer]:
+              - /url: /conteudos/gamificacao
+        - generic [ref=f3e167]:
+          - button "Configurações" [expanded] [ref=f3e168] [cursor=pointer]
+          - generic [ref=f3e171]:
+            - link "Menus Dinâmicos" [ref=f3e172] [cursor=pointer]:
+              - /url: /config/menus
+            - link "Modelos de Menus" [ref=f3e177] [cursor=pointer]:
+              - /url: /config/menus/modelos
+            - link "Perfis e Permissões" [ref=f3e183] [cursor=pointer]:
+              - /url: /config/perfis
+            - link "Usuários" [ref=f3e188] [cursor=pointer]:
+              - /url: /config/usuarios
+            - link "Logs e Auditoria" [ref=f3e195] [cursor=pointer]:
+              - /url: /config/auditoria
+            - link "Segurança" [ref=f3e200] [cursor=pointer]:
+              - /url: /config/seguranca
+            - link "Configurações Gerais" [ref=f3e205] [cursor=pointer]:
+              - /url: /config/geral
+        - generic [ref=f3e210]:
+          - button "Atendimento" [expanded] [ref=f3e211] [cursor=pointer]
+          - generic [ref=f3e214]:
+            - link "Chamados" [ref=f3e215] [cursor=pointer]:
+              - /url: /atendimento/chamados
+            - link "Chatbot" [ref=f3e219] [cursor=pointer]:
+              - /url: /atendimento/chatbot
+            - link "Histórico de Atendimentos" [ref=f3e224] [cursor=pointer]:
+              - /url: /atendimento/historico
+        - generic [ref=f3e230]:
+          - button "Relatórios" [expanded] [ref=f3e231] [cursor=pointer]
+          - generic [ref=f3e234]:
+            - link "Vendas" [ref=f3e235] [cursor=pointer]:
+              - /url: /relatorios/vendas
+            - link "Desempenho" [ref=f3e240] [cursor=pointer]:
+              - /url: /relatorios/desempenho
+            - link "Pontuação" [ref=f3e244] [cursor=pointer]:
+              - /url: /relatorios/pontuacao
+            - link "Distribuidoras" [ref=f3e251] [cursor=pointer]:
+              - /url: /relatorios/distribuidoras
+            - link "Campanhas" [ref=f3e257] [cursor=pointer]:
+              - /url: /relatorios/campanhas
+            - link "Rankings" [ref=f3e262] [cursor=pointer]:
+              - /url: /relatorios/rankings
+            - link "Exportações" [ref=f3e270] [cursor=pointer]:
+              - /url: /relatorios/exportacoes
+      - button "Sair" [ref=f3e277] [cursor=pointer]
+    - generic [ref=f3e282]:
+      - banner [ref=f3e283]:
+        - heading "Vendedores" [level=1] [ref=f3e290]
+        - generic [ref=f3e291]:
+          - button "Abrir tutorial" [ref=f3e292] [cursor=pointer]:
+            - generic [ref=f3e293]: Tutorial
+          - generic "Dados fictícios. Operações gravam no SQLite local, sem integração com sistemas reais." [ref=f3e294]: Ambiente de demonstração
+          - button "A Ana Administradora Super Admin" [ref=f3e297] [cursor=pointer]:
+            - generic [ref=f3e298]: A
+            - generic [ref=f3e300]: Ana Administradora
+            - generic [ref=f3e301]: Super Admin
+          - button "Toggle theme" [ref=f3e302] [cursor=pointer]
+      - main [ref=f3e304]:
+        - generic [ref=f3e305]:
+          - paragraph [ref=f3e306]: Vendedores acumulam pontos com as vendas importadas pelas distribuidoras.
+          - generic [ref=f3e307]:
+            - generic [ref=f3e308]:
+              - searchbox "Nome, e-mail ou CPF" [ref=f3e310]
+              - button "Filtros" [ref=f3e311] [cursor=pointer]
+            - generic [ref=f3e313]:
+              - button "Exportar página" [disabled] [ref=f3e314]
+              - button "Importar planilha" [ref=f3e318] [cursor=pointer]
+              - button "Novo vendedor" [ref=f3e323] [cursor=pointer]
+          - row "Selecionar página Nome CPF Distribuidora Gerente responsável Equipe Status Último acesso MFA" [ref=f3e328]:
+            - checkbox "Selecionar página" [ref=f3e329]
+            - button "Nome" [ref=f3e331] [cursor=pointer]
+            - generic [ref=f3e335]: CPF
+            - generic [ref=f3e336]: Distribuidora
+            - generic [ref=f3e337]: Gerente responsável
+            - generic [ref=f3e338]: Equipe
+            - generic [ref=f3e339]: Status
+            - button "Último acesso" [ref=f3e341] [cursor=pointer]
+            - generic [ref=f3e345]: MFA
+  - region "Notifications alt+T"

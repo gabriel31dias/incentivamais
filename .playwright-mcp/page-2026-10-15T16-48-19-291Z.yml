@@ -1,0 +1,474 @@
+- generic:
+  - generic:
+    - generic [aria-hidden]:
+      - complementary:
+        - generic:
+          - generic: Incentiva+
+          - button
+        - navigation:
+          - generic:
+            - button [expanded]: Visão Geral
+            - generic:
+              - link:
+                - /url: /dashboard
+                - generic: Dashboard
+              - link:
+                - /url: /atividades
+                - generic: Central de atividades
+          - generic:
+            - button [expanded]: Gestão Comercial
+            - generic:
+              - link:
+                - /url: /distribuidoras
+                - generic: Distribuidoras
+              - link:
+                - /url: /equipes
+                - generic: Equipes
+              - link:
+                - /url: /gerentes
+                - generic: Gerentes
+              - link:
+                - /url: /vendedores
+                - generic: Vendedores
+              - link:
+                - /url: /pontos-focais
+                - generic: Pontos Focais
+          - generic:
+            - button [expanded]: Campanhas e Incentivos
+            - generic:
+              - link:
+                - /url: /campanhas
+                - generic: Campanhas
+              - link:
+                - /url: /metas
+                - generic: Metas
+              - link:
+                - /url: /regras
+                - generic: Regras de Pontuação
+              - link:
+                - /url: /extrato
+                - generic: Extrato de Pontos
+              - link:
+                - /url: /ajustes
+                - generic: Ajustes de Pontos
+              - link:
+                - /url: /premiacoes
+                - generic: Premiações
+          - generic:
+            - button [expanded]: Importação de Vendas
+            - generic:
+              - link:
+                - /url: /importacao/nova
+                - generic: Nova Importação
+              - link:
+                - /url: /importacao/lotes
+                - generic: Histórico de Lotes
+              - link:
+                - /url: /importacao/validacao
+                - generic: Validação e Inconsistências
+              - link:
+                - /url: /importacao/reprocessamentos
+                - generic: Reprocessamentos
+          - generic:
+            - button [expanded]: Conteúdos
+            - generic:
+              - link:
+                - /url: /conteudos/noticias
+                - generic: Notícias
+              - link:
+                - /url: /conteudos/banners
+                - generic: Banners
+              - link:
+                - /url: /conteudos/comunicados
+                - generic: Comunicados
+              - link:
+                - /url: /conteudos/treinamentos
+                - generic: Treinamentos
+              - link:
+                - /url: /conteudos/quiz
+                - generic: Quiz e Enquetes
+              - link:
+                - /url: /conteudos/gamificacao
+                - generic: Missões e Medalhas
+          - generic:
+            - button [expanded]: Configurações
+            - generic:
+              - link:
+                - /url: /config/menus
+                - generic: Menus Dinâmicos
+              - link:
+                - /url: /config/perfis
+                - generic: Perfis e Permissões
+              - link:
+                - /url: /config/usuarios
+                - generic: Usuários
+              - link:
+                - /url: /config/auditoria
+                - generic: Logs e Auditoria
+              - link:
+                - /url: /config/seguranca
+                - generic: Segurança
+              - link:
+                - /url: /config/geral
+                - generic: Configurações Gerais
+          - generic:
+            - button [expanded]: Atendimento
+            - generic:
+              - link:
+                - /url: /atendimento/chamados
+                - generic: Chamados
+              - link:
+                - /url: /atendimento/chatbot
+                - generic: Chatbot
+              - link:
+                - /url: /atendimento/historico
+                - generic: Histórico de Atendimentos
+          - generic:
+            - button [expanded]: Relatórios
+            - generic:
+              - link:
+                - /url: /relatorios/vendas
+                - generic: Vendas
+              - link:
+                - /url: /relatorios/desempenho
+                - generic: Desempenho
+              - link:
+                - /url: /relatorios/pontuacao
+                - generic: Pontuação
+              - link:
+                - /url: /relatorios/distribuidoras
+                - generic: Distribuidoras
+              - link:
+                - /url: /relatorios/campanhas
+                - generic: Campanhas
+              - link:
+                - /url: /relatorios/rankings
+                - generic: Rankings
+              - link:
+                - /url: /relatorios/exportacoes
+                - generic: Exportações
+        - generic:
+          - button:
+            - generic: Sair
+      - generic:
+        - banner:
+          - generic:
+            - heading [level=1]: Menus Dinâmicos
+          - generic:
+            - button:
+              - generic: Tutorial
+            - generic: Ambiente de demonstração
+            - button:
+              - generic: A
+              - generic: Ana Administradora
+              - generic: Super Admin
+            - button:
+              - generic: Toggle theme
+        - main:
+          - generic:
+            - generic:
+              - paragraph: Estes são os itens do menu do app Incentiva+. O que você alterar aqui aparece no app assim que a tela for recarregada.
+              - generic:
+                - link:
+                  - /url: /config/menus/avancado
+                  - text: Ferramentas avançadas
+                - button: Copiar de outro perfil
+                - button: Novo item
+            - generic:
+              - tablist:
+                - tab [selected]: Vendedor
+                - tab: Gerente
+                - tab: Ponto Focal
+              - generic:
+                - combobox
+            - paragraph: "Itens marcados para “Todos” aparecem em todas as abas: editar um deles muda para todos os perfis."
+            - generic:
+              - generic:
+                - list:
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: Início
+                        - paragraph: "Início · Quem vê: Vendedor, Ponto Focal"
+                      - generic:
+                        - button [disabled]
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: Desempenho
+                        - paragraph: "Grupo (abre os submenus) · Quem vê: Todos"
+                      - generic:
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                    - list:
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Minhas Vendas
+                            - paragraph: "Minhas vendas · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Minhas Metas
+                            - paragraph: "Minhas metas · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Ranking
+                            - paragraph: "Ranking · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: Pontos
+                        - paragraph: "Grupo (abre os submenus) · Quem vê: Todos"
+                      - generic:
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                    - list:
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Meu Extrato
+                            - paragraph: "Extrato de pontos · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Histórico
+                            - paragraph: "Histórico de pontos · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: Conteúdos
+                        - paragraph: "Grupo (abre os submenus) · Quem vê: Todos"
+                      - generic:
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                    - list:
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Notícias
+                            - paragraph: "/noticias (sem tela no app) · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Treinamentos
+                            - paragraph: "Treinamentos · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: Gamificação
+                        - paragraph: "Grupo (abre os submenus) · Quem vê: Todos"
+                      - generic:
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                        - button
+                    - list:
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Quiz
+                            - paragraph: "/quiz (sem tela no app) · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Missões
+                            - paragraph: "/missoes (sem tela no app) · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button
+                            - button
+                            - button
+                            - button
+                      - listitem:
+                        - generic:
+                          - generic:
+                            - paragraph: Medalhas
+                            - paragraph: "/medalhas (sem tela no app) · Quem vê: quem vê o grupo"
+                          - generic:
+                            - button
+                            - button [disabled]
+                            - button
+                            - button
+                            - button
+                  - listitem:
+                    - generic:
+                      - generic:
+                        - paragraph: xx
+                        - paragraph: "Início · Quem vê: Vendedor, Gerente, Ponto Focal"
+                      - generic:
+                        - button
+                        - button [disabled]
+                        - button
+                        - button
+                        - button
+                        - button
+              - generic:
+                - generic:
+                  - heading [level=2]: Como Vendedor vê no app
+                  - generic:
+                    - generic: Incentiva+
+                    - generic:
+                      - list:
+                        - listitem:
+                          - button:
+                            - generic: Início
+                        - listitem:
+                          - button:
+                            - generic: Desempenho
+                        - listitem:
+                          - button:
+                            - generic: Pontos
+                        - listitem:
+                          - button:
+                            - generic: Conteúdos
+                        - listitem:
+                          - button:
+                            - generic: Gamificação
+                        - listitem:
+                          - button:
+                            - generic: xx
+                  - paragraph: Toque num grupo para ver os submenus.
+                - generic:
+                  - generic:
+                    - heading [level=2]: Modelos de navegação
+                    - button: Salvar este menu
+                  - paragraph: Monte um menu uma vez, salve como modelo e aplique em várias distribuidoras de uma vez.
+                  - list:
+                    - listitem:
+                      - generic:
+                        - paragraph: Navegação vendedor
+                        - paragraph: 16 menu(s)
+                      - button: Aplicar
+                      - button
+                    - listitem:
+                      - generic:
+                        - paragraph: Gamificação padrão
+                        - paragraph: 4 menu(s) · Quiz, missões e medalhas — base para novas campanhas
+                      - button: Aplicar
+                      - button
+    - region "Notifications alt+T"
+  - dialog [ref=f39e996]:
+    - generic [ref=f39e997]:
+      - generic [ref=f39e998]:
+        - heading "Aplicar \"Navegação vendedor\"" [level=2] [ref=f39e999]
+        - paragraph [ref=f39e1000]: Cada distribuidora marcada ganha uma cópia do modelo como menu próprio, no lugar do menu geral. Sem distribuidora marcada, o modelo substitui o menu geral do perfil.
+      - generic [ref=f39e1001]:
+        - generic [ref=f39e1002]:
+          - generic [ref=f39e1003]: Para o perfil
+          - combobox "Para o perfil" [ref=f39e1004]:
+            - option "Vendedor" [selected]
+            - option "Gerente"
+            - option "Ponto Focal"
+        - generic [ref=f39e1005]:
+          - generic [ref=f39e1006]: Nas distribuidoras
+          - generic [ref=f39e1007]:
+            - checkbox "Distribuidora Acreana" [ref=f39e1008] [cursor=pointer]
+            - checkbox "Distribuidora Alagoana" [ref=f39e1011] [cursor=pointer]
+            - checkbox "Distribuidora Amapaense" [ref=f39e1014] [cursor=pointer]
+            - checkbox "Distribuidora Amazonense" [ref=f39e1017] [cursor=pointer]
+            - checkbox "Distribuidora Baiana" [ref=f39e1020] [cursor=pointer]
+            - checkbox "Distribuidora Brasiliense" [ref=f39e1023] [cursor=pointer]
+            - checkbox "Distribuidora Campineira" [ref=f39e1026] [cursor=pointer]
+            - checkbox "Distribuidora Capixaba" [ref=f39e1029] [cursor=pointer]
+            - checkbox "Distribuidora Carioca" [ref=f39e1032] [cursor=pointer]
+            - checkbox "Distribuidora Catarinense" [ref=f39e1035] [cursor=pointer]
+            - checkbox "Distribuidora Cearense" [ref=f39e1038] [cursor=pointer]
+            - checkbox "Distribuidora Central" [ref=f39e1041] [cursor=pointer]
+            - checkbox "Distribuidora Cuiabana" [ref=f39e1044] [cursor=pointer]
+            - checkbox "Distribuidora Gaúcha" [ref=f39e1047] [cursor=pointer]
+            - checkbox "Distribuidora Goiana" [ref=f39e1050] [cursor=pointer]
+            - checkbox "Distribuidora Litoral Norte" [ref=f39e1053] [cursor=pointer]
+            - checkbox "Distribuidora Maranhense" [ref=f39e1056] [cursor=pointer]
+            - checkbox "Distribuidora Mineira" [checked] [active] [ref=f39e1059] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f39e1060]: ✓
+            - checkbox "Distribuidora Paraense" [ref=f39e1062] [cursor=pointer]
+            - checkbox "Distribuidora Paraibana" [ref=f39e1065] [cursor=pointer]
+            - checkbox "Distribuidora Paranaense" [ref=f39e1068] [cursor=pointer]
+            - checkbox "Distribuidora Paulista" [ref=f39e1071] [cursor=pointer]
+            - checkbox "Distribuidora Pernambucana" [ref=f39e1074] [cursor=pointer]
+            - checkbox "Distribuidora Piauiense" [ref=f39e1077] [cursor=pointer]
+            - checkbox "Distribuidora Potiguar" [ref=f39e1080] [cursor=pointer]
+            - checkbox "Distribuidora Rondoniense" [ref=f39e1083] [cursor=pointer]
+            - checkbox "Distribuidora Roraimense" [ref=f39e1086] [cursor=pointer]
+            - checkbox "Distribuidora Santista" [ref=f39e1089] [cursor=pointer]
+            - checkbox "Distribuidora Sergipana" [ref=f39e1092] [cursor=pointer]
+            - checkbox "Distribuidora Serra Gaúcha" [ref=f39e1095] [cursor=pointer]
+            - checkbox "Distribuidora Sudeste" [ref=f39e1098] [cursor=pointer]
+            - checkbox "Distribuidora Sul-Mato-Grossense" [ref=f39e1101] [cursor=pointer]
+            - checkbox "Distribuidora Tocantinense" [ref=f39e1104] [cursor=pointer]
+            - checkbox "Distribuidora Triângulo" [ref=f39e1107] [cursor=pointer]
+            - checkbox "Distribuidora Vale do Paraíba" [ref=f39e1110] [cursor=pointer]
+          - generic [ref=f39e1113]: Nenhuma marcada = menu geral do perfil (todas as distribuidoras sem menu próprio)
+      - generic [ref=f39e1114]:
+        - button "Cancelar" [ref=f39e1115] [cursor=pointer]
+        - button "Aplicar em 1 distribuidora(s)" [ref=f39e1122] [cursor=pointer]
+    - button "Close" [ref=f39e1117] [cursor=pointer]

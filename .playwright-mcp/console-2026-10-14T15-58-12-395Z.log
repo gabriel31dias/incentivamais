@@ -1,0 +1,37 @@
+[    2261ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://192.168.200.57:5199/node_modules/.vite/deps/react-dom_client.js?v=864f25ce:15804
+[    3714ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://192.168.200.57:5199/favicon.ico:0
+[ 7552183ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://192.168.200.57:5199/src/app/index.css?t=1792001044345:0
+[ 7552183ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://192.168.200.57:5199/src/app/carregar.ts?t=1792001044345:0
+[ 7552183ms] [ERROR] [vite] Failed to reload /src/app/index.css. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[ 7552184ms] [ERROR] [vite] Failed to reload /src/Lobby.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[ 7552184ms] [ERROR] [vite] Failed to reload /src/app/components/Carregando.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[ 7552186ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://192.168.200.57:5199/src/App.jsx?t=1792001044347:0
+[ 7552187ms] [ERROR] [vite] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[ 7552187ms] [LOG] [vite] server connection lost. Polling for restart... @ http://192.168.200.57:5199/@vite/client:1081
+[ 7553532ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx:0
+[ 7559228ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx:0
+[ 7577335ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001069619:0
+[ 7656666ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001148918:0
+[ 7656872ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001149183:0
+[ 7739255ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001149183:0
+[ 7897538ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001389789:0
+[ 7897785ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792001390080:0
+[ 7908599ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://192.168.200.57:5199/node_modules/.vite/deps/react-dom_client.js?v=864f25ce:15804
+[ 9014526ms] [ERROR] WebSocket connection to 'ws://192.168.200.57:5199/ws/bazuca/?EIO=4&transport=websocket' failed: Connection closed before receiving a handshake response @ http://192.168.200.57:5199/node_modules/.vite/deps/socket__io-client.js?v=864f25ce:980
+[11625762ms] [ERROR] WebSocket connection to 'ws://192.168.200.57:5199/ws/bazuca/?EIO=4&transport=websocket' failed: Connection closed before receiving a handshake response @ http://192.168.200.57:5199/node_modules/.vite/deps/socket__io-client.js?v=864f25ce:980
+[13106950ms] [ERROR] Failed to load resource: net::ERR_EMPTY_RESPONSE @ http://192.168.200.57:5199/src/Lobby.jsx?t=1792006598980:0
+[13106951ms] [ERROR] [vite] Failed to reload /src/Lobby.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[13106955ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://192.168.200.57:5199/src/App.jsx?t=1792006598982:0
+[13106955ms] [ERROR] [vite] Failed to reload /src/App.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[13106961ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://192.168.200.57:5199/src/Lobby.jsx?t=1792006598986:0
+[13106961ms] [ERROR] [vite] Failed to reload /src/Lobby.jsx. This could be due to syntax errors or importing non-existent modules. (see errors above) @ http://192.168.200.57:5199/@vite/client:356
+[13106962ms] [LOG] [vite] server connection lost. Polling for restart... @ http://192.168.200.57:5199/@vite/client:1081
+[13107364ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx:0
+[13124040ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792006616336:0
+[13209514ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792006701816:0
+[13209796ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792006702155:0
+[13491943ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792006702155:0
+[13496716ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792006702155:0
+[13508021ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792007000332:0
+[13508238ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://192.168.200.57:5199/src/App.jsx?t=1792007000531:0
+[13534502ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://192.168.200.57:5199/node_modules/.vite/deps/react-dom_client.js?v=864f25ce:15804
